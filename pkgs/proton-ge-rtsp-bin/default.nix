@@ -6,21 +6,10 @@
 stdenvNoCC.mkDerivation (finalAttrs: {
   inherit (source) pname src version;
   buildCommand = ''
-    runHook preBuild
+    echo "${finalAttrs.pname} should not be installed into environments. Please use programs.steam.extraCompatPackages instead." >"$out"
 
-    # Make it impossible to add to an environment. You should use the appropriate NixOS option.
-    # Also leave some breadcrumbs in the file.
-    echo "${finalAttrs.pname} should not be installed into environments. Please use programs.steam.extraCompatPackages instead." > $out
-
-    mkdir $steamcompattool
-    ln -s $src/* $steamcompattool
-    rm $steamcompattool/{compatibilitytool.vdf,proton,version}
-    cp $src/{compatibilitytool.vdf,proton,version} $steamcompattool
-
-    sed -i -r 's|GE-Proton[0-9]*-[0-9]*-rtsp[0-9]*|GE-Proton-rtsp|' $steamcompattool/compatibilitytool.vdf
-    sed -i -r 's|GE-Proton[0-9]*-[0-9]*-rtsp[0-9]*|GE-Proton-rtsp|' $steamcompattool/proton
-
-    runHook postBuild
+    install -dm755 "$steamcompattool"
+    cp -r ./* "$steamcompattool"
   '';
   meta = {
     description = ''
@@ -41,4 +30,8 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     "out"
     "steamcompattool"
   ];
+  postPatch = ''
+    sed -i -r 's|GE-Proton[0-9]*-[0-9]*-rtsp[0-9]*|GE-Proton-rtsp|' compatibilitytool.vdf
+    sed -i -r 's|GE-Proton[0-9]*-[0-9]*-rtsp[0-9]*|GE-Proton-rtsp|' proton
+  '';
 })
