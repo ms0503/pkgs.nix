@@ -1,0 +1,52 @@
+{
+    "alcom": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "alcom",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vrc-get",
+            "repo": "vrc-get",
+            "rev": "gui-v1.0.0",
+            "sha256": "sha256-bfpDb/V/SfVaT4OBSrONpzwYn6Sh6gP2iDZsr/wX2Pw=",
+            "type": "github"
+        },
+        "version": "gui-v1.0.0"
+    },
+    "proton-ge-rtsp-bin": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "proton-ge-rtsp-bin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-mIhXo6lkiL+bJb2NCOt+E9OW63UGw0dBrvpGsEpwebo=",
+            "type": "url",
+            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/archive/refs/tags/GE-Proton9-20-rtsp16.tar.gz"
+        },
+        "version": "GE-Proton9-20-rtsp16"
+    },
+    "zifu": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zifu",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Llg2z83Qq6lD0Yppmyb0z7XKIoijLB3ukepOj6BEH4w=",
+            "type": "url",
+            "url": "https://github.com/tats-u/zifu/archive/refs/tags/v1.1.0.tar.gz"
+        },
+        "version": "1.1.0"
+    }
+}

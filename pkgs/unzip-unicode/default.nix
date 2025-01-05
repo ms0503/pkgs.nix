@@ -1,6 +1,7 @@
 { fetchurl, unzip }:
 unzip.overrideAttrs (
   self: super: {
+    meta.description = "${super.meta.description}, with Unicode support";
     patches = super.patches ++ [
       (fetchurl {
         name = "20-unzip60-alt-iconv-utf8.patch";

@@ -1,0 +1,15 @@
+[alcom]
+fetch.github = "vrc-get/vrc-get"
+git.fetchSubmodules = true
+src.exclude_regex = ".*beta.*"
+src.github_tag = "vrc-get/vrc-get"
+src.include_regex = "gui-v.*"
+
+[proton-ge-rtsp-bin]
+fetch.url = "https://github.com/SpookySkeletons/proton-ge-rtsp/archive/refs/tags/$ver.tar.gz"
+src.github = "SpookySkeletons/proton-ge-rtsp"
+
+[zifu]
+fetch.url = "https://github.com/tats-u/zifu/archive/refs/tags/v$ver.tar.gz"
+src.github = "tats-u/zifu"
+src.prefix = "v"

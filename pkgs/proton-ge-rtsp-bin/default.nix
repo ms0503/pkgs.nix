@@ -1,15 +1,10 @@
 {
-  fetchzip,
   lib,
+  source,
   stdenvNoCC,
-  writeScript,
 }:
-let
-  sha256 = "iq7oiDW5+51wzqYwASOGSV922c/pg1k29MdkIXlT34k=";
-  version = "GE-Proton9-20-rtsp16";
-in
 stdenvNoCC.mkDerivation (finalAttrs: {
-  inherit version;
+  inherit (source) pname src version;
   buildCommand = ''
     runHook preBuild
 
@@ -46,16 +41,4 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     "out"
     "steamcompattool"
   ];
-  passthru.updateScript = writeScript "update-proton-ge-rtsp" ''
-    #!/usr/bin/env nix-shell
-    #!nix-shell -i bash -p common-updater-scripts curl jq
-    repo=https://api.github.com/repos/SpookySkeletons/proton-ge-rtsp/releases
-    version="$(curl -fsL "$repo" | jq 'map(select(.prerelease == false)) | .[0].tag_name' --raw-output)"
-    update-source-version proton-ge-rtsp-bin "$version"
-  '';
-  pname = "proton-ge-rtsp-bin";
-  src = fetchzip {
-    inherit sha256;
-    url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/${finalAttrs.version}/${finalAttrs.version}.tar.gz";
-  };
 })

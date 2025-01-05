@@ -1,8 +1,6 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs = {
-    jsonfmt.enable = true;
-    mdformat.enable = true;
     nixfmt.enable = true;
     rustfmt = {
       edition = "2021";

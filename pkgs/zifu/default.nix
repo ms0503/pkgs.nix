@@ -1,16 +1,19 @@
-{ fetchFromGitHub, rustPlatform }:
-let
-  cargoHash = "sha256-mBXXftmwEKq1ClgLwrWzKE5PdV6WnMCso4fso4ANS+k=";
-  sha256 = "zedt272khGod2zy7SdJ+I4MLHFrQa7BUAol9lrs7R6o=";
-  version = "1.1.0";
-in
+{
+  cargoHash,
+  lib,
+  rustPlatform,
+  source,
+}:
 rustPlatform.buildRustPackage {
-  inherit cargoHash version;
-  pname = "zifu";
-  src = fetchFromGitHub {
-    inherit sha256;
-    owner = "tats-u";
-    repo = "zifu";
-    rev = "v${version}";
+  inherit cargoHash;
+  inherit (source) pname src version;
+  meta = {
+    description = "Tool that fixes file names in ZIP archives (make them UTF-8)";
+    downloadPage = "https://github.com/tats-u/zifu/releases";
+    license = lib.licenses.mit;
+    mainProgram = "zifu";
+    sourceProvenance = with lib.sourceTypes; [
+      fromSource
+    ];
   };
 }

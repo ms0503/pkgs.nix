@@ -2,8 +2,8 @@
   buildDotnetModule,
   cargo-about,
   cargo-tauri,
+  cargoHash,
   dotnetCorePackages,
-  fetchFromGitHub,
   fetchNpmDeps,
   glib-networking,
   google-fonts,
@@ -11,15 +11,17 @@
   libsoup_3,
   nodePackages,
   nodejs-slim,
+  npmHash,
   npmHooks,
   openssl,
   pkg-config,
   rustPlatform,
+  source,
   stdenvNoCC,
   webkitgtk_4_1,
 }:
 let
-  cargoHash = "sha256-v9aNXafFj2vMM5VlKNfroK0mMi6021XUkoqkAXw2Trg=";
+  inherit (source) pname src;
   dotnet-build = buildDotnetModule {
     inherit
       dotnet-runtime
@@ -42,17 +44,7 @@ let
       "NotoSansJP"
     ];
   };
-  npmHash = "sha256-QAUoz/mzF9aDvkILKX3rxkYUC+VmJeRVjG8vJ/b0Dho=";
-  pname = "alcom";
-  sha256 = "ph9dJhm4DbI6/we/HD4T1LOafaWylhHoNT+zaYgl4f8=";
-  src = fetchFromGitHub {
-    inherit sha256;
-    fetchSubmodules = true;
-    owner = "vrc-get";
-    repo = "vrc-get";
-    rev = "gui-v${version}";
-  };
-  version = "0.1.17";
+  version = builtins.substring 5 ((builtins.stringLength source.version) - 5) source.version;
 in
 rustPlatform.buildRustPackage {
   inherit
