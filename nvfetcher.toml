@@ -6,7 +6,7 @@ src.github_tag = "vrc-get/vrc-get"
 src.include_regex = "gui-v.*"
 
 [proton-ge-rtsp-bin]
-fetch.url = "https://github.com/SpookySkeletons/proton-ge-rtsp/archive/refs/tags/$ver.tar.gz"
+fetch.url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/$ver/$ver.tar.gz"
 src.github = "SpookySkeletons/proton-ge-rtsp"
 
 [zifu]
