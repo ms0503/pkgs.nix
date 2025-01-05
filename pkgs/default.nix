@@ -18,8 +18,8 @@ let
 in
 {
   alcom = callPackage ./alcom {
-    cargoHash = "sha256-v9aNXafFj2vMM5VlKNfroK0mMi6021XUkoqkAXw2Trg=";
-    npmHash = "sha256-QAUoz/mzF9aDvkILKX3rxkYUC+VmJeRVjG8vJ/b0Dho=";
+    cargoHash = "sha256-MImKIdRZ0xNqmpmqukFQiSCty8V6DRP+P2fCHULTxJI=";
+    npmHash = "sha256-jg0F7V59pvONPNQGqbt+lIFZwK+OE248hiUe+Of4eFg=";
     source = sources.alcom;
   };
   microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
