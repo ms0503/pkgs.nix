@@ -5,11 +5,12 @@
 }:
 stdenvNoCC.mkDerivation (finalAttrs: {
   inherit (source) pname src version;
-  buildCommand = ''
+  buildPhase = ''
+    runHook preBuild
     echo "${finalAttrs.pname} should not be installed into environments. Please use programs.steam.extraCompatPackages instead." >"$out"
-
     install -dm755 "$steamcompattool"
     cp -r ./* "$steamcompattool"
+    runHook postBuild
   '';
   meta = {
     description = ''

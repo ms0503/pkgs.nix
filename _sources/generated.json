@@ -28,11 +28,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-knxXh37WbDTVW6xsIFzQAyjKXCxf7n72I2B6iDQ+nVs=",
+            "sha256": "sha256-lk51oeLkBjBJ8NFVAmAxHihXCGS0eKczoYUrPan5pQs=",
             "type": "url",
-            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-20-rtsp16/GE-Proton9-20-rtsp16.tar.gz"
+            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17/GE-Proton9-22-rtsp17.tar.gz"
         },
-        "version": "GE-Proton9-20-rtsp16"
+        "version": "GE-Proton9-22-rtsp17"
     },
     "zifu": {
         "cargoLocks": null,
