@@ -25,6 +25,18 @@
       sha256 = "sha256-lk51oeLkBjBJ8NFVAmAxHihXCGS0eKczoYUrPan5pQs=";
     };
   };
+  walland = {
+    pname = "walland";
+    version = "d50ed2b5c76dc6585c629f4d65a819bd53397ab9";
+    src = fetchFromGitHub {
+      owner = "Golim";
+      repo = "walland";
+      rev = "d50ed2b5c76dc6585c629f4d65a819bd53397ab9";
+      fetchSubmodules = false;
+      sha256 = "sha256-x5zaiaPjwa/MHHIwmO4rXZR1Olt4d2QuaBqwk4Hvo8k=";
+    };
+    date = "2024-09-23";
+  };
   zifu = {
     pname = "zifu";
     version = "1.1.0";

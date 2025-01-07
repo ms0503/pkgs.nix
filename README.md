@@ -35,6 +35,12 @@ nixpkgs.
     URxvt wrapper to use daemon mode easily
   - Source:
     none
+- walland
+  - Description:
+    Set as wallpaper on Wayland the picture of the day of different sources
+    using hyprpaper or other backends
+  - Source:
+    [github:Golim/walland][walland]
 - zifu
   - Description:
     Tool that fixes file names in ZIP archives (make them UTF-8)
@@ -44,4 +50,5 @@ nixpkgs.
 [infozip]: https://sourceforge.net/projects/infozip
 [proton-ge-rtsp]: https://github.com/SpookySkeletons/proton-ge-rtsp
 [vrc-get]: https://github.com/vrc-get/vrc-get
+[walland]: https://github.com/Golim/walland
 [zifu]: https://github.com/tats-u/zifu

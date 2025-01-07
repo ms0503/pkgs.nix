@@ -28,6 +28,9 @@ in
   };
   unzip-unicode = callPackage ./unzip-unicode { };
   urxvt-wrapper = callPackage ./urxvt-wrapper { };
+  walland = callPackage ./walland {
+    source = sources.walland;
+  };
   zifu = callPackage ./zifu {
     cargoHash = "sha256-mBXXftmwEKq1ClgLwrWzKE5PdV6WnMCso4fso4ANS+k=";
     source = sources.zifu;

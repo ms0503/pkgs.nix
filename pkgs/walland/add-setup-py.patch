@@ -1,0 +1,17 @@
+--- a/setup.py
++++ b/setup.py
+@@ -0,0 +1,14 @@
++from setuptools import setup
++
++setup(
++    entry_points={"console_scripts": ["walland=walland:main"]},
++    install_requires=[
++        "beautifulsoup4",
++        "curl_cffi",
++        "lxml",
++        "requests"
++    ],
++    name="walland",
++    py_modules=["walland"],
++    version="1.0.0"
++)

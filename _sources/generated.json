@@ -34,6 +34,26 @@
         },
         "version": "GE-Proton9-22-rtsp17"
     },
+    "walland": {
+        "cargoLocks": null,
+        "date": "2024-09-23",
+        "extract": null,
+        "name": "walland",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Golim",
+            "repo": "walland",
+            "rev": "d50ed2b5c76dc6585c629f4d65a819bd53397ab9",
+            "sha256": "sha256-x5zaiaPjwa/MHHIwmO4rXZR1Olt4d2QuaBqwk4Hvo8k=",
+            "type": "github"
+        },
+        "version": "d50ed2b5c76dc6585c629f4d65a819bd53397ab9"
+    },
     "zifu": {
         "cargoLocks": null,
         "date": null,
