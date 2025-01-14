@@ -5,6 +5,23 @@ src.exclude_regex = ".*beta.*"
 src.github_tag = "vrc-get/vrc-get"
 src.include_regex = "gui-v.*"
 
+[noto-cjk-sans]
+fetch.url = "https://github.com/notofonts/noto-cjk/releases/download/Sans$ver/03_NotoSansCJK-OTC.zip"
+src.github_tag = "notofonts/noto-cjk"
+src.include_regex = "Sans.*"
+src.prefix = "Sans"
+
+[noto-cjk-serif]
+fetch.url = "https://github.com/notofonts/noto-cjk/releases/download/Serif$ver/04_NotoSerifCJKOTC.zip"
+src.github_tag = "notofonts/noto-cjk"
+src.include_regex = "Serif.*"
+src.prefix = "Serif"
+
+[noto-fonts]
+fetch.url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-$ver.tar.gz"
+src.github = "notofonts/notofonts.github.io"
+src.prefix = "noto-monthly-release-"
+
 [proton-ge-rtsp-bin]
 fetch.url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/$ver/$ver.tar.gz"
 src.github = "SpookySkeletons/proton-ge-rtsp"

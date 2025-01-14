@@ -19,6 +19,51 @@
         },
         "version": "gui-v1.0.0"
     },
+    "noto-cjk-sans": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "noto-cjk-sans",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Uo9OGyX/O62wMhs40BXZVMTA3pJseDDvUOShlI9qPu0=",
+            "type": "url",
+            "url": "https://github.com/notofonts/noto-cjk/releases/download/Sans2.004/03_NotoSansCJK-OTC.zip"
+        },
+        "version": "2.004"
+    },
+    "noto-cjk-serif": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "noto-cjk-serif",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-x27Y/Ukc6YGC7GQwI4uQoeq+qIV8fbZOkDfvo44ZijE=",
+            "type": "url",
+            "url": "https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/04_NotoSerifCJKOTC.zip"
+        },
+        "version": "2.003"
+    },
+    "noto-fonts": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "noto-fonts",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-AiT5jIbh3qobK4tKqj6cY2Z8AgR0uyXdnl6+TNZirQM=",
+            "type": "url",
+            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.01.01.tar.gz"
+        },
+        "version": "2025.01.01"
+    },
     "proton-ge-rtsp-bin": {
         "cargoLocks": null,
         "date": null,

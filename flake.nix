@@ -59,10 +59,6 @@
                 ];
               };
               markdownlint.enable = true;
-              treefmt = {
-                enable = true;
-                package = treefmtEval.config.build.wrapper;
-              };
               yamlfmt.enable = true;
               yamllint.enable = true;
             };

@@ -23,6 +23,15 @@ in
     source = sources.alcom;
   };
   microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
+  noto-fonts-cjk-sans-non-variable = callPackage ./noto-fonts-cjk-sans-non-variable {
+    source = sources.noto-cjk-sans;
+  };
+  noto-fonts-cjk-serif-non-variable = callPackage ./noto-fonts-cjk-serif-non-variable {
+    source = sources.noto-cjk-serif;
+  };
+  noto-fonts-non-variable = callPackage ./noto-fonts-non-variable {
+    source = sources.noto-fonts;
+  };
   proton-ge-rtsp-bin = callPackage ./proton-ge-rtsp-bin {
     source = sources.proton-ge-rtsp-bin;
   };
