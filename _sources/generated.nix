@@ -44,6 +44,102 @@
       sha256 = "sha256-lk51oeLkBjBJ8NFVAmAxHihXCGS0eKczoYUrPan5pQs=";
     };
   };
+  unity-vrc-2019-android = {
+    pname = "unity-vrc-2019-android";
+    version = "2019.4.31f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2019.4.31f1.pkg";
+      sha256 = "sha256-+2SHixQ5n9hPXKajvA3o3/gBe5Kb/ZCqT8Wglm/nNCU=";
+    };
+  };
+  unity-vrc-2019-editor = {
+    pname = "unity-vrc-2019-editor";
+    version = "2019.4.31f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorInstaller/Unity.tar.xz";
+      sha256 = "sha256-oReUsK9+tHda9ij9VwPhJtEnCGGJj1NFgPU3Jd/vODM=";
+    };
+  };
+  unity-vrc-2019-ios = {
+    pname = "unity-vrc-2019-ios";
+    version = "2019.4.31f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2019.4.31f1.tar.xz";
+      sha256 = "sha256-sJnz9TmYn3LJT9jqIEzqTewXYtic8OY+LZfSqG38Egw=";
+    };
+  };
+  unity-vrc-2019-windows = {
+    pname = "unity-vrc-2019-windows";
+    version = "2019.4.31f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2019.4.31f1.pkg";
+      sha256 = "sha256-x71ewXl2aJhiAq7HDsbM48Z2Lhwot4Lzz6gnkgUKJWg=";
+    };
+  };
+  unity-vrc-2022-android = {
+    pname = "unity-vrc-2022-android";
+    version = "2022.3.22f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2022.3.22f1.pkg";
+      sha256 = "sha256-Vqk8HgnFsUzjLvjIhIdJTLFHpyE6UDhwR7hN7/Jjpak=";
+    };
+  };
+  unity-vrc-2022-editor = {
+    pname = "unity-vrc-2022-editor";
+    version = "2022.3.22f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorInstaller/Unity.tar.xz";
+      sha256 = "sha256-eE//d2kFHA9p7bA52NCUMeeuQASmSh20QDcJ3biKpQY=";
+    };
+  };
+  unity-vrc-2022-ios = {
+    pname = "unity-vrc-2022-ios";
+    version = "2022.3.22f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.22f1.tar.xz";
+      sha256 = "sha256-gKMWWq6kEpvZ3xWrWhkYHpohLLVhcCh324I5TKwkVT4=";
+    };
+  };
+  unity-vrc-2022-old-android = {
+    pname = "unity-vrc-2022-old-android";
+    version = "2022.3.6f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2022.3.6f1.pkg";
+      sha256 = "sha256-WrSVIDtVQLrJ7JSKymOECfcwFzaxSZ0litC7MVT7GG0=";
+    };
+  };
+  unity-vrc-2022-old-editor = {
+    pname = "unity-vrc-2022-old-editor";
+    version = "2022.3.6f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/LinuxEditorInstaller/Unity.tar.xz";
+      sha256 = "sha256-30hLUjxy8YyxfGBZzNkR9aDeTgBqBjHWRqF4vpIomBo=";
+    };
+  };
+  unity-vrc-2022-old-ios = {
+    pname = "unity-vrc-2022-old-ios";
+    version = "2022.3.6f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.6f1.tar.xz";
+      sha256 = "sha256-knAs3KcCPPcnQOCgPzOS6lV0sT1FIpf5wT9ym0Ltnrs=";
+    };
+  };
+  unity-vrc-2022-old-windows = {
+    pname = "unity-vrc-2022-old-windows";
+    version = "2022.3.6f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.6f1.pkg";
+      sha256 = "sha256-YOZcaPDPf34dPftSNt3ku5oBGeSmvClTlx7RELc0xSY=";
+    };
+  };
+  unity-vrc-2022-windows = {
+    pname = "unity-vrc-2022-windows";
+    version = "2022.3.22f1";
+    src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.22f1.pkg";
+      sha256 = "sha256-iBGBpsg3IwooTqQSC/y14qq5QLuQEOvftQ07iGXCBZ0=";
+    };
+  };
   walland = {
     pname = "walland";
     version = "d50ed2b5c76dc6585c629f4d65a819bd53397ab9";

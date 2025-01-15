@@ -79,6 +79,186 @@
         },
         "version": "GE-Proton9-22-rtsp17"
     },
+    "unity-vrc-2019-android": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2019-android",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-+2SHixQ5n9hPXKajvA3o3/gBe5Kb/ZCqT8Wglm/nNCU=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2019.4.31f1.pkg"
+        },
+        "version": "2019.4.31f1"
+    },
+    "unity-vrc-2019-editor": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2019-editor",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-oReUsK9+tHda9ij9VwPhJtEnCGGJj1NFgPU3Jd/vODM=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorInstaller/Unity.tar.xz"
+        },
+        "version": "2019.4.31f1"
+    },
+    "unity-vrc-2019-ios": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2019-ios",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-sJnz9TmYn3LJT9jqIEzqTewXYtic8OY+LZfSqG38Egw=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2019.4.31f1.tar.xz"
+        },
+        "version": "2019.4.31f1"
+    },
+    "unity-vrc-2019-windows": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2019-windows",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-x71ewXl2aJhiAq7HDsbM48Z2Lhwot4Lzz6gnkgUKJWg=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2019.4.31f1.pkg"
+        },
+        "version": "2019.4.31f1"
+    },
+    "unity-vrc-2022-android": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-android",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Vqk8HgnFsUzjLvjIhIdJTLFHpyE6UDhwR7hN7/Jjpak=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2022.3.22f1.pkg"
+        },
+        "version": "2022.3.22f1"
+    },
+    "unity-vrc-2022-editor": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-editor",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-eE//d2kFHA9p7bA52NCUMeeuQASmSh20QDcJ3biKpQY=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorInstaller/Unity.tar.xz"
+        },
+        "version": "2022.3.22f1"
+    },
+    "unity-vrc-2022-ios": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-ios",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-gKMWWq6kEpvZ3xWrWhkYHpohLLVhcCh324I5TKwkVT4=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.22f1.tar.xz"
+        },
+        "version": "2022.3.22f1"
+    },
+    "unity-vrc-2022-old-android": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-old-android",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-WrSVIDtVQLrJ7JSKymOECfcwFzaxSZ0litC7MVT7GG0=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2022.3.6f1.pkg"
+        },
+        "version": "2022.3.6f1"
+    },
+    "unity-vrc-2022-old-editor": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-old-editor",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-30hLUjxy8YyxfGBZzNkR9aDeTgBqBjHWRqF4vpIomBo=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/LinuxEditorInstaller/Unity.tar.xz"
+        },
+        "version": "2022.3.6f1"
+    },
+    "unity-vrc-2022-old-ios": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-old-ios",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-knAs3KcCPPcnQOCgPzOS6lV0sT1FIpf5wT9ym0Ltnrs=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.6f1.tar.xz"
+        },
+        "version": "2022.3.6f1"
+    },
+    "unity-vrc-2022-old-windows": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-old-windows",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-YOZcaPDPf34dPftSNt3ku5oBGeSmvClTlx7RELc0xSY=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.6f1.pkg"
+        },
+        "version": "2022.3.6f1"
+    },
+    "unity-vrc-2022-windows": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-windows",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-iBGBpsg3IwooTqQSC/y14qq5QLuQEOvftQ07iGXCBZ0=",
+            "type": "url",
+            "url": "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.22f1.pkg"
+        },
+        "version": "2022.3.22f1"
+    },
     "walland": {
         "cargoLocks": null,
         "date": "2024-09-23",
