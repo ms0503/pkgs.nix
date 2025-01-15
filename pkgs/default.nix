@@ -41,7 +41,11 @@ rec {
       android = sources.unity-vrc-2019-android;
       editor = sources.unity-vrc-2019-editor;
       ios = sources.unity-vrc-2019-ios;
+      ja = sources.unity-vrc-2019-lang-ja;
+      ko = sources.unity-vrc-2019-lang-ko;
       windows = sources.unity-vrc-2019-windows;
+      zh-hans = sources.unity-vrc-2019-lang-zh-hans;
+      zh-hant = sources.unity-vrc-2019-lang-zh-hant;
     };
   };
   unity-vrc-2022 = callPackage ./unity-vrc-2022 {
@@ -50,7 +54,11 @@ rec {
       android = sources.unity-vrc-2022-android;
       editor = sources.unity-vrc-2022-editor;
       ios = sources.unity-vrc-2022-ios;
+      ja = sources.unity-vrc-2022-lang-ja;
+      ko = sources.unity-vrc-2022-lang-ko;
       windows = sources.unity-vrc-2022-windows;
+      zh-hans = sources.unity-vrc-2022-lang-zh-hans;
+      zh-hant = sources.unity-vrc-2022-lang-zh-hant;
     };
   };
   unity-vrc-2022-old = callPackage ./unity-vrc-2022-old {
@@ -59,7 +67,11 @@ rec {
       android = sources.unity-vrc-2022-old-android;
       editor = sources.unity-vrc-2022-old-editor;
       ios = sources.unity-vrc-2022-old-ios;
+      ja = sources.unity-vrc-2022-lang-ja;
+      ko = sources.unity-vrc-2022-lang-ko;
       windows = sources.unity-vrc-2022-old-windows;
+      zh-hans = sources.unity-vrc-2022-lang-zh-hans;
+      zh-hant = sources.unity-vrc-2022-lang-zh-hant;
     };
   };
   unzip-unicode = callPackage ./unzip-unicode { };

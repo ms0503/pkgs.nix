@@ -124,6 +124,66 @@
         },
         "version": "2019.4.31f1"
     },
+    "unity-vrc-2019-lang-ja": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2019-lang-ja",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Zvvx0Z7RZqZFZcXtcsnR6K0Zs6rn8Yl4x0Rw/rlmpSM=",
+            "type": "url",
+            "url": "https://new-translate.unity3d.jp/v1/live/54/2019.4/ja"
+        },
+        "version": "2019.4.31f1"
+    },
+    "unity-vrc-2019-lang-ko": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2019-lang-ko",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-duHTZoAKl1OkboKO8yCZisiJSZ0mnwcprq5FHfa6Us8=",
+            "type": "url",
+            "url": "https://new-translate.unity3d.jp/v1/live/54/2019.4/ko"
+        },
+        "version": "2019.4.31f1"
+    },
+    "unity-vrc-2019-lang-zh-hans": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2019-lang-zh-hans",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-MvpsANmIsSQkB32sk55YA+5ZfedJ9s2OImdd0pCS79Q=",
+            "type": "url",
+            "url": "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hans"
+        },
+        "version": "2019.4.31f1"
+    },
+    "unity-vrc-2019-lang-zh-hant": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2019-lang-zh-hant",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-wzwRHBSJfShLvHnl7SurM+4fsve8pXUgZAW8LekQJpg=",
+            "type": "url",
+            "url": "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hant"
+        },
+        "version": "2019.4.31f1"
+    },
     "unity-vrc-2019-windows": {
         "cargoLocks": null,
         "date": null,
@@ -181,6 +241,66 @@
             "sha256": "sha256-gKMWWq6kEpvZ3xWrWhkYHpohLLVhcCh324I5TKwkVT4=",
             "type": "url",
             "url": "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.22f1.tar.xz"
+        },
+        "version": "2022.3.22f1"
+    },
+    "unity-vrc-2022-lang-ja": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-lang-ja",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-ASOiiuIMSLQX5xFfM+VGHz+G9c6+DAC2DDzikRl69YI=",
+            "type": "url",
+            "url": "https://new-translate.unity3d.jp/v1/live/54/2022.3/ja"
+        },
+        "version": "2022.3.22f1"
+    },
+    "unity-vrc-2022-lang-ko": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-lang-ko",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-eFn6vorKnpaulkL2emKtRVizxVvEUJf/wXQtQo/cagI=",
+            "type": "url",
+            "url": "https://new-translate.unity3d.jp/v1/live/54/2022.3/ko"
+        },
+        "version": "2022.3.22f1"
+    },
+    "unity-vrc-2022-lang-zh-hans": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-lang-zh-hans",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-FKrlo5ShrNXbwSKzqeHk+rVdtUAq+kcEE/f9zvRn8cU=",
+            "type": "url",
+            "url": "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hans"
+        },
+        "version": "2022.3.22f1"
+    },
+    "unity-vrc-2022-lang-zh-hant": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "unity-vrc-2022-lang-zh-hant",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-DzC5gE3xi/vhAm5dduqw+4EPFpAGfSiiFxY3nAv70Tw=",
+            "type": "url",
+            "url": "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hant"
         },
         "version": "2022.3.22f1"
     },

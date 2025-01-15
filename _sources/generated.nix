@@ -68,6 +68,38 @@
       sha256 = "sha256-sJnz9TmYn3LJT9jqIEzqTewXYtic8OY+LZfSqG38Egw=";
     };
   };
+  unity-vrc-2019-lang-ja = {
+    pname = "unity-vrc-2019-lang-ja";
+    version = "2019.4.31f1";
+    src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/ja";
+      sha256 = "sha256-Zvvx0Z7RZqZFZcXtcsnR6K0Zs6rn8Yl4x0Rw/rlmpSM=";
+    };
+  };
+  unity-vrc-2019-lang-ko = {
+    pname = "unity-vrc-2019-lang-ko";
+    version = "2019.4.31f1";
+    src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/ko";
+      sha256 = "sha256-duHTZoAKl1OkboKO8yCZisiJSZ0mnwcprq5FHfa6Us8=";
+    };
+  };
+  unity-vrc-2019-lang-zh-hans = {
+    pname = "unity-vrc-2019-lang-zh-hans";
+    version = "2019.4.31f1";
+    src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hans";
+      sha256 = "sha256-MvpsANmIsSQkB32sk55YA+5ZfedJ9s2OImdd0pCS79Q=";
+    };
+  };
+  unity-vrc-2019-lang-zh-hant = {
+    pname = "unity-vrc-2019-lang-zh-hant";
+    version = "2019.4.31f1";
+    src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hant";
+      sha256 = "sha256-wzwRHBSJfShLvHnl7SurM+4fsve8pXUgZAW8LekQJpg=";
+    };
+  };
   unity-vrc-2019-windows = {
     pname = "unity-vrc-2019-windows";
     version = "2019.4.31f1";
@@ -98,6 +130,38 @@
     src = fetchurl {
       url = "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.22f1.tar.xz";
       sha256 = "sha256-gKMWWq6kEpvZ3xWrWhkYHpohLLVhcCh324I5TKwkVT4=";
+    };
+  };
+  unity-vrc-2022-lang-ja = {
+    pname = "unity-vrc-2022-lang-ja";
+    version = "2022.3.22f1";
+    src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ja";
+      sha256 = "sha256-ASOiiuIMSLQX5xFfM+VGHz+G9c6+DAC2DDzikRl69YI=";
+    };
+  };
+  unity-vrc-2022-lang-ko = {
+    pname = "unity-vrc-2022-lang-ko";
+    version = "2022.3.22f1";
+    src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ko";
+      sha256 = "sha256-eFn6vorKnpaulkL2emKtRVizxVvEUJf/wXQtQo/cagI=";
+    };
+  };
+  unity-vrc-2022-lang-zh-hans = {
+    pname = "unity-vrc-2022-lang-zh-hans";
+    version = "2022.3.22f1";
+    src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hans";
+      sha256 = "sha256-FKrlo5ShrNXbwSKzqeHk+rVdtUAq+kcEE/f9zvRn8cU=";
+    };
+  };
+  unity-vrc-2022-lang-zh-hant = {
+    pname = "unity-vrc-2022-lang-zh-hant";
+    version = "2022.3.22f1";
+    src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hant";
+      sha256 = "sha256-DzC5gE3xi/vhAm5dduqw+4EPFpAGfSiiFxY3nAv70Tw=";
     };
   };
   unity-vrc-2022-old-android = {

@@ -42,6 +42,7 @@ let
       install -dm755 "$out/opt/Unity/2019.4.31f1"
       cp -r Editor "$out/opt/Unity/2019.4.31f1"
       install -Dm444 -t "$out/opt/Unity/2019.4.31f1/Editor/Data/Resources/Fonts" ${noto-fonts-cjk-sans-non-variable}/share/fonts/*/*/*
+      install -Dm444 -t "$out/opt/Unity/2019.4.31f1/Editor/Data/Localization" {ja,ko,zh-hans,zh-hant}.po
       runHook postInstall
     '';
     meta = {
@@ -142,15 +143,19 @@ let
       sources.android.src
       sources.ios.src
       sources.windows.src
+      sources.ja.src
+      sources.ko.src
+      sources.zh-hans.src
+      sources.zh-hant.src
     ];
     unpackPhase = ''
       runHook preUnpack
       srcs=($srcs)
       base_dir=$PWD
-      tar xf ''${srcs[0]}
-      tar xf ''${srcs[2]}
-      7z x -oandroid ''${srcs[1]}
-      7z x -owindows ''${srcs[3]}
+      tar xf "''${srcs[0]}"
+      tar xf "''${srcs[2]}"
+      7z x -oandroid "''${srcs[1]}"
+      7z x -owindows "''${srcs[3]}"
       mkdir Editor/Data/PlaybackEngines/{AndroidPlayer,WindowsStandaloneSupport}
       pushd Editor/Data/PlaybackEngines/AndroidPlayer
       cpio -i <"$base_dir/android/Payload~"
@@ -158,6 +163,10 @@ let
       pushd Editor/Data/PlaybackEngines/WindowsStandaloneSupport
       cpio -i <"$base_dir/windows/Payload~"
       popd
+      cp "''${srcs[4]}" ja.po
+      cp "''${srcs[5]}" ko.po
+      cp "''${srcs[6]}" zh-hans.po
+      cp "''${srcs[7]}" zh-hant.po
       runHook postUnpack
     '';
   };

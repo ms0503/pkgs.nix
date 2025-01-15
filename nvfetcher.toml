@@ -38,6 +38,22 @@ src.manual = "2019.4.31f1"
 fetch.url = "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2019.4.31f1.tar.xz"
 src.manual = "2019.4.31f1"
 
+[unity-vrc-2019-lang-ja]
+fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/ja"
+src.manual = "2019.4.31f1"
+
+[unity-vrc-2019-lang-ko]
+fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/ko"
+src.manual = "2019.4.31f1"
+
+[unity-vrc-2019-lang-zh-hans]
+fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hans"
+src.manual = "2019.4.31f1"
+
+[unity-vrc-2019-lang-zh-hant]
+fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hant"
+src.manual = "2019.4.31f1"
+
 [unity-vrc-2019-windows]
 fetch.url = "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2019.4.31f1.pkg"
 src.manual = "2019.4.31f1"
@@ -54,8 +70,20 @@ src.manual = "2022.3.22f1"
 fetch.url = "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.22f1.tar.xz"
 src.manual = "2022.3.22f1"
 
-[unity-vrc-2022-windows]
-fetch.url = "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.22f1.pkg"
+[unity-vrc-2022-lang-ja]
+fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ja"
+src.manual = "2022.3.22f1"
+
+[unity-vrc-2022-lang-ko]
+fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ko"
+src.manual = "2022.3.22f1"
+
+[unity-vrc-2022-lang-zh-hans]
+fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hans"
+src.manual = "2022.3.22f1"
+
+[unity-vrc-2022-lang-zh-hant]
+fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hant"
 src.manual = "2022.3.22f1"
 
 [unity-vrc-2022-old-android]
@@ -73,6 +101,10 @@ src.manual = "2022.3.6f1"
 [unity-vrc-2022-old-windows]
 fetch.url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.6f1.pkg"
 src.manual = "2022.3.6f1"
+
+[unity-vrc-2022-windows]
+fetch.url = "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.22f1.pkg"
+src.manual = "2022.3.22f1"
 
 [walland]
 fetch.github = "Golim/walland"
