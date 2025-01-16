@@ -96,6 +96,7 @@ rustPlatform.buildRustPackage {
     inherit (dotnet-build) fetch-deps;
   };
   patches = [
+    ./delete-create-updater-artifacts.patch
     ./delete-get-commit-hash.patch
     ./fix-headless-unityhub-args.patch
   ];
