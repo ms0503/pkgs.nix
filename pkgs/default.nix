@@ -22,6 +22,11 @@ rec {
     npmHash = "sha256-jg0F7V59pvONPNQGqbt+lIFZwK+OE248hiUe+Of4eFg=";
     source = sources.alcom;
   };
+  blender3 = callPackage ./blender3 {
+    assetsHash = "sha256-C+4ewC4BTbyUp/EV8eqKgJSXMz5cRFOY1NBR3xO93rE=";
+    sourceHash = "sha256-ysP42g7OFuvB1leAuWfyUxHL/yZXx4TdlGDCrsT4lnw=";
+    version = "3.6.19";
+  };
   microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
   noto-fonts-cjk-sans-non-variable = callPackage ./noto-fonts-cjk-sans-non-variable {
     source = sources.noto-cjk-sans;

@@ -10,6 +10,11 @@ nixpkgs.
     Experimental GUI application to manage VRChat Unity Projects
   - Source:
     [github:vrc-get/vrc-get][vrc-get]
+- blender3
+  - Description:
+    3D Creation/Animation/Publishing System
+  - Inherit:
+    [nixpkgs]
 - microsoft-edge-dev
   - Description:
     Web browser from Microsoft, weekly build
@@ -48,6 +53,7 @@ nixpkgs.
     [github:tats-u/zifu][zifu]
 
 [infozip]: https://sourceforge.net/projects/infozip
+[nixpkgs]: https://github.com/NixOS/nixpkgs
 [proton-ge-rtsp]: https://github.com/SpookySkeletons/proton-ge-rtsp
 [vrc-get]: https://github.com/vrc-get/vrc-get
 [walland]: https://github.com/Golim/walland
