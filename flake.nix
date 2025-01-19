@@ -5,9 +5,13 @@
       url = "github:nix-community/fenix";
     };
     flake-compat.url = "github:edolstra/flake-compat";
+    flake-parts = {
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+      url = "github:hercules-ci/flake-parts";
+    };
     git-hooks = {
       inputs = {
-        flake-compat.follows = "flake-compat";
+        flake-compat.follows = "";
         nixpkgs.follows = "nixpkgs";
       };
       url = "github:cachix/git-hooks.nix";
@@ -19,81 +23,21 @@
     };
   };
   outputs =
-    {
+    inputs@{
       fenix,
+      flake-parts,
       git-hooks,
       nixpkgs,
-      self,
       treefmt-nix,
       ...
     }:
-    let
-      allSystems = [
-        "aarch64-darwin"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "x86_64-linux"
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        git-hooks.flakeModule
+        treefmt-nix.flakeModule
       ];
-      forAllSystems = nixpkgs.lib.genAttrs allSystems;
-    in
-    {
-      checks = forAllSystems (
-        system:
-        let
-          pkgs = import nixpkgs { inherit system; };
-          treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
-        in
-        {
-          formatting = treefmtEval.config.build.check self;
-          pre-commit-check = git-hooks.lib.${system}.run {
-            hooks = {
-              actionlint.enable = true;
-              check-json.enable = true;
-              check-toml.enable = true;
-              editorconfig-checker = {
-                enable = true;
-                excludes = [
-                  "_sources"
-                  "flake.lock"
-                  "pkgs/alcom/deps.json"
-                ];
-              };
-              markdownlint.enable = true;
-              yamlfmt.enable = true;
-              yamllint.enable = true;
-            };
-            src = ./.;
-          };
-        }
-      );
-      devShells = forAllSystems (
-        system:
-        let
-          packages =
-            preCommitCheck.enabledPackages
-            ++ (with pkgs; [
-              nvfetcher
-            ]);
-          pkgs = import nixpkgs { inherit system; };
-          preCommitCheck = self.checks.${system}.pre-commit-check;
-        in
-        {
-          default = pkgs.mkShell {
-            inherit packages;
-            inherit (preCommitCheck) shellHook;
-          };
-        }
-      );
-      formatter = forAllSystems (
-        system:
-        let
-          pkgs = import nixpkgs { inherit system; };
-          treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
-        in
-        treefmtEval.config.build.wrapper
-      );
-      packages = forAllSystems (
-        system:
+      perSystem =
+        { system, ... }:
         let
           pkgs = import nixpkgs {
             inherit system;
@@ -103,7 +47,47 @@
             ];
           };
         in
-        import ./pkgs pkgs
-      );
+        {
+          _module.args.pkgs = pkgs;
+          devShells.default =
+            let
+              packages = with pkgs; [
+                nvfetcher
+              ];
+            in
+            pkgs.mkShell {
+              inherit packages;
+            };
+          packages = import ./pkgs pkgs;
+          pre-commit = {
+            check.enable = true;
+            settings = {
+              hooks = {
+                actionlint.enable = true;
+                check-json.enable = true;
+                check-toml.enable = true;
+                editorconfig-checker = {
+                  enable = true;
+                  excludes = [
+                    "_sources"
+                    "flake.lock"
+                    "pkgs/alcom/deps.json"
+                  ];
+                };
+                markdownlint.enable = true;
+                yamlfmt.enable = true;
+                yamllint.enable = true;
+              };
+              src = ./.;
+            };
+          };
+          treefmt = import ./treefmt.nix;
+        };
+      systems = [
+        "aarch64-darwin"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "x86_64-linux"
+      ];
     };
 }
