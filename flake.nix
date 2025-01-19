@@ -37,7 +37,7 @@
         treefmt-nix.flakeModule
       ];
       perSystem =
-        { system, ... }:
+        { config, system, ... }:
         let
           pkgs = import nixpkgs {
             inherit system;
@@ -57,6 +57,9 @@
             in
             pkgs.mkShell {
               inherit packages;
+              shellHook = ''
+                ${config.pre-commit.installationScript}
+              '';
             };
           packages = import ./pkgs pkgs;
           pre-commit = {
