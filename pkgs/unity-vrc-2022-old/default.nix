@@ -1,5 +1,6 @@
 {
   cpio,
+  fetchurl,
   gcc,
   gdk-pixbuf,
   glib,
@@ -10,7 +11,6 @@
   makeDesktopItem,
   noto-fonts-cjk-sans-non-variable,
   p7zip,
-  sources,
   stdenvNoCC,
   udev,
   xorg,
@@ -21,6 +21,44 @@ let
     exec = "${unity}/opt/Unity/2022.3.6f1/Editor/Unity";
     icon = "unity-vrc-2022-old";
     name = "unity-vrc-2022-old";
+  };
+  sources = {
+    android.src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2022.3.6f1.pkg";
+      sha256 = "sha256-WrSVIDtVQLrJ7JSKymOECfcwFzaxSZ0litC7MVT7GG0=";
+    };
+    editor = {
+      pname = "unity-vrc-2022-old-editor";
+      version = "2022.3.6f1";
+      src = fetchurl {
+        url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/LinuxEditorInstaller/Unity.tar.xz";
+        sha256 = "sha256-30hLUjxy8YyxfGBZzNkR9aDeTgBqBjHWRqF4vpIomBo=";
+      };
+    };
+    ios.src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.6f1.tar.xz";
+      sha256 = "sha256-knAs3KcCPPcnQOCgPzOS6lV0sT1FIpf5wT9ym0Ltnrs=";
+    };
+    ja.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ja";
+      sha256 = "sha256-ASOiiuIMSLQX5xFfM+VGHz+G9c6+DAC2DDzikRl69YI=";
+    };
+    ko.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ko";
+      sha256 = "sha256-eFn6vorKnpaulkL2emKtRVizxVvEUJf/wXQtQo/cagI=";
+    };
+    windows.src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.6f1.pkg";
+      sha256 = "sha256-YOZcaPDPf34dPftSNt3ku5oBGeSmvClTlx7RELc0xSY=";
+    };
+    zh-hans.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hans";
+      sha256 = "sha256-FKrlo5ShrNXbwSKzqeHk+rVdtUAq+kcEE/f9zvRn8cU=";
+    };
+    zh-hant.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hant";
+      sha256 = "sha256-DzC5gE3xi/vhAm5dduqw+4EPFpAGfSiiFxY3nAv70Tw=";
+    };
   };
   unity = stdenvNoCC.mkDerivation {
     inherit (sources.editor) version;

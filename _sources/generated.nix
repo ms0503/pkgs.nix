@@ -12,6 +12,18 @@
       sha256 = "sha256-bfpDb/V/SfVaT4OBSrONpzwYn6Sh6gP2iDZsr/wX2Pw=";
     };
   };
+  git-vrc = {
+    pname = "git-vrc";
+    version = "601fe2881631542b263501b52ac01dad99dc6ede";
+    src = fetchFromGitHub {
+      owner = "anatawa12";
+      repo = "git-vrc";
+      rev = "601fe2881631542b263501b52ac01dad99dc6ede";
+      fetchSubmodules = false;
+      sha256 = "sha256-KKioKfZFPj/LNAeh1zhDCb9L4d+4Av0Sb+OnTRrNYVY=";
+    };
+    date = "2024-06-19";
+  };
   noto-cjk-sans = {
     pname = "noto-cjk-sans";
     version = "2.004";
@@ -30,10 +42,10 @@
   };
   noto-fonts = {
     pname = "noto-fonts";
-    version = "2025.01.01";
+    version = "2025.02.01";
     src = fetchurl {
-      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.01.01.tar.gz";
-      sha256 = "sha256-AiT5jIbh3qobK4tKqj6cY2Z8AgR0uyXdnl6+TNZirQM=";
+      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.02.01.tar.gz";
+      sha256 = "sha256-AMtx28WVSR8w9V0lG4HaVdpMeIfzaFLklLRsEplY04M=";
     };
   };
   proton-ge-rtsp-bin = {
@@ -42,166 +54,6 @@
     src = fetchurl {
       url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17/GE-Proton9-22-rtsp17.tar.gz";
       sha256 = "sha256-lk51oeLkBjBJ8NFVAmAxHihXCGS0eKczoYUrPan5pQs=";
-    };
-  };
-  unity-vrc-2019-android = {
-    pname = "unity-vrc-2019-android";
-    version = "2019.4.31f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2019.4.31f1.pkg";
-      sha256 = "sha256-+2SHixQ5n9hPXKajvA3o3/gBe5Kb/ZCqT8Wglm/nNCU=";
-    };
-  };
-  unity-vrc-2019-editor = {
-    pname = "unity-vrc-2019-editor";
-    version = "2019.4.31f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorInstaller/Unity.tar.xz";
-      sha256 = "sha256-oReUsK9+tHda9ij9VwPhJtEnCGGJj1NFgPU3Jd/vODM=";
-    };
-  };
-  unity-vrc-2019-ios = {
-    pname = "unity-vrc-2019-ios";
-    version = "2019.4.31f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2019.4.31f1.tar.xz";
-      sha256 = "sha256-sJnz9TmYn3LJT9jqIEzqTewXYtic8OY+LZfSqG38Egw=";
-    };
-  };
-  unity-vrc-2019-lang-ja = {
-    pname = "unity-vrc-2019-lang-ja";
-    version = "2019.4.31f1";
-    src = fetchurl {
-      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/ja";
-      sha256 = "sha256-Zvvx0Z7RZqZFZcXtcsnR6K0Zs6rn8Yl4x0Rw/rlmpSM=";
-    };
-  };
-  unity-vrc-2019-lang-ko = {
-    pname = "unity-vrc-2019-lang-ko";
-    version = "2019.4.31f1";
-    src = fetchurl {
-      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/ko";
-      sha256 = "sha256-duHTZoAKl1OkboKO8yCZisiJSZ0mnwcprq5FHfa6Us8=";
-    };
-  };
-  unity-vrc-2019-lang-zh-hans = {
-    pname = "unity-vrc-2019-lang-zh-hans";
-    version = "2019.4.31f1";
-    src = fetchurl {
-      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hans";
-      sha256 = "sha256-MvpsANmIsSQkB32sk55YA+5ZfedJ9s2OImdd0pCS79Q=";
-    };
-  };
-  unity-vrc-2019-lang-zh-hant = {
-    pname = "unity-vrc-2019-lang-zh-hant";
-    version = "2019.4.31f1";
-    src = fetchurl {
-      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hant";
-      sha256 = "sha256-wzwRHBSJfShLvHnl7SurM+4fsve8pXUgZAW8LekQJpg=";
-    };
-  };
-  unity-vrc-2019-windows = {
-    pname = "unity-vrc-2019-windows";
-    version = "2019.4.31f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2019.4.31f1.pkg";
-      sha256 = "sha256-x71ewXl2aJhiAq7HDsbM48Z2Lhwot4Lzz6gnkgUKJWg=";
-    };
-  };
-  unity-vrc-2022-android = {
-    pname = "unity-vrc-2022-android";
-    version = "2022.3.22f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2022.3.22f1.pkg";
-      sha256 = "sha256-Vqk8HgnFsUzjLvjIhIdJTLFHpyE6UDhwR7hN7/Jjpak=";
-    };
-  };
-  unity-vrc-2022-editor = {
-    pname = "unity-vrc-2022-editor";
-    version = "2022.3.22f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorInstaller/Unity.tar.xz";
-      sha256 = "sha256-eE//d2kFHA9p7bA52NCUMeeuQASmSh20QDcJ3biKpQY=";
-    };
-  };
-  unity-vrc-2022-ios = {
-    pname = "unity-vrc-2022-ios";
-    version = "2022.3.22f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.22f1.tar.xz";
-      sha256 = "sha256-gKMWWq6kEpvZ3xWrWhkYHpohLLVhcCh324I5TKwkVT4=";
-    };
-  };
-  unity-vrc-2022-lang-ja = {
-    pname = "unity-vrc-2022-lang-ja";
-    version = "2022.3.22f1";
-    src = fetchurl {
-      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ja";
-      sha256 = "sha256-ASOiiuIMSLQX5xFfM+VGHz+G9c6+DAC2DDzikRl69YI=";
-    };
-  };
-  unity-vrc-2022-lang-ko = {
-    pname = "unity-vrc-2022-lang-ko";
-    version = "2022.3.22f1";
-    src = fetchurl {
-      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ko";
-      sha256 = "sha256-eFn6vorKnpaulkL2emKtRVizxVvEUJf/wXQtQo/cagI=";
-    };
-  };
-  unity-vrc-2022-lang-zh-hans = {
-    pname = "unity-vrc-2022-lang-zh-hans";
-    version = "2022.3.22f1";
-    src = fetchurl {
-      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hans";
-      sha256 = "sha256-FKrlo5ShrNXbwSKzqeHk+rVdtUAq+kcEE/f9zvRn8cU=";
-    };
-  };
-  unity-vrc-2022-lang-zh-hant = {
-    pname = "unity-vrc-2022-lang-zh-hant";
-    version = "2022.3.22f1";
-    src = fetchurl {
-      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hant";
-      sha256 = "sha256-DzC5gE3xi/vhAm5dduqw+4EPFpAGfSiiFxY3nAv70Tw=";
-    };
-  };
-  unity-vrc-2022-old-android = {
-    pname = "unity-vrc-2022-old-android";
-    version = "2022.3.6f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2022.3.6f1.pkg";
-      sha256 = "sha256-WrSVIDtVQLrJ7JSKymOECfcwFzaxSZ0litC7MVT7GG0=";
-    };
-  };
-  unity-vrc-2022-old-editor = {
-    pname = "unity-vrc-2022-old-editor";
-    version = "2022.3.6f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/LinuxEditorInstaller/Unity.tar.xz";
-      sha256 = "sha256-30hLUjxy8YyxfGBZzNkR9aDeTgBqBjHWRqF4vpIomBo=";
-    };
-  };
-  unity-vrc-2022-old-ios = {
-    pname = "unity-vrc-2022-old-ios";
-    version = "2022.3.6f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.6f1.tar.xz";
-      sha256 = "sha256-knAs3KcCPPcnQOCgPzOS6lV0sT1FIpf5wT9ym0Ltnrs=";
-    };
-  };
-  unity-vrc-2022-old-windows = {
-    pname = "unity-vrc-2022-old-windows";
-    version = "2022.3.6f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.6f1.pkg";
-      sha256 = "sha256-YOZcaPDPf34dPftSNt3ku5oBGeSmvClTlx7RELc0xSY=";
-    };
-  };
-  unity-vrc-2022-windows = {
-    pname = "unity-vrc-2022-windows";
-    version = "2022.3.22f1";
-    src = fetchurl {
-      url = "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.22f1.pkg";
-      sha256 = "sha256-iBGBpsg3IwooTqQSC/y14qq5QLuQEOvftQ07iGXCBZ0=";
     };
   };
   walland = {
