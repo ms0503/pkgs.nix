@@ -28,7 +28,7 @@ rec {
     version = "3.6.19";
   };
   git-vrc = callPackage ./git-vrc {
-    cargoHash = "sha256-MImKIdRZ0xNqmpmqukFQiSCty8V6DRP+P2fCHULTxJI=";
+    cargoHash = "sha256-SPnqrHsrQ5RIL+WzE3/hcuX6R3QF5KZmOGPmFNkBpZc=";
     source = sources.git-vrc;
   };
   microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
