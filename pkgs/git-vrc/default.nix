@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage {
     description = "A command line extension for git to reduce meaningless diff on git of VRC project";
     downloadPage = "https://github.com/anatawa12/git-vrc";
     license = with lib.licenses; [
-      apache
+      asl20
       mit
     ];
     sourceProvenance = with lib.sourceTypes; [
