@@ -19,8 +19,8 @@
       owner = "anatawa12";
       repo = "git-vrc";
       rev = "601fe2881631542b263501b52ac01dad99dc6ede";
-      fetchSubmodules = false;
-      sha256 = "sha256-KKioKfZFPj/LNAeh1zhDCb9L4d+4Av0Sb+OnTRrNYVY=";
+      fetchSubmodules = true;
+      sha256 = "sha256-zR8yau7K4QZLjZ/MsqC7UwrGklr4QC+fPJTHRQ451uI=";
     };
     date = "2024-06-19";
   };

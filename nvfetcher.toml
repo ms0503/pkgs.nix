@@ -7,6 +7,7 @@ src.include_regex = "gui-v.*"
 
 [git-vrc]
 fetch.github = "anatawa12/git-vrc"
+git.fetchSubmodules = true
 src.branch = "master"
 src.git = "https://github.com/anatawa12/git-vrc.git"
 
