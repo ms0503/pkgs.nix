@@ -27,6 +27,10 @@ rec {
     sourceHash = "sha256-ysP42g7OFuvB1leAuWfyUxHL/yZXx4TdlGDCrsT4lnw=";
     version = "3.6.19";
   };
+  git-vrc = callPackage ./git-vrc {
+    cargoHash = "sha256-MImKIdRZ0xNqmpmqukFQiSCty8V6DRP+P2fCHULTxJI=";
+    source = sources.git-vrc;
+  };
   microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
   noto-fonts-cjk-sans-non-variable = callPackage ./noto-fonts-cjk-sans-non-variable {
     source = sources.noto-cjk-sans;
@@ -42,42 +46,12 @@ rec {
   };
   unity-vrc-2019 = callPackage ./unity-vrc-2019 {
     inherit noto-fonts-cjk-sans-non-variable;
-    sources = {
-      android = sources.unity-vrc-2019-android;
-      editor = sources.unity-vrc-2019-editor;
-      ios = sources.unity-vrc-2019-ios;
-      ja = sources.unity-vrc-2019-lang-ja;
-      ko = sources.unity-vrc-2019-lang-ko;
-      windows = sources.unity-vrc-2019-windows;
-      zh-hans = sources.unity-vrc-2019-lang-zh-hans;
-      zh-hant = sources.unity-vrc-2019-lang-zh-hant;
-    };
   };
   unity-vrc-2022 = callPackage ./unity-vrc-2022 {
     inherit noto-fonts-cjk-sans-non-variable;
-    sources = {
-      android = sources.unity-vrc-2022-android;
-      editor = sources.unity-vrc-2022-editor;
-      ios = sources.unity-vrc-2022-ios;
-      ja = sources.unity-vrc-2022-lang-ja;
-      ko = sources.unity-vrc-2022-lang-ko;
-      windows = sources.unity-vrc-2022-windows;
-      zh-hans = sources.unity-vrc-2022-lang-zh-hans;
-      zh-hant = sources.unity-vrc-2022-lang-zh-hant;
-    };
   };
   unity-vrc-2022-old = callPackage ./unity-vrc-2022-old {
     inherit noto-fonts-cjk-sans-non-variable;
-    sources = {
-      android = sources.unity-vrc-2022-old-android;
-      editor = sources.unity-vrc-2022-old-editor;
-      ios = sources.unity-vrc-2022-old-ios;
-      ja = sources.unity-vrc-2022-lang-ja;
-      ko = sources.unity-vrc-2022-lang-ko;
-      windows = sources.unity-vrc-2022-old-windows;
-      zh-hans = sources.unity-vrc-2022-lang-zh-hans;
-      zh-hant = sources.unity-vrc-2022-lang-zh-hant;
-    };
   };
   unzip-unicode = callPackage ./unzip-unicode { };
   urxvt-wrapper = callPackage ./urxvt-wrapper { };

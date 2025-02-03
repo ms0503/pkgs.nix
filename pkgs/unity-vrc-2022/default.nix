@@ -1,5 +1,6 @@
 {
   cpio,
+  fetchurl,
   gcc,
   gdk-pixbuf,
   glib,
@@ -10,7 +11,6 @@
   makeDesktopItem,
   noto-fonts-cjk-sans-non-variable,
   p7zip,
-  sources,
   stdenvNoCC,
   udev,
   xorg,
@@ -21,6 +21,44 @@ let
     exec = "${unity}/opt/Unity/2022.3.22f1/Editor/Unity";
     icon = "unity-vrc-2022";
     name = "unity-vrc-2022";
+  };
+  sources = {
+    android.src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2022.3.22f1.pkg";
+      sha256 = "sha256-Vqk8HgnFsUzjLvjIhIdJTLFHpyE6UDhwR7hN7/Jjpak=";
+    };
+    editor = {
+      pname = "unity-vrc-2022-editor";
+      version = "2022.3.22f1";
+      src = fetchurl {
+        url = "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorInstaller/Unity.tar.xz";
+        sha256 = "sha256-eE//d2kFHA9p7bA52NCUMeeuQASmSh20QDcJ3biKpQY=";
+      };
+    };
+    ios.src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.22f1.tar.xz";
+      sha256 = "sha256-gKMWWq6kEpvZ3xWrWhkYHpohLLVhcCh324I5TKwkVT4=";
+    };
+    ja.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ja";
+      sha256 = "sha256-ASOiiuIMSLQX5xFfM+VGHz+G9c6+DAC2DDzikRl69YI=";
+    };
+    ko.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ko";
+      sha256 = "sha256-eFn6vorKnpaulkL2emKtRVizxVvEUJf/wXQtQo/cagI=";
+    };
+    windows.src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.22f1.pkg";
+      sha256 = "sha256-iBGBpsg3IwooTqQSC/y14qq5QLuQEOvftQ07iGXCBZ0=";
+    };
+    zh-hans.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hans";
+      sha256 = "sha256-FKrlo5ShrNXbwSKzqeHk+rVdtUAq+kcEE/f9zvRn8cU=";
+    };
+    zh-hant.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hant";
+      sha256 = "sha256-DzC5gE3xi/vhAm5dduqw+4EPFpAGfSiiFxY3nAv70Tw=";
+    };
   };
   unity = stdenvNoCC.mkDerivation {
     inherit (sources.editor) version;

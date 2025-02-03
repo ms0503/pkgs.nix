@@ -6,6 +6,7 @@
   cups,
   dbus,
   expat,
+  fetchurl,
   fontconfig,
   freetype,
   gcc,
@@ -22,7 +23,6 @@
   nss,
   p7zip,
   pango,
-  sources,
   stdenvNoCC,
   xorg,
 }:
@@ -32,6 +32,44 @@ let
     exec = "${unity}/opt/Unity/2019.4.31f1/Editor/Unity";
     icon = "unity-vrc-2019";
     name = "unity-vrc-2019";
+  };
+  sources = {
+    android.src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2019.4.31f1.pkg";
+      sha256 = "sha256-+2SHixQ5n9hPXKajvA3o3/gBe5Kb/ZCqT8Wglm/nNCU=";
+    };
+    editor = {
+      pname = "unity-vrc-2019-editor";
+      version = "2019.4.31f1";
+      src = fetchurl {
+        url = "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorInstaller/Unity.tar.xz";
+        sha256 = "sha256-oReUsK9+tHda9ij9VwPhJtEnCGGJj1NFgPU3Jd/vODM=";
+      };
+    };
+    ios.src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2019.4.31f1.tar.xz";
+      sha256 = "sha256-sJnz9TmYn3LJT9jqIEzqTewXYtic8OY+LZfSqG38Egw=";
+    };
+    ja.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/ja";
+      sha256 = "sha256-Zvvx0Z7RZqZFZcXtcsnR6K0Zs6rn8Yl4x0Rw/rlmpSM=";
+    };
+    ko.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/ko";
+      sha256 = "sha256-duHTZoAKl1OkboKO8yCZisiJSZ0mnwcprq5FHfa6Us8=";
+    };
+    windows.src = fetchurl {
+      url = "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2019.4.31f1.pkg";
+      sha256 = "sha256-x71ewXl2aJhiAq7HDsbM48Z2Lhwot4Lzz6gnkgUKJWg=";
+    };
+    zh-hans.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hans";
+      sha256 = "sha256-MvpsANmIsSQkB32sk55YA+5ZfedJ9s2OImdd0pCS79Q=";
+    };
+    zh-hant.src = fetchurl {
+      url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hant";
+      sha256 = "sha256-wzwRHBSJfShLvHnl7SurM+4fsve8pXUgZAW8LekQJpg=";
+    };
   };
   unity = stdenvNoCC.mkDerivation {
     inherit (sources.editor) version;

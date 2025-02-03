@@ -5,6 +5,11 @@ src.exclude_regex = ".*beta.*"
 src.github_tag = "vrc-get/vrc-get"
 src.include_regex = "gui-v.*"
 
+[git-vrc]
+fetch.github = "anatawa12/git-vrc"
+src.branch = "master"
+src.git = "https://github.com/anatawa12/git-vrc.git"
+
 [noto-cjk-sans]
 fetch.url = "https://github.com/notofonts/noto-cjk/releases/download/Sans$ver/03_NotoSansCJK-OTC.zip"
 src.github_tag = "notofonts/noto-cjk"
@@ -25,86 +30,6 @@ src.prefix = "noto-monthly-release-"
 [proton-ge-rtsp-bin]
 fetch.url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/$ver/$ver.tar.gz"
 src.github = "SpookySkeletons/proton-ge-rtsp"
-
-[unity-vrc-2019-android]
-fetch.url = "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2019.4.31f1.pkg"
-src.manual = "2019.4.31f1"
-
-[unity-vrc-2019-editor]
-fetch.url = "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorInstaller/Unity.tar.xz"
-src.manual = "2019.4.31f1"
-
-[unity-vrc-2019-ios]
-fetch.url = "https://netstorage.unity3d.com/unity/bd5abf232a62/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2019.4.31f1.tar.xz"
-src.manual = "2019.4.31f1"
-
-[unity-vrc-2019-lang-ja]
-fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/ja"
-src.manual = "2019.4.31f1"
-
-[unity-vrc-2019-lang-ko]
-fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/ko"
-src.manual = "2019.4.31f1"
-
-[unity-vrc-2019-lang-zh-hans]
-fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hans"
-src.manual = "2019.4.31f1"
-
-[unity-vrc-2019-lang-zh-hant]
-fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2019.4/zh-hant"
-src.manual = "2019.4.31f1"
-
-[unity-vrc-2019-windows]
-fetch.url = "https://netstorage.unity3d.com/unity/bd5abf232a62/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2019.4.31f1.pkg"
-src.manual = "2019.4.31f1"
-
-[unity-vrc-2022-android]
-fetch.url = "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2022.3.22f1.pkg"
-src.manual = "2022.3.22f1"
-
-[unity-vrc-2022-editor]
-fetch.url = "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorInstaller/Unity.tar.xz"
-src.manual = "2022.3.22f1"
-
-[unity-vrc-2022-ios]
-fetch.url = "https://netstorage.unity3d.com/unity/887be4894c44/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.22f1.tar.xz"
-src.manual = "2022.3.22f1"
-
-[unity-vrc-2022-lang-ja]
-fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ja"
-src.manual = "2022.3.22f1"
-
-[unity-vrc-2022-lang-ko]
-fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/ko"
-src.manual = "2022.3.22f1"
-
-[unity-vrc-2022-lang-zh-hans]
-fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hans"
-src.manual = "2022.3.22f1"
-
-[unity-vrc-2022-lang-zh-hant]
-fetch.url = "https://new-translate.unity3d.jp/v1/live/54/2022.3/zh-hant"
-src.manual = "2022.3.22f1"
-
-[unity-vrc-2022-old-android]
-fetch.url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2022.3.6f1.pkg"
-src.manual = "2022.3.6f1"
-
-[unity-vrc-2022-old-editor]
-fetch.url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/LinuxEditorInstaller/Unity.tar.xz"
-src.manual = "2022.3.6f1"
-
-[unity-vrc-2022-old-ios]
-fetch.url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2022.3.6f1.tar.xz"
-src.manual = "2022.3.6f1"
-
-[unity-vrc-2022-old-windows]
-fetch.url = "https://netstorage.unity3d.com/unity/b9e6e7e9fa2d/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.6f1.pkg"
-src.manual = "2022.3.6f1"
-
-[unity-vrc-2022-windows]
-fetch.url = "https://netstorage.unity3d.com/unity/887be4894c44/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2022.3.22f1.pkg"
-src.manual = "2022.3.22f1"
 
 [walland]
 fetch.github = "Golim/walland"
