@@ -13,12 +13,12 @@
             "name": null,
             "owner": "vrc-get",
             "repo": "vrc-get",
-            "rev": "gui-v1.0.0",
-            "sha256": "sha256-bfpDb/V/SfVaT4OBSrONpzwYn6Sh6gP2iDZsr/wX2Pw=",
+            "rev": "gui-v1.0.1",
+            "sha256": "sha256-cOx7X3xfTBYpXhv1zIRStaIpyGWSp+d7qzdJLGzXtDY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "gui-v1.0.0"
+        "version": "gui-v1.0.1"
     },
     "git-vrc": {
         "cargoLocks": null,
