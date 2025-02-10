@@ -1,6 +1,7 @@
 [alcom]
 fetch.github = "vrc-get/vrc-get"
 git.fetchSubmodules = true
+git.leaveDotGit = true
 src.exclude_regex = ".*beta.*"
 src.github_tag = "vrc-get/vrc-get"
 src.include_regex = "gui-v.*"

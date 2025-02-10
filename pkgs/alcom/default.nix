@@ -5,6 +5,7 @@
   cargoHash,
   dotnetCorePackages,
   fetchNpmDeps,
+  git,
   glib-networking,
   google-fonts,
   lib,
@@ -81,6 +82,7 @@ rustPlatform.buildRustPackage {
     cargo-about
     cargo-tauri.hook
     dotnet-sdk
+    git
     nodePackages.npm
     nodejs-slim
     npmHooks.npmConfigHook
@@ -97,7 +99,6 @@ rustPlatform.buildRustPackage {
   };
   patches = [
     ./delete-create-updater-artifacts.patch
-    ./delete-get-commit-hash.patch
     ./fix-headless-unityhub-args.patch
   ];
   postPatch = ''
@@ -109,4 +110,5 @@ rustPlatform.buildRustPackage {
       -p:ContinuousIntegrationBuild=true \
       -p:Deterministic=true
   '';
+  useFetchCargoVendor = true;
 }
