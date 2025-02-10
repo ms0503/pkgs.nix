@@ -27,11 +27,15 @@ rec {
     sourceHash = "sha256-ysP42g7OFuvB1leAuWfyUxHL/yZXx4TdlGDCrsT4lnw=";
     version = "3.6.19";
   };
+  discord-canary-wayland = callPackage ./discord-canary-wayland { };
   git-vrc = callPackage ./git-vrc {
     cargoHash = "sha256-SPnqrHsrQ5RIL+WzE3/hcuX6R3QF5KZmOGPmFNkBpZc=";
     source = sources.git-vrc;
   };
   microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
+  microsoft-edge-dev-wayland = callPackage ./microsoft-edge-dev-wayland {
+    inherit microsoft-edge-dev;
+  };
   noto-fonts-cjk-sans-non-variable = callPackage ./noto-fonts-cjk-sans-non-variable {
     source = sources.noto-cjk-sans;
   };
@@ -44,10 +48,12 @@ rec {
   proton-ge-rtsp-bin = callPackage ./proton-ge-rtsp-bin {
     source = sources.proton-ge-rtsp-bin;
   };
+  slack-wayland = callPackage ./slack-wayland { };
   spotify-tui = callPackage ./spotify-tui {
     cargoHash = "sha256-iucI4/iMF+uXRlnMttobu4xo3IQXq7tGiSSN8eCrLM0=";
     source = sources.spotify-tui;
   };
+  spotify-wayland = callPackage ./spotify-wayland { };
   unity-vrc-2019 = callPackage ./unity-vrc-2019 {
     inherit noto-fonts-cjk-sans-non-variable;
   };
