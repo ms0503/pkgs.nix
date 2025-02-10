@@ -36,7 +36,12 @@
         let
           pkgs = import nixpkgs {
             inherit system;
-            config.allowUnfree = true;
+            config = {
+              allowUnfree = true;
+              permittedInsecurePackages = [
+                "openssl-1.1.1w"
+              ];
+            };
           };
         in
         {
@@ -67,6 +72,7 @@
                     "_sources"
                     "flake.lock"
                     "pkgs/alcom/deps.json"
+                    "pkgs/spotify-tui/Cargo.lock"
                   ];
                 };
                 markdownlint.enable = true;

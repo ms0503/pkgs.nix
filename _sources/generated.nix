@@ -56,6 +56,14 @@
       sha256 = "sha256-lk51oeLkBjBJ8NFVAmAxHihXCGS0eKczoYUrPan5pQs=";
     };
   };
+  spotify-tui = {
+    pname = "spotify-tui";
+    version = "0.25.0";
+    src = fetchurl {
+      url = "https://github.com/Rigellute/spotify-tui/archive/refs/tags/v0.25.0.tar.gz";
+      sha256 = "sha256-nW+pmOYlzv+VilNVtDeasWS6dldRQ6e21diutsNtcKc=";
+    };
+  };
   walland = {
     pname = "walland";
     version = "d50ed2b5c76dc6585c629f4d65a819bd53397ab9";
