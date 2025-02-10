@@ -3,13 +3,13 @@
 {
   alcom = {
     pname = "alcom";
-    version = "gui-v1.0.0";
+    version = "gui-v1.0.1";
     src = fetchFromGitHub {
       owner = "vrc-get";
       repo = "vrc-get";
-      rev = "gui-v1.0.0";
+      rev = "gui-v1.0.1";
       fetchSubmodules = true;
-      sha256 = "sha256-bfpDb/V/SfVaT4OBSrONpzwYn6Sh6gP2iDZsr/wX2Pw=";
+      sha256 = "sha256-cOx7X3xfTBYpXhv1zIRStaIpyGWSp+d7qzdJLGzXtDY=";
     };
   };
   git-vrc = {
