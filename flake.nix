@@ -1,9 +1,5 @@
 {
   inputs = {
-    fenix = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/fenix";
-    };
     flake-compat.url = "github:edolstra/flake-compat";
     flake-parts = {
       inputs.nixpkgs-lib.follows = "nixpkgs";
@@ -24,7 +20,6 @@
   };
   outputs =
     inputs@{
-      fenix,
       flake-parts,
       git-hooks,
       nixpkgs,
@@ -42,9 +37,6 @@
           pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
-            overlays = [
-              fenix.overlays.default
-            ];
           };
         in
         {
