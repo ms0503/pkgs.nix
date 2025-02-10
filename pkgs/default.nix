@@ -44,6 +44,10 @@ rec {
   proton-ge-rtsp-bin = callPackage ./proton-ge-rtsp-bin {
     source = sources.proton-ge-rtsp-bin;
   };
+  spotify-tui = callPackage ./spotify-tui {
+    cargoHash = "sha256-iucI4/iMF+uXRlnMttobu4xo3IQXq7tGiSSN8eCrLM0=";
+    source = sources.spotify-tui;
+  };
   unity-vrc-2019 = callPackage ./unity-vrc-2019 {
     inherit noto-fonts-cjk-sans-non-variable;
   };

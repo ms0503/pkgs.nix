@@ -32,6 +32,11 @@ src.prefix = "noto-monthly-release-"
 fetch.url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/$ver/$ver.tar.gz"
 src.github = "SpookySkeletons/proton-ge-rtsp"
 
+[spotify-tui]
+fetch.url = "https://github.com/Rigellute/spotify-tui/archive/refs/tags/v$ver.tar.gz"
+src.github = "Rigellute/spotify-tui"
+src.prefix = "v"
+
 [walland]
 fetch.github = "Golim/walland"
 src.branch = "main"
