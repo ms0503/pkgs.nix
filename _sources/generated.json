@@ -14,7 +14,7 @@
             "owner": "vrc-get",
             "repo": "vrc-get",
             "rev": "gui-v1.0.1",
-            "sha256": "sha256-u+K+p6kbcAJtz6MQWkBqpb4GmJs2JzNfPbBBd6Z+7IM=",
+            "sha256": "sha256-vlytYAtV8NhquFjpIqg2tAL54n0Qu1GNEkHBgRkHLW4=",
             "sparseCheckout": [],
             "type": "github"
         },
@@ -153,4 +153,3 @@
         "version": "1.1.0"
     }
 }
-
