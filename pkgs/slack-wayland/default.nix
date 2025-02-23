@@ -49,5 +49,6 @@ slack.overrideAttrs (
       + ''
         runHook postInstall
       '';
+    pname = prev.pname + "-wayland";
   }
 )
