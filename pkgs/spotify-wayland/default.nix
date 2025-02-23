@@ -1,6 +1,7 @@
 { spotify }:
 spotify.overrideAttrs (
-  _: _: {
+  _: prev: {
+    pname = prev.pname + "-wayland";
     preFixup = ''
       gappsWrapperArgs+=(
         --add-flags "--enable-wayland-ime"
