@@ -15,7 +15,6 @@
             "repo": "vrc-get",
             "rev": "gui-v1.0.1",
             "sha256": "sha256-vlytYAtV8NhquFjpIqg2tAL54n0Qu1GNEkHBgRkHLW4=",
-            "sparseCheckout": [],
             "type": "github"
         },
         "version": "gui-v1.0.1"
@@ -36,7 +35,6 @@
             "repo": "git-vrc",
             "rev": "601fe2881631542b263501b52ac01dad99dc6ede",
             "sha256": "sha256-zR8yau7K4QZLjZ/MsqC7UwrGklr4QC+fPJTHRQ451uI=",
-            "sparseCheckout": [],
             "type": "github"
         },
         "version": "601fe2881631542b263501b52ac01dad99dc6ede"
@@ -132,7 +130,6 @@
             "repo": "walland",
             "rev": "d50ed2b5c76dc6585c629f4d65a819bd53397ab9",
             "sha256": "sha256-x5zaiaPjwa/MHHIwmO4rXZR1Olt4d2QuaBqwk4Hvo8k=",
-            "sparseCheckout": [],
             "type": "github"
         },
         "version": "d50ed2b5c76dc6585c629f4d65a819bd53397ab9"
