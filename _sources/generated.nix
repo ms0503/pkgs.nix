@@ -11,7 +11,6 @@
       fetchSubmodules = true;
       deepClone = false;
       leaveDotGit = true;
-      sparseCheckout = [ ];
       sha256 = "sha256-vlytYAtV8NhquFjpIqg2tAL54n0Qu1GNEkHBgRkHLW4=";
     };
   };
