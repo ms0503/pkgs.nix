@@ -11,7 +11,7 @@
       fetchSubmodules = true;
       deepClone = false;
       leaveDotGit = true;
-      sha256 = "sha256-vlytYAtV8NhquFjpIqg2tAL54n0Qu1GNEkHBgRkHLW4=";
+      sha256 = "sha256-8pJfYx4eUHPPv4AL02YmoF8Pb8Liyz4srJ0DHsJoDm0=";
     };
   };
   git-vrc = {
