@@ -1,6 +1,9 @@
 {
   inputs = {
-    flake-compat.url = "github:edolstra/flake-compat";
+    flake-compat = {
+      flake = false;
+      url = "github:edolstra/flake-compat";
+    };
     flake-parts = {
       inputs.nixpkgs-lib.follows = "nixpkgs";
       url = "github:hercules-ci/flake-parts";
@@ -13,6 +16,10 @@
       url = "github:cachix/git-hooks.nix";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
+    systems = {
+      flake = false;
+      url = "github:nix-systems/default";
+    };
     treefmt-nix = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/treefmt-nix";
@@ -23,6 +30,7 @@
       flake-parts,
       git-hooks,
       nixpkgs,
+      systems,
       treefmt-nix,
       ...
     }:
@@ -84,11 +92,6 @@
           };
           treefmt = import ./treefmt.nix;
         };
-      systems = [
-        "aarch64-darwin"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "x86_64-linux"
-      ];
+      systems = import systems;
     };
 }
