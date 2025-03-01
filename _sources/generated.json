@@ -1,24 +1,4 @@
 {
-    "alcom": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "alcom",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": true,
-            "leaveDotGit": true,
-            "name": null,
-            "owner": "vrc-get",
-            "repo": "vrc-get",
-            "rev": "gui-v1.0.1",
-            "sha256": "sha256-8pJfYx4eUHPPv4AL02YmoF8Pb8Liyz4srJ0DHsJoDm0=",
-            "type": "github"
-        },
-        "version": "gui-v1.0.1"
-    },
     "git-vrc": {
         "cargoLocks": null,
         "date": "2024-06-19",
