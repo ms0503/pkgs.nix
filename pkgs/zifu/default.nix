@@ -16,4 +16,5 @@ rustPlatform.buildRustPackage {
       fromSource
     ];
   };
+  useFetchCargoVendor = true;
 }
