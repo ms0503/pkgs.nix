@@ -42,7 +42,7 @@ let
     };
     discord-canary-wayland = callPackage ./discord-canary-wayland { };
     git-vrc = callPackage ./git-vrc {
-      cargoHash = "sha256-SPnqrHsrQ5RIL+WzE3/hcuX6R3QF5KZmOGPmFNkBpZc=";
+      cargoHash = "sha256-/vO8xkD0uW0kqF8RzvAw2/TAvmDI5N8GZD0f6S6lY+M=";
       source = sources.git-vrc;
     };
     microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
@@ -63,7 +63,6 @@ let
     };
     slack-wayland = callPackage ./slack-wayland { };
     spotify-tui = callPackage ./spotify-tui {
-      cargoHash = "sha256-iucI4/iMF+uXRlnMttobu4xo3IQXq7tGiSSN8eCrLM0=";
       source = sources.spotify-tui;
     };
     spotify-wayland = callPackage ./spotify-wayland { };
@@ -82,7 +81,7 @@ let
       source = sources.walland;
     };
     zifu = callPackage ./zifu {
-      cargoHash = "sha256-mBXXftmwEKq1ClgLwrWzKE5PdV6WnMCso4fso4ANS+k=";
+      cargoHash = "sha256-IjR1uplTbfaX0VGkv1vTtafOTGCLQYd+4yPmj1wuw9Q=";
       source = sources.zifu;
     };
   };

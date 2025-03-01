@@ -15,7 +15,7 @@
       };
       url = "github:cachix/git-hooks.nix";
     };
-    nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     systems = {
       flake = false;
       url = "github:nix-systems/default";

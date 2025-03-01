@@ -1,5 +1,4 @@
 {
-  cargoHash,
   openssl_1_1,
   pkg-config,
   rustPlatform,
@@ -17,4 +16,5 @@ rustPlatform.buildRustPackage {
   nativeBuildInputs = [
     pkg-config
   ];
+  useFetchCargoVendor = true;
 }
