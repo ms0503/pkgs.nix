@@ -4,6 +4,7 @@
   fetchFromGitHub,
   fetchgit,
   fetchurl,
+  git,
   lib,
   linkFarm,
   ...
@@ -13,7 +14,26 @@ let
     alcom = callPackage ./alcom {
       cargoHash = "sha256-Ph6QZW21JYQJgrUecN+MklWuY51iKC2glPEdgxw+3r8=";
       npmHash = "sha256-lWQPBILZn8VGoILfEY2bMxGaBL2ALGbvcT5RqanTNyY=";
-      source = sources.alcom;
+      source =
+        let
+          version = "1.0.1";
+        in
+        {
+          inherit version;
+          pname = "alcom";
+          src = fetchFromGitHub {
+            hash = "sha256-+6BI67exjXvr/P8jgbsyjb7b+oV8Uf5hQVHSVhYQicU=";
+            leaveDotGit = true;
+            owner = "vrc-get";
+            postFetch = ''
+              cd "$out"
+              ${git}/bin/git rev-parse HEAD >commit_hash.txt
+              rm -rf .git
+            '';
+            repo = "vrc-get";
+            rev = "gui-v${version}";
+          };
+        };
     };
     blender3 = callPackage ./blender3 {
       assetsHash = "sha256-C+4ewC4BTbyUp/EV8eqKgJSXMz5cRFOY1NBR3xO93rE=";

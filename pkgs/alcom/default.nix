@@ -22,7 +22,7 @@
   webkitgtk_4_1,
 }:
 let
-  inherit (source) pname src;
+  inherit (source) pname src version;
   dotnet-build = buildDotnetModule {
     inherit
       dotnet-runtime
@@ -45,7 +45,6 @@ let
       "NotoSansJP"
     ];
   };
-  version = builtins.substring 5 ((builtins.stringLength source.version) - 5) source.version;
 in
 rustPlatform.buildRustPackage {
   inherit
@@ -100,7 +99,12 @@ rustPlatform.buildRustPackage {
   patches = [
     ./delete-create-updater-artifacts.patch
     ./fix-headless-unityhub-args.patch
+    ./replace-getting-commit-hash.patch
   ];
+  postFetch = ''
+    ls -lha
+    false
+  '';
   postPatch = ''
     install -Dm444 "${google-fonts'}/share/fonts/truetype/NotoSans[wdth,wght].ttf" vrc-get-gui/app/fonts/noto-sans.ttf
     install -Dm444 "${google-fonts'}/share/fonts/truetype/NotoSansJP[wght].ttf" vrc-get-gui/app/fonts/noto-sans-jp.ttf
