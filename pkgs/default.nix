@@ -80,6 +80,7 @@ let
     walland = callPackage ./walland {
       source = sources.walland;
     };
+    wezimgcat-wrapper = callPackage ./wezimgcat-wrapper { };
     zifu = callPackage ./zifu {
       cargoHash = "sha256-IjR1uplTbfaX0VGkv1vTtafOTGCLQYd+4yPmj1wuw9Q=";
       source = sources.zifu;

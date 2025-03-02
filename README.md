@@ -117,6 +117,11 @@ nixpkgs.
     using hyprpaper or other backends
   - Source:
     [github:Golim/walland]
+- wezimgcat-wrapper
+  - Description:
+    WezTerm's imgcat wrapper for unsupported images
+  - Source:
+    none
 - zifu
   - Description:
     Tool that fixes file names in ZIP archives (make them UTF-8)
