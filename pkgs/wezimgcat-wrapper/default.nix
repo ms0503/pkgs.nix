@@ -3,7 +3,11 @@
   lib,
   rustPlatform,
 }:
+let
+  cargoToml = builtins.fromTOML (builtins.readFile ./Cargo.toml);
+in
 rustPlatform.buildRustPackage {
+  inherit (cargoToml.package) version;
   buildInputs = [
     imagemagick
   ];
@@ -16,8 +20,7 @@ rustPlatform.buildRustPackage {
       fromSource
     ];
   };
-  pname = "wezimgcat-wrapper";
+  pname = cargoToml.package.name;
   src = ./.;
   useFetchCargoVendor = true;
-  version = "0.1.0";
 }
