@@ -1,5 +1,6 @@
 [dependencies]
 regex = "1"
+tempfile = "3"
 
 [dependencies.tokio]
 features = ["full"]
@@ -8,4 +9,4 @@ version = "1"
 [package]
 edition = "2021"
 name = "wezimgcat-wrapper"
-version = "0.1.0"
+version = "0.1.1"
