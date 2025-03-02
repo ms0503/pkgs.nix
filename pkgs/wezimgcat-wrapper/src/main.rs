@@ -10,7 +10,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let supported_suffix_pattern = Regex::new(SUPPORTED_SUFFIX_PATTERN)?;
     let mut args = vec![];
     let mut threads = vec![];
-    for arg in env::args() {
+    for arg in env::args().skip(1) {
         if let Some(filename) = file_pattern.captures(&arg) {
             let (filename, [basename, suffix]) = filename.extract();
             if supported_suffix_pattern.is_match(suffix) {
