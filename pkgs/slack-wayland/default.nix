@@ -49,6 +49,7 @@ slack.overrideAttrs (
       + ''
         runHook postInstall
       '';
+    meta.description = prev.meta.description + ", including Wayland support";
     pname = prev.pname + "-wayland";
   }
 )

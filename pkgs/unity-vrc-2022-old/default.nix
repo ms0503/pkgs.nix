@@ -73,6 +73,7 @@ let
       runHook postInstall
     '';
     meta = {
+      description = "Unity for VRChat (2022.3.6f1)";
       downloadPage = "https://unity.com/releases/editor/whats-new/2022.3.6";
       homepage = "https://unity.com";
       license = lib.licenses.unfree;
