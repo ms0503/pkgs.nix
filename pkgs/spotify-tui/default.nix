@@ -1,4 +1,5 @@
 {
+  lib,
   openssl_1_1,
   pkg-config,
   rustPlatform,
@@ -13,6 +14,16 @@ rustPlatform.buildRustPackage {
   cargoPatches = [
     ./Cargo.lock.patch
   ];
+  meta = {
+    description = "Spotify for the terminal written in Rust 🚀";
+    downloadPage = "https://github.com/Rigellute/spotify-tui/releases";
+    homepage = "https://github.com/Rigellute/spotify-tui";
+    license = lib.licenses.mit;
+    mainProgram = "spt";
+    sourceProvenance = with lib.sourceTypes; [
+      fromSource
+    ];
+  };
   nativeBuildInputs = [
     pkg-config
   ];
