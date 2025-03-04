@@ -14,7 +14,7 @@ let
     ;
 in
 buildPythonApplication {
-  inherit (source) pname src version;
+  inherit (source) pname src;
   build-system = [
     setuptools
   ];
@@ -33,4 +33,5 @@ buildPythonApplication {
   patches = [
     ./add-setup-py.patch
   ];
+  version = source.date;
 }
