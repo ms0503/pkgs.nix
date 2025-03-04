@@ -15,6 +15,7 @@
             "repo": "git-vrc",
             "rev": "601fe2881631542b263501b52ac01dad99dc6ede",
             "sha256": "sha256-zR8yau7K4QZLjZ/MsqC7UwrGklr4QC+fPJTHRQ451uI=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "601fe2881631542b263501b52ac01dad99dc6ede"
@@ -58,11 +59,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-AMtx28WVSR8w9V0lG4HaVdpMeIfzaFLklLRsEplY04M=",
+            "sha256": "sha256-eApDwsT2B6PnGSuI0UAWQLDAQfbC16YxPDAVf1Nnx3E=",
             "type": "url",
-            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.02.01.tar.gz"
+            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.03.01.tar.gz"
         },
-        "version": "2025.02.01"
+        "version": "2025.03.01"
     },
     "proton-ge-rtsp-bin": {
         "cargoLocks": null,
@@ -110,6 +111,7 @@
             "repo": "walland",
             "rev": "d50ed2b5c76dc6585c629f4d65a819bd53397ab9",
             "sha256": "sha256-x5zaiaPjwa/MHHIwmO4rXZR1Olt4d2QuaBqwk4Hvo8k=",
+            "sparseCheckout": [],
             "type": "github"
         },
         "version": "d50ed2b5c76dc6585c629f4d65a819bd53397ab9"
