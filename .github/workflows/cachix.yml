@@ -186,7 +186,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -384,7 +384,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -582,7 +582,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -780,7 +780,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -978,7 +978,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -1176,7 +1176,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -1374,7 +1374,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -1572,7 +1572,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -1770,7 +1770,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -1968,7 +1968,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -2166,7 +2166,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -2364,7 +2364,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -2562,7 +2562,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -2760,7 +2760,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -2958,7 +2958,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -3156,7 +3156,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -3354,7 +3354,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -3552,7 +3552,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -3750,7 +3750,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -3948,7 +3948,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
@@ -4146,7 +4146,7 @@ jobs:
       - uses: "cachix/install-nix-action@v30"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
-          nix_path: "nixpkgs=channel:nixos-24.11"
+          nix_path: "nixpkgs=channel:nixos-unstable"
       - uses: "cachix/cachix-action@v15"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
