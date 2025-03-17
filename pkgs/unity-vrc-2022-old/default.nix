@@ -77,6 +77,7 @@ let
       downloadPage = "https://unity.com/releases/editor/whats-new/2022.3.6";
       homepage = "https://unity.com";
       license = lib.licenses.unfree;
+      mainProgram = "../opt/Unity/2022.3.6f1/Editor/Unity";
       sourceProvenance = with lib.sourceTypes; [
         binaryNativeCode
       ];
