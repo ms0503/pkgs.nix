@@ -14,6 +14,7 @@ rustPlatform.buildRustPackage {
       asl20
       mit
     ];
+    mainProgram = "";
     sourceProvenance = with lib.sourceTypes; [
       fromSource
     ];

@@ -88,6 +88,7 @@ let
       downloadPage = "https://unity.com/releases/editor/whats-new/2019.4.31";
       homepage = "https://unity.com";
       license = lib.licenses.unfree;
+      mainProgram = "../opt/Unity/2019.4.31f1/Editor/Unity";
       sourceProvenance = with lib.sourceTypes; [
         binaryNativeCode
       ];

@@ -41,6 +41,7 @@
   libdrm,
   liberation_ttf,
   libexif,
+  libgbm,
   libglvnd,
   libkrb5,
   libopus,
@@ -110,6 +111,7 @@ let
       libdrm
       liberation_ttf
       libexif
+      libgbm
       libglvnd
       libkrb5
       libpng
@@ -134,13 +136,15 @@ let
     ]
     ++ lib.optional pulseSupport libpulseaudio
     ++ lib.optional libvaSupport libva;
-  dist = "dev";
   opusWithCustomModes = libopus.override { withCustomModes = true; };
-  sha256 = "Zb0pHUU9aqU+UJhSuJ4stgmAxIP+327t06d8Q+3aQs8=";
+  src = fetchurl {
+    hash = "sha256-Zb0pHUU9aqU+UJhSuJ4stgmAxIP+327t06d8Q+3aQs8=";
+    url = "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/microsoft-edge-dev_${version}-1_amd64.deb";
+  };
   version = "133.0.3014.0";
 in
 stdenv.mkDerivation (finalAttrs: {
-  inherit dist version;
+  inherit src version;
   binpath = lib.makeBinPath deps;
   buildInputs = [
     adwaita-icon-theme
@@ -152,9 +156,9 @@ stdenv.mkDerivation (finalAttrs: {
   installPhase = ''
     runHook preInstall
 
-    appname=msedge-$dist
+    appname=msedge-dev
 
-    exe=$out/bin/microsoft-edge-$dist
+    exe=$out/bin/microsoft-edge-dev
 
     mkdir -p "$out/bin" "$out/share"
     cp -v -a opt/* "$out/share"
@@ -164,15 +168,15 @@ stdenv.mkDerivation (finalAttrs: {
     rm -v "$out/share/microsoft/$appname/libvulkan.so.1"
     ln -v -s -t "$out/share/microsoft/$appname" "${lib.getLib vulkan-loader}/lib/libvulkan.so.1"
 
-    substituteInPlace "$out/share/microsoft/$appname/microsoft-edge-$dist" \
+    substituteInPlace "$out/share/microsoft/$appname/microsoft-edge-dev" \
       --replace-fail 'CHROME_WRAPPER' 'WRAPPER'
-    substituteInPlace "$out/share/applications/microsoft-edge-$dist.desktop" \
-      --replace-fail "/usr/bin/microsoft-edge-$dist" "$exe"
-    substituteInPlace "$out/share/gnome-control-center/default-apps/microsoft-edge-$dist.xml" \
-      --replace-fail "/opt/microsoft/$appname/microsoft-edge-$dist" "$exe"
-    substituteInPlace "$out/share/menu/microsoft-edge-$dist.menu" \
+    substituteInPlace "$out/share/applications/microsoft-edge-dev.desktop" \
+      --replace-fail "/usr/bin/microsoft-edge-dev" "$exe"
+    substituteInPlace "$out/share/gnome-control-center/default-apps/microsoft-edge-dev.xml" \
+      --replace-fail "/opt/microsoft/$appname/microsoft-edge-dev" "$exe"
+    substituteInPlace "$out/share/menu/microsoft-edge-dev.menu" \
       --replace-fail /opt "$out/share" \
-      --replace-fail "$out/share/microsoft/$appname/microsoft-edge-$dist" "$exe"
+      --replace-fail "$out/share/microsoft/$appname/microsoft-edge-dev" "$exe"
 
     for icon_file in "$out/share/microsoft/$appname/product_logo_"[0-9][0-9]"_$dist.png"; do
       num_and_suffix=''${icon_file##*logo_}
@@ -180,11 +184,11 @@ stdenv.mkDerivation (finalAttrs: {
       logo_output_prefix=$out/share/icons/hicolor
       logo_output_path=$logo_output_prefix/''${icon_size}x''${icon_size}/apps
       mkdir -p "$logo_output_path"
-      mv "$icon_file" "$logo_output_path/microsoft-edge-$dist.png"
+      mv "$icon_file" "$logo_output_path/microsoft-edge-dev.png"
     done
 
     # "--simulate-outdated-no-au" disables auto updates and browser outdated popup
-    makeWrapper "$out/share/microsoft/$appname/microsoft-edge-$dist" "$exe" \
+    makeWrapper "$out/share/microsoft/$appname/microsoft-edge-dev" "$exe" \
       --prefix LD_LIBRARY_PATH : "$rpath" \
       --prefix PATH            : "$binpath" \
       --suffix PATH            : "${lib.makeBinPath [ xdg-utils ]}" \
@@ -212,7 +216,7 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Web browser from Microsoft, weekly build";
     homepage = "https://www.microsoft.com/en-us/edge";
     license = lib.licenses.unfree;
-    mainProgram = "microsoft-${dist}";
+    mainProgram = "microsoft-edge-dev";
     platforms = [
       "x86_64-linux"
     ];
@@ -225,12 +229,8 @@ stdenv.mkDerivation (finalAttrs: {
     patchelf
   ];
   passthru.updateScript = ./update.py;
-  pname = "microsoft-edge-${dist}";
+  pname = "microsoft-edge-dev";
   rpath = lib.makeLibraryPath deps + ":" + lib.makeSearchPathOutput "lib" "lib64" deps;
-  src = fetchurl {
-    inherit sha256;
-    url = "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-${dist}/microsoft-edge-${dist}_${finalAttrs.version}-1_amd64.deb";
-  };
   strictDeps = false;
   unpackPhase = ''
     runHook preUnpack
