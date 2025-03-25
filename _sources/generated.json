@@ -1,4 +1,25 @@
 {
+    "ds4pairer": {
+        "cargoLocks": null,
+        "date": "2023-03-28",
+        "extract": null,
+        "name": "ds4pairer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "paulstraw",
+            "repo": "ds4pairer",
+            "rev": "24b6f6194e67270e94781c6b1211a4a830735fe9",
+            "sha256": "sha256-JZxEQhl+f2xGK/5nu3+6j/k06SER6u56cF6W9F8SoRY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "24b6f6194e67270e94781c6b1211a4a830735fe9"
+    },
     "git-vrc": {
         "cargoLocks": null,
         "date": "2024-06-19",

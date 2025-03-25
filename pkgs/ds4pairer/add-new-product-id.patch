@@ -1,0 +1,21 @@
+--- a/main.c
++++ b/main.c
+@@ -30,7 +30,8 @@
+ #include <hidapi/hidapi.h>
+ 
+ #define VENDOR 0x054c
+ #define PRODUCT 0x05C4
++#define PRODUCT_NEW 0x09CC
+ /* 0xf5   == (0x03f5 & ~(3 << 8))
+  * 0x03f5 == (0xf5 | (3 << 8))
+  * HIDAPI will automatically add (3 << 8 to the report id.
+@@ -144,6 +145,9 @@
+     }
+ 
+     dev = hid_open(VENDOR, PRODUCT, NULL);
++    if (dev == NULL) {
++        dev = hid_open(VENDOR, PRODUCT_NEW, NULL);
++    }
+     if (dev == NULL) {
+         fprintf(stderr, "Could not find SixAxis controller\n");
+         return 0;
