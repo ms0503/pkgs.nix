@@ -28,16 +28,15 @@
   outputs =
     inputs@{
       flake-parts,
-      git-hooks,
       nixpkgs,
       systems,
-      treefmt-nix,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
-        git-hooks.flakeModule
-        treefmt-nix.flakeModule
+        ./treefmt.nix
+        ./git-hooks.nix
+        ./pkgs
       ];
       perSystem =
         { config, system, ... }:
@@ -66,31 +65,6 @@
                 ${config.pre-commit.installationScript}
               '';
             };
-          packages = import ./pkgs pkgs;
-          pre-commit = {
-            check.enable = true;
-            settings = {
-              hooks = {
-                actionlint.enable = true;
-                check-json.enable = true;
-                check-toml.enable = true;
-                editorconfig-checker = {
-                  enable = true;
-                  excludes = [
-                    "Cargo.lock"
-                    "_sources"
-                    "flake.lock"
-                    "pkgs/alcom/deps.json"
-                  ];
-                };
-                markdownlint.enable = true;
-                yamlfmt.enable = true;
-                yamllint.enable = true;
-              };
-              src = ./.;
-            };
-          };
-          treefmt = import ./treefmt.nix;
         };
       systems = import systems;
     };

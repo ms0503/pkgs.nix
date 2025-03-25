@@ -1,3 +1,8 @@
+[ds4pairer]
+fetch.github = "paulstraw/ds4pairer"
+src.branch = "master"
+src.git = "https://github.com/paulstraw/ds4pairer.git"
+
 [git-vrc]
 fetch.github = "anatawa12/git-vrc"
 git.fetchSubmodules = true
