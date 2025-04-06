@@ -1,5 +1,6 @@
 {
   lib,
+  mold,
   openssl_1_1,
   pkg-config,
   rustPlatform,
@@ -7,6 +8,7 @@
 }:
 rustPlatform.buildRustPackage {
   inherit (source) pname src version;
+  RUSTFLAGS = "-Clink-arg=-fuse-ld=mold";
   buildInputs = [
     openssl_1_1
   ];
@@ -25,6 +27,7 @@ rustPlatform.buildRustPackage {
     ];
   };
   nativeBuildInputs = [
+    mold
     pkg-config
   ];
   useFetchCargoVendor = true;
