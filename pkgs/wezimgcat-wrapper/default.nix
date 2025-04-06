@@ -1,6 +1,7 @@
 {
   imagemagick,
   lib,
+  mold,
   rustPlatform,
 }:
 let
@@ -8,6 +9,7 @@ let
 in
 rustPlatform.buildRustPackage {
   inherit (cargoToml.package) version;
+  RUSTFLAGS = "-Clink-arg=-fuse-ld=mold";
   buildInputs = [
     imagemagick
   ];
@@ -20,6 +22,9 @@ rustPlatform.buildRustPackage {
       fromSource
     ];
   };
+  nativeBuildInputs = [
+    mold
+  ];
   pname = cargoToml.package.name;
   src = ./.;
   useFetchCargoVendor = true;
