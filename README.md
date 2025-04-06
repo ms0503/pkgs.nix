@@ -4,9 +4,6 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 
 ## Package List
 
-- alcom
-  - Description: Experimental GUI application to manage VRChat Unity Projects
-  - Source: [github:vrc-get/vrc-get]
 - blender3
   - Description: 3D Creation/Animation/Publishing System
   - Inherit: [nixpkgs]#blender
@@ -97,6 +94,5 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 [github:rigellute/spotify-tui]: https://github.com/Rigellute/spotify-tui
 [github:spookyskeletons/proton-ge-rtsp]: https://github.com/SpookySkeletons/proton-ge-rtsp
 [github:tats-u/zifu]: https://github.com/tats-u/zifu
-[github:vrc-get/vrc-get]: https://github.com/vrc-get/vrc-get
 [nixpkgs]: https://github.com/NixOS/nixpkgs
 [sf:infozip]: https://sourceforge.net/projects/infozip
