@@ -4,7 +4,7 @@
     inputs.treefmt-nix.flakeModule
   ];
   perSystem =
-    { pkgs, ... }:
+    { inputs', pkgs, ... }:
     {
       treefmt = {
         programs = {
@@ -23,8 +23,9 @@
           };
           nixfmt.enable = true;
           rustfmt = {
-            edition = "2021";
+            edition = "2024";
             enable = true;
+            package = inputs'.fenix.packages.latest.rustfmt;
           };
           shellcheck.enable = true;
           shfmt = {

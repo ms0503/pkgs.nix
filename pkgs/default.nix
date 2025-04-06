@@ -1,6 +1,6 @@
 _: {
   perSystem =
-    { pkgs, ... }:
+    { inputs', pkgs, ... }:
     let
       inherit (pkgs)
         alcom
@@ -9,6 +9,7 @@ _: {
         fetchFromGitHub
         fetchgit
         fetchurl
+        makeRustPlatform
         ;
       sources = import ../_sources/generated.nix {
         inherit
@@ -21,6 +22,12 @@ _: {
     in
     {
       packages =
+        let
+          rustPlatform = makeRustPlatform {
+            cargo = inputs'.fenix.packages.latest.toolchain;
+            rustc = inputs'.fenix.packages.latest.toolchain;
+          };
+        in
         {
           alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." alcom;
         }
@@ -35,6 +42,7 @@ _: {
             source = sources.ds4pairer;
           };
           git-vrc = callPackage ./git-vrc {
+            inherit rustPlatform;
             cargoHash = "sha256-/vO8xkD0uW0kqF8RzvAw2/TAvmDI5N8GZD0f6S6lY+M=";
             source = sources.git-vrc;
           };
@@ -56,6 +64,7 @@ _: {
           };
           slack-wayland = callPackage ./slack-wayland { };
           spotify-tui = callPackage ./spotify-tui {
+            inherit rustPlatform;
             source = sources.spotify-tui;
           };
           spotify-wayland = callPackage ./spotify-wayland { };
@@ -73,8 +82,11 @@ _: {
           walland = callPackage ./walland {
             source = sources.walland;
           };
-          wezimgcat-wrapper = callPackage ./wezimgcat-wrapper { };
+          wezimgcat-wrapper = callPackage ./wezimgcat-wrapper {
+            inherit rustPlatform;
+          };
           zifu = callPackage ./zifu {
+            inherit rustPlatform;
             cargoHash = "sha256-IjR1uplTbfaX0VGkv1vTtafOTGCLQYd+4yPmj1wuw9Q=";
             source = sources.zifu;
           };
