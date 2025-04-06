@@ -7,6 +7,8 @@ features = ["full"]
 version = "1"
 
 [package]
-edition = "2021"
+authors = ["Sora Tonami <ms0503@outlook.com>"]
+edition = "2024"
 name = "wezimgcat-wrapper"
-version = "0.1.1"
+resolver = "3"
+version = "0.2.0"

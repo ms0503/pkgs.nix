@@ -1,5 +1,9 @@
 {
   inputs = {
+    fenix = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/fenix";
+    };
     flake-compat = {
       flake = false;
       url = "github:edolstra/flake-compat";
