@@ -80,11 +80,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-eApDwsT2B6PnGSuI0UAWQLDAQfbC16YxPDAVf1Nnx3E=",
+            "sha256": "sha256-cLwiBmDvNS9NixMHWRDjN+MdLaZwcAc0S87pzIcfzzA=",
             "type": "url",
-            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.03.01.tar.gz"
+            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.04.01.tar.gz"
         },
-        "version": "2025.03.01"
+        "version": "2025.04.01"
     },
     "proton-ge-rtsp-bin": {
         "cargoLocks": null,
@@ -118,7 +118,7 @@
     },
     "walland": {
         "cargoLocks": null,
-        "date": "2024-09-23",
+        "date": "2025-03-25",
         "extract": null,
         "name": "walland",
         "passthru": null,
@@ -130,12 +130,12 @@
             "name": null,
             "owner": "Golim",
             "repo": "walland",
-            "rev": "d50ed2b5c76dc6585c629f4d65a819bd53397ab9",
-            "sha256": "sha256-x5zaiaPjwa/MHHIwmO4rXZR1Olt4d2QuaBqwk4Hvo8k=",
+            "rev": "82719b76593529b93714c2f74603b0d742be0a5a",
+            "sha256": "sha256-aE1yzFr8dRHKj/Y6C7Ir8i4YcHmcD5hmVBCuAP/9p0k=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "d50ed2b5c76dc6585c629f4d65a819bd53397ab9"
+        "version": "82719b76593529b93714c2f74603b0d742be0a5a"
     },
     "zifu": {
         "cargoLocks": null,
@@ -153,3 +153,4 @@
         "version": "1.1.0"
     }
 }
+
