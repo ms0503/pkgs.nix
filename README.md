@@ -6,11 +6,11 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 
 - blender3
   - Description: 3D Creation/Animation/Publishing System
-  - Inherit: [nixpkgs]\#blender
+  - Inherit: [nixpkgs]#blender
 - discord-canary-wayland
   - Description: All-in-one cross-platform voice and text chat for gamers,
     including Wayland support
-  - Inherit: [nixpkgs]\#discord-canary
+  - Inherit: [nixpkgs]#discord-canary
 - ds4pairer
   - Description: A tool for viewing and setting the bluetooth address a
     DualShock 4 controller is currently paired with
@@ -24,83 +24,57 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Source: packages.microsoft.com
   - Note: Unfree
 - microsoft-edge-dev-wayland
-  - Description:
-    Web browser from Microsoft, weekly build, including Wayland support
-  - Inherit:
-    .\#microsoft-edge-dev
-  - Note:
-    Unfree
-- noto-fonts-cjk-sans-non-variable
-  - Description:
-    Beautiful and free fonts for CJK languages, non-variable version
-  - Source:
-    [github:notofonts/noto-cjk]
-- noto-fonts-cjk-serif-non-variable
-  - Description:
-    Beautiful and free fonts for CJK languages, non-variable version
-  - Source:
-    [github:notofonts/noto-cjk]
-- noto-fonts-non-variable
-  - Description:
-    Beautiful and free fonts for many languages, non-variable version
-  - Source:
-    [github:notofonts/notofonts.github.io]
-- proton-ge-rtsp-bin
-  - Description:
-    Compatibility tool for Steam Play based on Wine and additional components.  
-    (This is intended for use in the \`programs.steam.extraCompatPackages\`
-    option only.)
-  - Source:
-    [github:SpookySkeletons/proton-ge-rtsp]
-- rcedit
-  - Description:
-    Command line tool to edit resources of exe
-  - Source:
-    [github:electron/rcedit]
-- slack-wayland
-  - Description:
-    Desktop client for Slack, including Wayland support
-  - Inherit:
-    [nixpkgs]\#slack
-- spotify-tui
-  - Description:
-    Spotify for the terminal written in Rust 🚀
-  - Source:
-    [github:Rigellute/spotify-tui]
-- spotify-wayland
-  - Description:
-    Play music from the Spotify music service, including Wayland support
-  - Inherit:
-    [nixpkgs]\#spotify
-- unity-vrc-2019
-  - Description:
-    Unity for VRChat (2019.4.31f1)
-  - Source:
-    netstorage.unity3d.com
-    new-translate.unity3d.jp
-  - Note:
-    Unfree
-- unity-vrc-2022
-  - Description:
-    Unity for VRChat (2022.3.22f1)
-  - Source:
-    netstorage.unity3d.com
-    new-translate.unity3d.jp
-  - Note:
-    Unfree
-- unity-vrc-2022-old
-  - Description:
-    Unity for VRChat (2022.3.6f1)
-  - Source:
-    netstorage.unity3d.com
-    new-translate.unity3d.jp
-  - Note:
-    Unfree
-- unzip-unicode
-  - Description:
-    Extraction utility for archives compressed in .zip format, with Unicode
+  - Description: Web browser from Microsoft, weekly build, including Wayland
     support
-  - Inherit: .\#microsoft-edge-dev
+  - Inherit: .#microsoft-edge-dev
+  - Note: Unfree
+- noto-fonts-cjk-sans-non-variable
+  - Description: Beautiful and free fonts for CJK languages, non-variable
+    version
+  - Source: [github:notofonts/noto-cjk]
+- noto-fonts-cjk-serif-non-variable
+  - Description: Beautiful and free fonts for CJK languages, non-variable
+    version
+  - Source: [github:notofonts/noto-cjk]
+- noto-fonts-non-variable
+  - Description: Beautiful and free fonts for many languages, non-variable
+    version
+  - Source: [github:notofonts/notofonts.github.io]
+- proton-ge-rtsp-bin
+  - Description: Compatibility tool for Steam Play based on Wine and additional
+    components.\
+    (This is intended for use in the
+    \`programs.steam.extraCompatPackages\` option only.)
+  - Source: [github:SpookySkeletons/proton-ge-rtsp]
+- rcedit
+  - Description: Command line tool to edit resources of exe
+  - Source: \[github:electron/rcedit\]
+- slack-wayland
+  - Description: Desktop client for Slack, including Wayland support
+  - Inherit: [nixpkgs]#slack
+- spotify-tui
+  - Description: Spotify for the terminal written in Rust 🚀
+  - Source: [github:Rigellute/spotify-tui]
+- spotify-wayland
+  - Description: Play music from the Spotify music service, including Wayland
+    support
+  - Inherit: [nixpkgs]#spotify
+- unity-vrc-2019
+  - Description: Unity for VRChat (2019.4.31f1)
+  - Source: netstorage.unity3d.com new-translate.unity3d.jp
+  - Note: Unfree
+- unity-vrc-2022
+  - Description: Unity for VRChat (2022.3.22f1)
+  - Source: netstorage.unity3d.com new-translate.unity3d.jp
+  - Note: Unfree
+- unity-vrc-2022-old
+  - Description: Unity for VRChat (2022.3.6f1)
+  - Source: netstorage.unity3d.com new-translate.unity3d.jp
+  - Note: Unfree
+- unzip-unicode
+  - Description: Extraction utility for archives compressed in .zip format, with
+    Unicode support
+  - Inherit: .#microsoft-edge-dev
   - Note: Unfree
 - noto-fonts-cjk-sans-non-variable
   - Description: Beautiful and free fonts for CJK languages, non-variable
@@ -122,14 +96,14 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Source: [github:SpookySkeletons/proton-ge-rtsp]
 - slack-wayland
   - Description: Desktop client for Slack, including Wayland support
-  - Inherit: [nixpkgs]\#slack
+  - Inherit: [nixpkgs]#slack
 - spotify-tui
   - Description: Spotify for the terminal written in Rust 🚀
   - Source: [github:Rigellute/spotify-tui]
 - spotify-wayland
   - Description: Play music from the Spotify music service, including Wayland
     support
-  - Inherit: [nixpkgs]\#spotify
+  - Inherit: [nixpkgs]#spotify
 - unity-vrc-2019
   - Description: Unity for VRChat (2019.4.31f1)
   - Source: netstorage.unity3d.com new-translate.unity3d.jp
