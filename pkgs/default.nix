@@ -64,7 +64,7 @@ _: {
           };
           slack-wayland = callPackage ./slack-wayland { };
           spotify-tui = callPackage ./spotify-tui {
-            inherit rustPlatform;
+            # inherit rustPlatform;
             source = sources.spotify-tui;
           };
           spotify-wayland = callPackage ./spotify-wayland { };
@@ -86,7 +86,7 @@ _: {
             inherit rustPlatform;
           };
           zifu = callPackage ./zifu {
-            inherit rustPlatform;
+            # inherit rustPlatform;
             cargoHash = "sha256-IjR1uplTbfaX0VGkv1vTtafOTGCLQYd+4yPmj1wuw9Q=";
             source = sources.zifu;
           };
