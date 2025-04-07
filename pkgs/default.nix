@@ -1,6 +1,11 @@
 _: {
   perSystem =
-    { inputs', pkgs, ... }:
+    {
+      inputs',
+      lib,
+      pkgs,
+      ...
+    }:
     let
       inherit (pkgs)
         alcom
@@ -10,6 +15,7 @@ _: {
         fetchgit
         fetchurl
         makeRustPlatform
+        stdenv
         ;
       sources = import ../_sources/generated.nix {
         inherit
@@ -32,11 +38,15 @@ _: {
           alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." alcom;
         }
         // rec {
-          blender3 = callPackage ./blender3 {
-            assetsHash = "sha256-C+4ewC4BTbyUp/EV8eqKgJSXMz5cRFOY1NBR3xO93rE=";
-            sourceHash = "sha256-ysP42g7OFuvB1leAuWfyUxHL/yZXx4TdlGDCrsT4lnw=";
-            version = "3.6.19";
-          };
+          blender3 = callPackage ./blender3 (
+            lib.optionalAttrs (!stdenv.isDarwin) {
+              Cocoa = null;
+              CoreGraphics = null;
+              ForceFeedback = null;
+              OpenAL = null;
+              OpenGL = null;
+            }
+          );
           discord-canary-wayland = callPackage ./discord-canary-wayland { };
           ds4pairer = callPackage ./ds4pairer {
             source = sources.ds4pairer;
