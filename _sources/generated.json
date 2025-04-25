@@ -118,7 +118,7 @@
     },
     "walland": {
         "cargoLocks": null,
-        "date": "2025-03-25",
+        "date": "2025-04-14",
         "extract": null,
         "name": "walland",
         "passthru": null,
@@ -130,12 +130,12 @@
             "name": null,
             "owner": "Golim",
             "repo": "walland",
-            "rev": "82719b76593529b93714c2f74603b0d742be0a5a",
-            "sha256": "sha256-aE1yzFr8dRHKj/Y6C7Ir8i4YcHmcD5hmVBCuAP/9p0k=",
+            "rev": "f25ba9badfc965a360b410f5ca1e63e9c132a916",
+            "sha256": "sha256-yMCw/KzfmwjrimBP0a3T9plaHllwXJ6YqozuQ/rYDH8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "82719b76593529b93714c2f74603b0d742be0a5a"
+        "version": "f25ba9badfc965a360b410f5ca1e63e9c132a916"
     },
     "zifu": {
         "cargoLocks": null,
@@ -153,4 +153,3 @@
         "version": "1.1.0"
     }
 }
-
