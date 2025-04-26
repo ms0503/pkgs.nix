@@ -43,18 +43,15 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 - proton-ge-rtsp-bin
   - Description: Compatibility tool for Steam Play based on Wine and additional
     components.\
-    (This is intended for use in the
-    \`programs.steam.extraCompatPackages\` option only.)
+    (This is intended for use in the \`programs.steam.extraCompatPackages\`
+    option only.)
   - Source: [github:SpookySkeletons/proton-ge-rtsp]
 - rcedit
   - Description: Command line tool to edit resources of exe
-  - Source: \[github:electron/rcedit\]
+  - Source: [github:electron/rcedit]
 - slack-wayland
   - Description: Desktop client for Slack, including Wayland support
   - Inherit: [nixpkgs]#slack
-- spotify-tui
-  - Description: Spotify for the terminal written in Rust 🚀
-  - Source: [github:Rigellute/spotify-tui]
 - spotify-wayland
   - Description: Play music from the Spotify music service, including Wayland
     support
@@ -91,8 +88,8 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 - proton-ge-rtsp-bin
   - Description: Compatibility tool for Steam Play based on Wine and additional
     components.\
-    (This is intended for use in the
-    \`programs.steam.extraCompatPackages\` option only.)
+    (This is intended for use in the \`programs.steam.extraCompatPackages\`
+    option only.)
   - Source: [github:SpookySkeletons/proton-ge-rtsp]
 - slack-wayland
   - Description: Desktop client for Slack, including Wayland support

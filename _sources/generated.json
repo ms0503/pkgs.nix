@@ -101,21 +101,6 @@
         },
         "version": "GE-Proton9-22-rtsp17"
     },
-    "spotify-tui": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "spotify-tui",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-nW+pmOYlzv+VilNVtDeasWS6dldRQ6e21diutsNtcKc=",
-            "type": "url",
-            "url": "https://github.com/Rigellute/spotify-tui/archive/refs/tags/v0.25.0.tar.gz"
-        },
-        "version": "0.25.0"
-    },
     "walland": {
         "cargoLocks": null,
         "date": "2025-04-14",

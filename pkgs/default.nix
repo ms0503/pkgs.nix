@@ -73,10 +73,6 @@ _: {
             source = sources.proton-ge-rtsp-bin;
           };
           slack-wayland = callPackage ./slack-wayland { };
-          spotify-tui = callPackage ./spotify-tui {
-            # inherit rustPlatform;
-            source = sources.spotify-tui;
-          };
           spotify-wayland = callPackage ./spotify-wayland { };
           unity-vrc-2019 = callPackage ./unity-vrc-2019 {
             inherit noto-fonts-cjk-sans-non-variable;
