@@ -71,10 +71,14 @@
   };
   zifu = {
     pname = "zifu";
-    version = "1.1.0";
-    src = fetchurl {
-      url = "https://github.com/tats-u/zifu/archive/refs/tags/v1.1.0.tar.gz";
-      sha256 = "sha256-Llg2z83Qq6lD0Yppmyb0z7XKIoijLB3ukepOj6BEH4w=";
+    version = "447684211b6f3bb2eb0938c84a14d89c86e533b3";
+    src = fetchFromGitHub {
+      owner = "tats-u";
+      repo = "zifu";
+      rev = "447684211b6f3bb2eb0938c84a14d89c86e533b3";
+      fetchSubmodules = false;
+      sha256 = "sha256-4gtIPpLzI9ufrtwx0+W72uEfzrva6IE+koEUxbBBHJ8=";
     };
+    date = "2024-11-14";
   };
 }
