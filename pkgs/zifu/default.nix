@@ -7,7 +7,7 @@
 }:
 rustPlatform.buildRustPackage {
   inherit cargoHash;
-  inherit (source) pname src version;
+  inherit (source) pname src;
   RUSTFLAGS = "-Clink-arg=-fuse-ld=mold";
   meta = {
     description = "Tool that fixes file names in ZIP archives (make them UTF-8)";
@@ -22,4 +22,5 @@ rustPlatform.buildRustPackage {
     mold
   ];
   useFetchCargoVendor = true;
+  version = "1.1.0";
 }

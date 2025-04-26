@@ -92,8 +92,8 @@ _: {
             inherit rustPlatform;
           };
           zifu = callPackage ./zifu {
-            # inherit rustPlatform;
-            cargoHash = "sha256-IjR1uplTbfaX0VGkv1vTtafOTGCLQYd+4yPmj1wuw9Q=";
+            inherit rustPlatform;
+            cargoHash = "sha256-MKnhEqa8u8yg7fEc3GdPX63kIMl0FPOFg8FOSViLPhg=";
             source = sources.zifu;
           };
         };

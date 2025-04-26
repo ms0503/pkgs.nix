@@ -36,6 +36,10 @@ src.branch = "main"
 src.git = "https://github.com/Golim/walland.git"
 
 [zifu]
-fetch.url = "https://github.com/tats-u/zifu/archive/refs/tags/v$ver.tar.gz"
-src.github = "tats-u/zifu"
-src.prefix = "v"
+# proc-macro2's error is not solved yet
+#fetch.url = "https://github.com/tats-u/zifu/archive/refs/tags/v$ver.tar.gz"
+#src.github = "tats-u/zifu"
+#src.prefix = "v"
+fetch.github = "tats-u/zifu"
+src.branch = "master"
+src.git = "https://github.com/tats-u/zifu.git"
