@@ -10,6 +10,8 @@ spotify.overrideAttrs (
       gappsWrapperArgs+=(
         --add-flags "--enable-wayland-ime"
         --add-flags "--disable-gpu-compositing"
+        --add-flags "--enable-features=UseOzonePlatform"
+        --add-flags "--ozone-platform=wayland"
       )
     '';
   }
