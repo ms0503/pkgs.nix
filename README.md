@@ -4,9 +4,6 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 
 ## Package List
 
-- blender3
-  - Description: 3D Creation/Animation/Publishing System
-  - Inherit: [nixpkgs]#blender
 - discord-canary-wayland
   - Description: All-in-one cross-platform voice and text chat for gamers,
     including Wayland support
