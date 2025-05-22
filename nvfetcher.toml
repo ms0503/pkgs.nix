@@ -9,6 +9,11 @@ git.fetchSubmodules = true
 src.branch = "master"
 src.git = "https://github.com/anatawa12/git-vrc.git"
 
+[microsoft-edit]
+fetch.url = "https://github.com/microsoft/edit/archive/refs/tags/v$ver.tar.gz"
+src.github = "microsoft/edit"
+src.prefix = "v"
+
 [noto-cjk-sans]
 fetch.url = "https://github.com/notofonts/noto-cjk/releases/download/Sans$ver/03_NotoSansCJK-OTC.zip"
 src.github_tag = "notofonts/noto-cjk"

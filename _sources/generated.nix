@@ -15,15 +15,23 @@
   };
   git-vrc = {
     pname = "git-vrc";
-    version = "601fe2881631542b263501b52ac01dad99dc6ede";
+    version = "5f4ecf70a2149e652276f7cede4a58961c90440f";
     src = fetchFromGitHub {
       owner = "anatawa12";
       repo = "git-vrc";
-      rev = "601fe2881631542b263501b52ac01dad99dc6ede";
+      rev = "5f4ecf70a2149e652276f7cede4a58961c90440f";
       fetchSubmodules = true;
-      sha256 = "sha256-zR8yau7K4QZLjZ/MsqC7UwrGklr4QC+fPJTHRQ451uI=";
+      sha256 = "sha256-97vxwLbFJo/SXmhq0hZlj3BAOxhf1qSNcPCS5MGxnSI=";
     };
-    date = "2024-06-19";
+    date = "2025-05-20";
+  };
+  microsoft-edit = {
+    pname = "microsoft-edit";
+    version = "1.0.0";
+    src = fetchurl {
+      url = "https://github.com/microsoft/edit/archive/refs/tags/v1.0.0.tar.gz";
+      sha256 = "sha256-ZxjZqWqp3SEX2dSvqDsCeO8Ae81CvbHoxOKtNBRCRsA=";
+    };
   };
   noto-cjk-sans = {
     pname = "noto-cjk-sans";
@@ -59,15 +67,15 @@
   };
   walland = {
     pname = "walland";
-    version = "f25ba9badfc965a360b410f5ca1e63e9c132a916";
+    version = "d1c9dae35e7125e642f93e6acfee2682e801b627";
     src = fetchFromGitHub {
       owner = "Golim";
       repo = "walland";
-      rev = "f25ba9badfc965a360b410f5ca1e63e9c132a916";
+      rev = "d1c9dae35e7125e642f93e6acfee2682e801b627";
       fetchSubmodules = false;
-      sha256 = "sha256-yMCw/KzfmwjrimBP0a3T9plaHllwXJ6YqozuQ/rYDH8=";
+      sha256 = "sha256-5SiLbLz3N3D/Fvu42zJy1QUQjArkzabwBo5pYP7DbcA=";
     };
-    date = "2025-04-14";
+    date = "2025-05-21";
   };
   zifu = {
     pname = "zifu";
