@@ -54,6 +54,11 @@ _: {
           microsoft-edge-dev-wayland = callPackage ./microsoft-edge-dev-wayland {
             inherit microsoft-edge-dev;
           };
+          microsoft-edit = callPackage ./microsoft-edit {
+            inherit rustPlatform;
+            cargoHash = "sha256-DEzjfrXSmum/GJdYanaRDKxG4+eNPWf5echLhStxcIg=";
+            source = sources.microsoft-edit;
+          };
           noto-fonts-cjk-sans-non-variable = callPackage ./noto-fonts-cjk-sans-non-variable {
             source = sources.noto-cjk-sans;
           };

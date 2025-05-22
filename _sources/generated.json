@@ -22,7 +22,7 @@
     },
     "git-vrc": {
         "cargoLocks": null,
-        "date": "2024-06-19",
+        "date": "2025-05-20",
         "extract": null,
         "name": "git-vrc",
         "passthru": null,
@@ -34,12 +34,27 @@
             "name": null,
             "owner": "anatawa12",
             "repo": "git-vrc",
-            "rev": "601fe2881631542b263501b52ac01dad99dc6ede",
-            "sha256": "sha256-zR8yau7K4QZLjZ/MsqC7UwrGklr4QC+fPJTHRQ451uI=",
+            "rev": "5f4ecf70a2149e652276f7cede4a58961c90440f",
+            "sha256": "sha256-97vxwLbFJo/SXmhq0hZlj3BAOxhf1qSNcPCS5MGxnSI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "601fe2881631542b263501b52ac01dad99dc6ede"
+        "version": "5f4ecf70a2149e652276f7cede4a58961c90440f"
+    },
+    "microsoft-edit": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "microsoft-edit",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-ZxjZqWqp3SEX2dSvqDsCeO8Ae81CvbHoxOKtNBRCRsA=",
+            "type": "url",
+            "url": "https://github.com/microsoft/edit/archive/refs/tags/v1.0.0.tar.gz"
+        },
+        "version": "1.0.0"
     },
     "noto-cjk-sans": {
         "cargoLocks": null,
@@ -103,7 +118,7 @@
     },
     "walland": {
         "cargoLocks": null,
-        "date": "2025-04-14",
+        "date": "2025-05-21",
         "extract": null,
         "name": "walland",
         "passthru": null,
@@ -115,12 +130,12 @@
             "name": null,
             "owner": "Golim",
             "repo": "walland",
-            "rev": "f25ba9badfc965a360b410f5ca1e63e9c132a916",
-            "sha256": "sha256-yMCw/KzfmwjrimBP0a3T9plaHllwXJ6YqozuQ/rYDH8=",
+            "rev": "d1c9dae35e7125e642f93e6acfee2682e801b627",
+            "sha256": "sha256-5SiLbLz3N3D/Fvu42zJy1QUQjArkzabwBo5pYP7DbcA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f25ba9badfc965a360b410f5ca1e63e9c132a916"
+        "version": "d1c9dae35e7125e642f93e6acfee2682e801b627"
     },
     "zifu": {
         "cargoLocks": null,

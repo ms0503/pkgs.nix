@@ -25,6 +25,9 @@ This repository contains packages that are out-dated or not included in nixpkgs.
     support
   - Inherit: .#microsoft-edge-dev
   - Note: Unfree
+- microsoft-edit
+  - Description: A simple editor for simple needs
+  - Source: [github:microsoft/edit]
 - noto-fonts-cjk-sans-non-variable
   - Description: Beautiful and free fonts for CJK languages, non-variable
     version
@@ -130,6 +133,7 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 
 [github:anatawa12/git-vrc]: https://github.com/anatawa12/git-vrc
 [github:golim/walland]: https://github.com/Golim/walland
+[github:microsoft/edit]: https://github.com/microsoft/edit
 [github:notofonts/noto-cjk]: https://github.com/notofonts/noto-cjk
 [github:notofonts/notofonts.github.io]: https://github.com/notofonts/notofonts.github.io
 [github:paulstraw/ds4pairer]: https://github.com/paulstraw/ds4pairer
