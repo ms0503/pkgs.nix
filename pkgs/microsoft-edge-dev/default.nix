@@ -138,10 +138,10 @@ let
     ++ lib.optional libvaSupport libva;
   opusWithCustomModes = libopus.override { withCustomModes = true; };
   src = fetchurl {
-    hash = "sha256-Zb0pHUU9aqU+UJhSuJ4stgmAxIP+327t06d8Q+3aQs8=";
+    hash = "sha256-97XgsNM959DRTHVGdgWL2CG3L8kurmVAQ6vArI6UrWA=";
     url = "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/microsoft-edge-dev_${version}-1_amd64.deb";
   };
-  version = "133.0.3014.0";
+  version = "139.0.3365.2";
 in
 stdenv.mkDerivation (finalAttrs: {
   inherit src version;
@@ -228,7 +228,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     patchelf
   ];
-  passthru.updateScript = ./update.py;
+  passthru.updateScript = ./update.sh;
   pname = "microsoft-edge-dev";
   rpath = lib.makeLibraryPath deps + ":" + lib.makeSearchPathOutput "lib" "lib64" deps;
   strictDeps = false;
