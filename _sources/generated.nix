@@ -27,10 +27,10 @@
   };
   microsoft-edit = {
     pname = "microsoft-edit";
-    version = "1.1.0";
+    version = "1.2.0";
     src = fetchurl {
-      url = "https://github.com/microsoft/edit/archive/refs/tags/v1.1.0.tar.gz";
-      sha256 = "sha256-2RIFUTskW/TtESfDXRSMrE99r9IrBx/jRD0IC72kue8=";
+      url = "https://github.com/microsoft/edit/archive/refs/tags/v1.2.0.tar.gz";
+      sha256 = "sha256-5Lpv8b/s/v8kkjBvWFDHFL9Q/9s8w7tb46qYconyQP4=";
     };
   };
   noto-cjk-sans = {
