@@ -15,15 +15,15 @@
   };
   git-vrc = {
     pname = "git-vrc";
-    version = "5f4ecf70a2149e652276f7cede4a58961c90440f";
+    version = "b0ca3bf7da90099a02181df8880af022c6fc0320";
     src = fetchFromGitHub {
       owner = "anatawa12";
       repo = "git-vrc";
-      rev = "5f4ecf70a2149e652276f7cede4a58961c90440f";
+      rev = "b0ca3bf7da90099a02181df8880af022c6fc0320";
       fetchSubmodules = true;
-      sha256 = "sha256-97vxwLbFJo/SXmhq0hZlj3BAOxhf1qSNcPCS5MGxnSI=";
+      sha256 = "sha256-UKS7i0tyaeScaubTTusdwZfmojQXwj+EDqxfw8vQkgA=";
     };
-    date = "2025-05-20";
+    date = "2025-06-18";
   };
   microsoft-edit = {
     pname = "microsoft-edit";
