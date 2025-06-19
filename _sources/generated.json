@@ -22,7 +22,7 @@
     },
     "git-vrc": {
         "cargoLocks": null,
-        "date": "2025-05-20",
+        "date": "2025-06-18",
         "extract": null,
         "name": "git-vrc",
         "passthru": null,
@@ -34,12 +34,12 @@
             "name": null,
             "owner": "anatawa12",
             "repo": "git-vrc",
-            "rev": "5f4ecf70a2149e652276f7cede4a58961c90440f",
-            "sha256": "sha256-97vxwLbFJo/SXmhq0hZlj3BAOxhf1qSNcPCS5MGxnSI=",
+            "rev": "b0ca3bf7da90099a02181df8880af022c6fc0320",
+            "sha256": "sha256-UKS7i0tyaeScaubTTusdwZfmojQXwj+EDqxfw8vQkgA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "5f4ecf70a2149e652276f7cede4a58961c90440f"
+        "version": "b0ca3bf7da90099a02181df8880af022c6fc0320"
     },
     "microsoft-edit": {
         "cargoLocks": null,
