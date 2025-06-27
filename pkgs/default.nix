@@ -42,6 +42,18 @@ _: {
             hash = "sha256-vFZjV6EDWARObGf0mWw/cQfILbWQtDQsML/bjyc4UJk=";
             version = "3.6.23";
           };
+          blender3-cpu = callPackage ./blender3 {
+            cudaSupport = false;
+            hash = "sha256-vFZjV6EDWARObGf0mWw/cQfILbWQtDQsML/bjyc4UJk=";
+            hipSupport = false;
+            version = "3.6.23";
+          };
+          blender3-gpu = callPackage ./blender3 {
+            cudaSupport = true;
+            hash = "sha256-vFZjV6EDWARObGf0mWw/cQfILbWQtDQsML/bjyc4UJk=";
+            hipSupport = true;
+            version = "3.6.23";
+          };
         }
         // rec {
           discord-canary-wayland = callPackage ./discord-canary-wayland { };
