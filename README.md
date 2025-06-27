@@ -7,6 +7,12 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 - blender3
   - Description: 3D Creation/Animation/Publishing System
   - Source: [blender]
+- blender3-cpu
+  - Description: 3D Creation/Animation/Publishing System, without GPU supports
+  - Inherit: blender3
+- blender3-gpu
+  - Description: 3D Creation/Animation/Publishing System, with GPU supports
+  - Inherit: blender3
 - discord-canary-wayland
   - Description: All-in-one cross-platform voice and text chat for gamers,
     including Wayland support

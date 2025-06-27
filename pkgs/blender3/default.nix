@@ -1,5 +1,5 @@
 {
-  addOpenGLRunpath,
+  addDriverRunpath,
   alembic,
   boost183,
   callPackage,
@@ -156,7 +156,7 @@ let
         }
       );
   optix = fetchzip {
-    hash = "sha256-0max1j4822mchj0xpz9lqzh91zkmvsn4py0r174cvqfz8z8ykjk8";
+    hash = "sha256-aMrp0Uff4c3ICRn4S6zedf6Q4Mc0/duBhKwKgYgMXVU=";
     url = "https://developer.download.nvidia.com/redist/optix/v7.3/OptiX-7.3.0-Include.zip";
   };
   python3Packages = python310Packages;
@@ -312,7 +312,7 @@ stdenv.mkDerivation (
         mold
         wrapPython
       ]
-      ++ lib.optional cudaSupport addOpenGLRunpath
+      ++ lib.optional cudaSupport addDriverRunpath
       ++ lib.optional waylandSupport pkg-config;
     passthru = {
       inherit
@@ -379,7 +379,7 @@ stdenv.mkDerivation (
     postFixup = lib.optionalString cudaSupport ''
       for program in "$out/bin/blender3" "$out/bin/.blender3-wrapped"; do
         isELF "$program" || continue
-        addOpenGLRunpath "$program"
+        addDriverRunpath "$program"
       done
     '';
     postInstall = ''
