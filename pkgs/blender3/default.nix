@@ -1,6 +1,7 @@
 {
   addDriverRunpath,
   alembic,
+  blenderAlias ? false,
   boost183,
   callPackage,
   cmake,
@@ -382,19 +383,24 @@ stdenv.mkDerivation (
         addDriverRunpath "$program"
       done
     '';
-    postInstall = ''
-      mv "$out/bin/blender"{,3}
-      mv "$out/bin/blender"{,3}-thumbnailer
-      mv "$out/share/blender/${lib.versions.majorMinor finalAttrs.version}/python"{,-ext}
-      mv "$out/share/applications/blender"{,3}.desktop
-      sed -i 's/Exec=blender/Exec=blender3/g' "$out/share/applications/blender3.desktop"
-      buildPythonPath "$pythonPath"
-      wrapProgram "$out/bin/blender3" \
-        --add-flags '--python-use-system-env' \
-        --prefix PATH : "$program_PATH" \
-        --prefix PYTHONPATH : "$program_PYTHONPATH" \
-        --set LD_LIBRARY_PATH "${lib.makeLibraryPath finalAttrs.buildInputs}"
-    '';
+    postInstall =
+      ''
+        mv "$out/bin/blender"{,3}
+        mv "$out/bin/blender"{,3}-thumbnailer
+        mv "$out/share/blender/${lib.versions.majorMinor finalAttrs.version}/python"{,-ext}
+        mv "$out/share/applications/blender"{,3}.desktop
+        sed -i 's/Exec=blender/Exec=blender3/g' "$out/share/applications/blender3.desktop"
+        buildPythonPath "$pythonPath"
+        wrapProgram "$out/bin/blender3" \
+          --add-flags '--python-use-system-env' \
+          --prefix PATH : "$program_PATH" \
+          --prefix PYTHONPATH : "$program_PYTHONPATH" \
+          --set LD_LIBRARY_PATH "${lib.makeLibraryPath finalAttrs.buildInputs}"
+      ''
+      + lib.optionalString blenderAlias ''
+        ln -s "$out/bin/blender"{3,}
+        ln -s "$out/bin/blender"{3,}-thumbnailer
+      '';
     postPatch =
       ''
         substituteInPlace extern/clew/src/clew.c \
