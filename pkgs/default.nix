@@ -37,8 +37,11 @@ _: {
         {
           alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." alcom;
         }
-        // lib.optionalAttrs (system == "x86_64-linux") {
-          blender3 = builtins.warn "github:ms0503/pkgs.nix#blender3 is deprecated. Please use github:edolstra/nix-warez?dir=blender#blender_3_6 instead." inputs'.nix-warez-blender.packages.blender_3_6;
+        // lib.optionalAttrs (pkgs.stdenv.isLinux) {
+          blender3 = callPackage ./blender3 {
+            hash = "sha256-vFZjV6EDWARObGf0mWw/cQfILbWQtDQsML/bjyc4UJk=";
+            version = "3.6.23";
+          };
         }
         // rec {
           discord-canary-wayland = callPackage ./discord-canary-wayland { };

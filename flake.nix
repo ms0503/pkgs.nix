@@ -20,10 +20,6 @@
       url = "github:cachix/git-hooks.nix";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nix-warez-blender = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:edolstra/nix-warez?dir=blender";
-    };
     systems = {
       flake = false;
       url = "github:nix-systems/default";

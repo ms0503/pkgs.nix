@@ -4,6 +4,9 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 
 ## Package List
 
+- blender3
+  - Description: 3D Creation/Animation/Publishing System
+  - Source: [blender]
 - discord-canary-wayland
   - Description: All-in-one cross-platform voice and text chat for gamers,
     including Wayland support
@@ -131,6 +134,7 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Description: Tool that fixes file names in ZIP archives (make them UTF-8)
   - Source: [github:tats-u/zifu]
 
+[blender]: https://www.blender.org
 [github:anatawa12/git-vrc]: https://github.com/anatawa12/git-vrc
 [github:golim/walland]: https://github.com/Golim/walland
 [github:microsoft/edit]: https://github.com/microsoft/edit
