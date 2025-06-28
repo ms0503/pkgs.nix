@@ -20,6 +20,7 @@
       url = "github:cachix/git-hooks.nix";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-blender3.url = "github:NixOS/nixpkgs/nixos-25.05";
     systems = {
       flake = false;
       url = "github:nix-systems/default";
@@ -43,9 +44,14 @@
         ./pkgs
       ];
       perSystem =
-        { config, system, ... }:
-        let
-          pkgs = import nixpkgs {
+        {
+          config,
+          pkgs,
+          system,
+          ...
+        }:
+        {
+          _module.args.pkgs = import nixpkgs {
             inherit system;
             config = {
               allowUnfree = true;
@@ -54,9 +60,6 @@
               ];
             };
           };
-        in
-        {
-          _module.args.pkgs = pkgs;
           devShells.default =
             let
               packages = with pkgs; [

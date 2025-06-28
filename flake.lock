@@ -116,6 +116,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-blender3": {
+      "locked": {
+        "lastModified": 1750969886,
+        "narHash": "sha256-zW/OFnotiz/ndPFdebpo3X0CrbVNf22n4DjN2vxlb58=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a676066377a2fe7457369dd37c31fd2263b662f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "fenix": "fenix",
@@ -123,6 +139,7 @@
         "flake-parts": "flake-parts",
         "git-hooks": "git-hooks",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-blender3": "nixpkgs-blender3",
         "systems": "systems",
         "treefmt-nix": "treefmt-nix"
       }
