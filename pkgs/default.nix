@@ -37,24 +37,28 @@ _: {
         {
           alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." alcom;
         }
-        // lib.optionalAttrs (pkgs.stdenv.isLinux) {
-          blender3 = callPackage ./blender3 {
+        // lib.optionalAttrs (pkgs.stdenv.isLinux) (
+          let
+            inherit (inputs'.nixpkgs.legacyPackages) callPackage;
             hash = "sha256-vFZjV6EDWARObGf0mWw/cQfILbWQtDQsML/bjyc4UJk=";
             version = "3.6.23";
-          };
-          blender3-cpu = callPackage ./blender3 {
-            cudaSupport = false;
-            hash = "sha256-vFZjV6EDWARObGf0mWw/cQfILbWQtDQsML/bjyc4UJk=";
-            hipSupport = false;
-            version = "3.6.23";
-          };
-          blender3-gpu = callPackage ./blender3 {
-            cudaSupport = true;
-            hash = "sha256-vFZjV6EDWARObGf0mWw/cQfILbWQtDQsML/bjyc4UJk=";
-            hipSupport = true;
-            version = "3.6.23";
-          };
-        }
+          in
+          {
+            blender3 = callPackage ./blender3 {
+              inherit hash version;
+            };
+            blender3-cpu = callPackage ./blender3 {
+              inherit hash version;
+              cudaSupport = false;
+              hipSupport = false;
+            };
+            blender3-gpu = callPackage ./blender3 {
+              inherit hash version;
+              cudaSupport = true;
+              hipSupport = true;
+            };
+          }
+        )
         // rec {
           discord-canary-wayland = callPackage ./discord-canary-wayland { };
           ds4pairer = callPackage ./ds4pairer {
