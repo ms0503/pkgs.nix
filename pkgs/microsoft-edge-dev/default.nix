@@ -138,10 +138,10 @@ let
     ++ lib.optional libvaSupport libva;
   opusWithCustomModes = libopus.override { withCustomModes = true; };
   src = fetchurl {
-    hash = "sha256-97XgsNM959DRTHVGdgWL2CG3L8kurmVAQ6vArI6UrWA=";
+    hash = "sha256-ebc8mGFcp0YmHlu3TvMz6cSwMGYuFKXwJJI0NFxWXcQ=";
     url = "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/microsoft-edge-dev_${version}-1_amd64.deb";
   };
-  version = "139.0.3365.2";
+  version = "139.0.3394.0";
 in
 stdenv.mkDerivation (finalAttrs: {
   inherit src version;
