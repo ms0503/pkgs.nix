@@ -204,6 +204,9 @@ jobs:
     strategy:
       matrix:
         package:
+          - "blender3"
+          - "blender3-cpu"
+          - "blender3-gpu"
           - "discord-canary-wayland"
           - "ds4pairer"
           - "git-vrc"
