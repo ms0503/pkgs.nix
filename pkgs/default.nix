@@ -4,6 +4,7 @@ _: {
       inputs',
       lib,
       pkgs,
+      pkgsB3d3,
       system,
       ...
     }:
@@ -39,7 +40,7 @@ _: {
         }
         // lib.optionalAttrs (pkgs.stdenv.isLinux) (
           let
-            inherit (inputs'.nixpkgs.legacyPackages) callPackage;
+            inherit (pkgsB3d3) callPackage;
             hash = "sha256-vFZjV6EDWARObGf0mWw/cQfILbWQtDQsML/bjyc4UJk=";
             version = "3.6.23";
           in

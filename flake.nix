@@ -34,6 +34,7 @@
     inputs@{
       flake-parts,
       nixpkgs,
+      nixpkgs-blender3,
       systems,
       ...
     }:
@@ -51,13 +52,19 @@
           ...
         }:
         {
-          _module.args.pkgs = import nixpkgs {
-            inherit system;
-            config = {
-              allowUnfree = true;
-              permittedInsecurePackages = [
-                "openssl-1.1.1w"
-              ];
+          _module.args = {
+            pkgs = import nixpkgs {
+              inherit system;
+              config = {
+                allowUnfree = true;
+                permittedInsecurePackages = [
+                  "openssl-1.1.1w"
+                ];
+              };
+            };
+            pkgsB3d3 = import nixpkgs-blender3 {
+              inherit system;
+              config.allowUnfree = true;
             };
           };
           devShells.default =
