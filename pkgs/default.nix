@@ -76,7 +76,7 @@ _: {
           };
           microsoft-edit = callPackage ./microsoft-edit {
             inherit rustPlatform;
-            cargoHash = "sha256-DEzjfrXSmum/GJdYanaRDKxG4+eNPWf5echLhStxcIg=";
+            cargoHash = "sha256-ceAaaR+N03Dq2MHYel4sHDbbYUOr/ZrtwqJwhaUbC2o=";
             source = sources.microsoft-edit;
           };
           noto-fonts-cjk-sans-non-variable = callPackage ./noto-fonts-cjk-sans-non-variable {
