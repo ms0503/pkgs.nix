@@ -9,10 +9,10 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Source: [blender]
 - blender3-cpu
   - Description: 3D Creation/Animation/Publishing System, without GPU supports
-  - Inherit: blender3
+  - Inherit: .#blender3
 - blender3-gpu
   - Description: 3D Creation/Animation/Publishing System, with GPU supports
-  - Inherit: blender3
+  - Inherit: .#blender3
 - discord-canary-wayland
   - Description: All-in-one cross-platform voice and text chat for gamers,
     including Wayland support
@@ -55,9 +55,6 @@ This repository contains packages that are out-dated or not included in nixpkgs.
     (This is intended for use in the \`programs.steam.extraCompatPackages\`
     option only.)
   - Source: [github:SpookySkeletons/proton-ge-rtsp]
-- rcedit
-  - Description: Command line tool to edit resources of exe
-  - Source: [github:electron/rcedit]
 - slack-wayland
   - Description: Desktop client for Slack, including Wayland support
   - Inherit: [nixpkgs]#slack
@@ -80,52 +77,8 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 - unzip-unicode
   - Description: Extraction utility for archives compressed in .zip format, with
     Unicode support
-  - Inherit: .#microsoft-edge-dev
+  - Inherit: [nixpkgs]#unzip
   - Note: Unfree
-- noto-fonts-cjk-sans-non-variable
-  - Description: Beautiful and free fonts for CJK languages, non-variable
-    version
-  - Source: [github:notofonts/noto-cjk]
-- noto-fonts-cjk-serif-non-variable
-  - Description: Beautiful and free fonts for CJK languages, non-variable
-    version
-  - Source: [github:notofonts/noto-cjk]
-- noto-fonts-non-variable
-  - Description: Beautiful and free fonts for many languages, non-variable
-    version
-  - Source: [github:notofonts/notofonts.github.io]
-- proton-ge-rtsp-bin
-  - Description: Compatibility tool for Steam Play based on Wine and additional
-    components.\
-    (This is intended for use in the \`programs.steam.extraCompatPackages\`
-    option only.)
-  - Source: [github:SpookySkeletons/proton-ge-rtsp]
-- slack-wayland
-  - Description: Desktop client for Slack, including Wayland support
-  - Inherit: [nixpkgs]#slack
-- spotify-tui
-  - Description: Spotify for the terminal written in Rust 🚀
-  - Source: [github:Rigellute/spotify-tui]
-- spotify-wayland
-  - Description: Play music from the Spotify music service, including Wayland
-    support
-  - Inherit: [nixpkgs]#spotify
-- unity-vrc-2019
-  - Description: Unity for VRChat (2019.4.31f1)
-  - Source: netstorage.unity3d.com new-translate.unity3d.jp
-  - Note: Unfree
-- unity-vrc-2022
-  - Description: Unity for VRChat (2022.3.22f1)
-  - Source: netstorage.unity3d.com new-translate.unity3d.jp
-  - Note: Unfree
-- unity-vrc-2022-old
-  - Description: Unity for VRChat (2022.3.6f1)
-  - Source: netstorage.unity3d.com new-translate.unity3d.jp
-  - Note: Unfree
-- unzip-unicode
-  - Description: Extraction utility for archives compressed in .zip format, with
-    Unicode support
-  - Source: [sf:infozip]
 - urxvt-wrapper
   - Description: URxvt wrapper to use daemon mode easily
   - Source: none
@@ -147,8 +100,6 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 [github:notofonts/noto-cjk]: https://github.com/notofonts/noto-cjk
 [github:notofonts/notofonts.github.io]: https://github.com/notofonts/notofonts.github.io
 [github:paulstraw/ds4pairer]: https://github.com/paulstraw/ds4pairer
-[github:rigellute/spotify-tui]: https://github.com/Rigellute/spotify-tui
 [github:spookyskeletons/proton-ge-rtsp]: https://github.com/SpookySkeletons/proton-ge-rtsp
 [github:tats-u/zifu]: https://github.com/tats-u/zifu
 [nixpkgs]: https://github.com/NixOS/nixpkgs
-[sf:infozip]: https://sourceforge.net/projects/infozip
