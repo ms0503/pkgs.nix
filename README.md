@@ -62,18 +62,6 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Description: Play music from the Spotify music service, including Wayland
     support
   - Inherit: [nixpkgs]#spotify
-- unity-vrc-2019
-  - Description: Unity for VRChat (2019.4.31f1)
-  - Source: netstorage.unity3d.com new-translate.unity3d.jp
-  - Note: Unfree
-- unity-vrc-2022
-  - Description: Unity for VRChat (2022.3.22f1)
-  - Source: netstorage.unity3d.com new-translate.unity3d.jp
-  - Note: Unfree
-- unity-vrc-2022-old
-  - Description: Unity for VRChat (2022.3.6f1)
-  - Source: netstorage.unity3d.com new-translate.unity3d.jp
-  - Note: Unfree
 - unzip-unicode
   - Description: Extraction utility for archives compressed in .zip format, with
     Unicode support
