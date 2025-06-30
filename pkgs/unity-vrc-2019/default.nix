@@ -99,50 +99,10 @@ let
     ];
     pname = "unity-vrc-2019-app";
     postFixup = ''
-      patchelf --add-rpath "$rpath" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/7za" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/AssetCacheServer" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/JobProcess" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/UnityShaderCompiler" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/UnityYAMLMerge" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/UnwrapCL" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/WebExtract" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/binary2text" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/etccompress" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/glslang.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libCST.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libCausticGLUT.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libOpenCL.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libOpenCL.so.1" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libOpenCL.so.1.0.0" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libOpenImageDenoise.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libOpenImageDenoise.so.0" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libOpenImageDenoise.so.1.1.0" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libRL.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libembree.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libembree.so.2" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libfreeimage.so.3" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libtbb.so.2" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/libtbbmalloc.so.2" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Data/Tools/lzma-linux64" \
-        "$out/opt/Unity/2019.4.31f1/Editor/Unity" \
-        "$out/opt/Unity/2019.4.31f1/Editor/UnityHelper" \
-        "$out/opt/Unity/2019.4.31f1/Editor/chrome-sandbox" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libOpenCL.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libOpenCL.so.1" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libOpenCL.so.1.0.0" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libOpenImageDenoise.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libRL.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libcef.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libembree.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libfbxsdk.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libffmpegsumo.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libfreeimage-3.18.0.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libispc_texcomp.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libpdf.so" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libtbb.so.2" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libtbbmalloc.so.2" \
-        "$out/opt/Unity/2019.4.31f1/Editor/libumbraoptimizer64.so"
+      for file in $(find "$out/opt/Unity/2019.4.31f1/Editor" -type f); do
+        isELF "$file" || continue
+        patchelf --add-rpath "$rpath" "$file"
+      done
     '';
     rpath = lib.makeLibraryPath (
       with xorg;
