@@ -70,15 +70,6 @@ _: {
           };
           slack-wayland = callPackage ./slack-wayland { };
           spotify-wayland = callPackage ./spotify-wayland { };
-          unity-vrc-2019 = pkgsB3d3.callPackage ./unity-vrc-2019 {
-            inherit (self'.packages) noto-fonts-cjk-sans-non-variable;
-          };
-          unity-vrc-2022 = callPackage ./unity-vrc-2022 {
-            inherit (self'.packages) noto-fonts-cjk-sans-non-variable;
-          };
-          unity-vrc-2022-old = callPackage ./unity-vrc-2022-old {
-            inherit (self'.packages) noto-fonts-cjk-sans-non-variable;
-          };
           unzip-unicode = callPackage ./unzip-unicode { };
           urxvt-wrapper = callPackage ./urxvt-wrapper { };
           walland = callPackage ./walland {
