@@ -51,9 +51,9 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Source: [github:notofonts/notofonts.github.io]
 - proton-ge-rtsp-bin
   - Description: Compatibility tool for Steam Play based on Wine and additional
-    components.\
+    components\
     (This is intended for use in the \`programs.steam.extraCompatPackages\`
-    option only.)
+    option only)
   - Source: [github:SpookySkeletons/proton-ge-rtsp]
 - slack-wayland
   - Description: Desktop client for Slack, including Wayland support
