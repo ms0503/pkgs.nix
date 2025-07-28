@@ -73,75 +73,74 @@
   xdg-utils,
 }:
 let
-  deps =
-    [
-      alsa-lib
-      at-spi2-atk
-      at-spi2-core
-      atk
-      bzip2
-      cairo
-      coreutils
-      cups
-      curl
-      dbus
-      expat
-      flac
-      fontconfig
-      freetype
-      gcc-unwrapped.lib
-      gdk-pixbuf
-      glib
-      gtk3
-      gtk4
-      harfbuzz
-      icu
-      libX11
-      libXScrnSaver
-      libXcomposite
-      libXcursor
-      libXdamage
-      libXext
-      libXfixes
-      libXi
-      libXrandr
-      libXrender
-      libXtst
-      libcap
-      libdrm
-      liberation_ttf
-      libexif
-      libgbm
-      libglvnd
-      libkrb5
-      libpng
-      libuuid
-      libxcb
-      libxkbcommon
-      libxshmfence
-      mesa
-      nspr
-      nss
-      opusWithCustomModes
-      pango
-      pciutils
-      pipewire
-      snappy
-      speechd-minimal
-      systemd
-      util-linux
-      vulkan-loader
-      wayland
-      wget
-    ]
-    ++ lib.optional pulseSupport libpulseaudio
-    ++ lib.optional libvaSupport libva;
+  deps = [
+    alsa-lib
+    at-spi2-atk
+    at-spi2-core
+    atk
+    bzip2
+    cairo
+    coreutils
+    cups
+    curl
+    dbus
+    expat
+    flac
+    fontconfig
+    freetype
+    gcc-unwrapped.lib
+    gdk-pixbuf
+    glib
+    gtk3
+    gtk4
+    harfbuzz
+    icu
+    libX11
+    libXScrnSaver
+    libXcomposite
+    libXcursor
+    libXdamage
+    libXext
+    libXfixes
+    libXi
+    libXrandr
+    libXrender
+    libXtst
+    libcap
+    libdrm
+    liberation_ttf
+    libexif
+    libgbm
+    libglvnd
+    libkrb5
+    libpng
+    libuuid
+    libxcb
+    libxkbcommon
+    libxshmfence
+    mesa
+    nspr
+    nss
+    opusWithCustomModes
+    pango
+    pciutils
+    pipewire
+    snappy
+    speechd-minimal
+    systemd
+    util-linux
+    vulkan-loader
+    wayland
+    wget
+  ]
+  ++ lib.optional pulseSupport libpulseaudio
+  ++ lib.optional libvaSupport libva;
   opusWithCustomModes = libopus.override { withCustomModes = true; };
   src = fetchurl {
-    hash = "sha256-ebc8mGFcp0YmHlu3TvMz6cSwMGYuFKXwJJI0NFxWXcQ=";
+    hash = "sha256-Yy0bTk/iHzN7SFdqC5l76E9WJdGd1tcjn2ZqK5an/Zc=";
     url = "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/microsoft-edge-dev_${version}-1_amd64.deb";
   };
-  version = "139.0.3394.0";
+  version = "140.0.3442.1";
 in
 stdenv.mkDerivation (finalAttrs: {
   inherit src version;
