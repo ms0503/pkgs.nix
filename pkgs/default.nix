@@ -42,9 +42,7 @@ _: {
           ds4pairer = callPackage ./ds4pairer {
             source = sources.ds4pairer;
           };
-          fakevrchat = callPackage ./fakevrchat {
-            hash = "sha256-wlSAYYQq7YUZA9/XB0B6jWY8krieDNQaiScSVhNNVZ4=";
-          };
+          fakevrchat = callPackage ./fakevrchat { };
           git-vrc = callPackage ./git-vrc {
             inherit rustPlatform;
             cargoHash = "sha256-/vO8xkD0uW0kqF8RzvAw2/TAvmDI5N8GZD0f6S6lY+M=";
