@@ -47,6 +47,9 @@ stdenv.mkDerivation {
       -e 's|^	std::string vrchat_exe_path .*$|	std::string vrchat_exe_path = "${vrchat-exe-path}";|'
     runHook postPatch
   '';
+  patches = [
+    ./replace-2f-with-slash-instead-of-bslash.patch
+  ];
   pname = "fakevrchat";
   src = fetchurl {
     inherit hash;
@@ -57,5 +60,5 @@ stdenv.mkDerivation {
     cp "$src" FakeVRChat.cpp
     runHook postUnpack
   '';
-  version = "1.0.2";
+  version = "1.0.3";
 }
