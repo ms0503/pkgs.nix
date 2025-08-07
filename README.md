@@ -22,9 +22,8 @@ This repository contains packages that are out-dated or not included in nixpkgs.
     DualShock 4 controller is currently paired with
   - Source: [github:paulstraw/ds4pairer]
 - fakevrchat
-  - Description: The fake "VRChat.exe" for running offline test of VRChat World
-    on GNU/Linux
-  - Source: [software.tlfoxhuman.net]
+  - Description: VRChat wrapper for offline world testing on Linux
+  - Source: none
 - git-vrc
   - Description: A command line extension for git to reduce meaningless diff on
     git of VRC project
@@ -95,4 +94,3 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 [github:spookyskeletons/proton-ge-rtsp]: https://github.com/SpookySkeletons/proton-ge-rtsp
 [github:tats-u/zifu]: https://github.com/tats-u/zifu
 [nixpkgs]: https://github.com/NixOS/nixpkgs
-[software.tlfoxhuman.net]: https://software.tlfoxhuman.net
