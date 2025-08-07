@@ -13,17 +13,19 @@ assert lib.assertMsg (
   compat-client-install-path != ""
 ) "at least, you must specify compat-client-install-path";
 stdenv.mkDerivation {
-  buildInputs = [
-    steam-run
-  ];
   buildPhase = ''
     runHook preBuild
-    g++ -O2 -o FakeVRChat.exe FakeVRChat.cpp
+    g++ -O2 -o FakeVRChat FakeVRChat.cpp
     runHook postBuild
   '';
   installPhase = ''
     runHook preInstall
-    install -Dm555 FakeVRChat.exe "$out/opt/FakeVRChat/bin/FakeVRChat.exe"
+    install -Dm555 FakeVRChat "$out/opt/FakeVRChat/bin/FakeVRChat"
+    cat <<EOF >"$out/opt/FakeVRChat/bin/FakeVRChat.exe"
+    #!/usr/bin/env bash
+    exec "${steam-run}/bin/steam-run" "$out/opt/FakeVRChat/bin/FakeVRChat" "$@"
+    EOF
+    chmod 0555 "$out/opt/FakeVRChat/bin/FakeVRChat.exe"
     runHook postInstall
   '';
   meta = {
@@ -45,9 +47,6 @@ stdenv.mkDerivation {
       -e 's|^	std::string vrchat_exe_path .*$|	std::string vrchat_exe_path = "${vrchat-exe-path}";|'
     runHook postPatch
   '';
-  patches = [
-    ./add-steam-run.patch
-  ];
   pname = "fakevrchat";
   src = fetchurl {
     inherit hash;
@@ -58,5 +57,5 @@ stdenv.mkDerivation {
     cp "$src" FakeVRChat.cpp
     runHook postUnpack
   '';
-  version = "1.0.1";
+  version = "1.0.2";
 }
