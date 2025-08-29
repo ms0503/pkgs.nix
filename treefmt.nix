@@ -41,6 +41,7 @@
           ];
           shellcheck.excludes = [
             "**/.envrc"
+            ".envrc"
           ];
         };
       };
