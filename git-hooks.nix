@@ -13,15 +13,6 @@
             actionlint.enable = true;
             check-json.enable = true;
             check-toml.enable = true;
-            editorconfig-checker = {
-              enable = true;
-              excludes = [
-                "Cargo.lock"
-                "_sources"
-                "flake.lock"
-                "pkgs/alcom/deps.json"
-              ];
-            };
             markdownlint = {
               enable = true;
               settings.configuration.MD013 = false;
