@@ -95,11 +95,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-jyi/3i1EyAyYnCfl0RnynwgpFrE8FCD6tql1pHvLHNY=",
+            "sha256": "sha256-seLORKrMF3OhjC+3NFw8cQyyaWhHR6aNKpfAqLGAtlI=",
             "type": "url",
-            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.07.01.tar.gz"
+            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.08.01.tar.gz"
         },
-        "version": "2025.07.01"
+        "version": "2025.08.01"
     },
     "proton-ge-rtsp-bin": {
         "cargoLocks": null,
