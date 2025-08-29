@@ -22,5 +22,4 @@ rustPlatform.buildRustPackage {
   nativeBuildInputs = [
     mold
   ];
-  useFetchCargoVendor = true;
 }

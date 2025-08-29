@@ -27,5 +27,4 @@ rustPlatform.buildRustPackage {
   ];
   pname = cargoToml.package.name;
   src = ./.;
-  useFetchCargoVendor = true;
 }
