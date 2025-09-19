@@ -51,18 +51,18 @@
   };
   noto-fonts = {
     pname = "noto-fonts";
-    version = "2025.08.01";
+    version = "2025.09.01";
     src = fetchurl {
-      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.08.01.tar.gz";
-      sha256 = "sha256-seLORKrMF3OhjC+3NFw8cQyyaWhHR6aNKpfAqLGAtlI=";
+      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.09.01.tar.gz";
+      sha256 = "sha256-Mjq/Fk1H6KReGk94q7cjhCBkjlUOyxYwNCyhn4Z/YUo=";
     };
   };
   proton-ge-rtsp-bin = {
     pname = "proton-ge-rtsp-bin";
-    version = "GE-Proton9-22-rtsp17";
+    version = "GE-Proton10-15-rtsp18";
     src = fetchurl {
-      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton9-22-rtsp17/GE-Proton9-22-rtsp17.tar.gz";
-      sha256 = "sha256-lk51oeLkBjBJ8NFVAmAxHihXCGS0eKczoYUrPan5pQs=";
+      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton10-15-rtsp18/GE-Proton10-15-rtsp18.tar.gz";
+      sha256 = "sha256-Np6Z50z0e+5dTAOt+w1nGzBjE9UJGyEdTKWYo5eW+3E=";
     };
   };
   walland = {
