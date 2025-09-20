@@ -173,9 +173,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail "/usr/bin/microsoft-edge-dev" "$exe"
     substituteInPlace "$out/share/gnome-control-center/default-apps/microsoft-edge-dev.xml" \
       --replace-fail "/opt/microsoft/$appname/microsoft-edge-dev" "$exe"
-    substituteInPlace "$out/share/menu/microsoft-edge-dev.menu" \
-      --replace-fail /opt "$out/share" \
-      --replace-fail "$out/share/microsoft/$appname/microsoft-edge-dev" "$exe"
 
     for icon_file in "$out/share/microsoft/$appname/product_logo_"[0-9][0-9]"_$dist.png"; do
       num_and_suffix=''${icon_file##*logo_}
