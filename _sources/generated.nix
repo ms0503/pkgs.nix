@@ -27,10 +27,10 @@
   };
   microsoft-edit = {
     pname = "microsoft-edit";
-    version = "1.2.0";
+    version = "1.2.1";
     src = fetchurl {
-      url = "https://github.com/microsoft/edit/archive/refs/tags/v1.2.0.tar.gz";
-      sha256 = "sha256-5Lpv8b/s/v8kkjBvWFDHFL9Q/9s8w7tb46qYconyQP4=";
+      url = "https://github.com/microsoft/edit/archive/refs/tags/v1.2.1.tar.gz";
+      sha256 = "sha256-QccZsIIS+kq25DSlMkKycYujE+jSTQkPJEu4V9ap0P0=";
     };
   };
   noto-cjk-sans = {
@@ -51,18 +51,18 @@
   };
   noto-fonts = {
     pname = "noto-fonts";
-    version = "2025.09.01";
+    version = "2025.10.01";
     src = fetchurl {
-      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.09.01.tar.gz";
-      sha256 = "sha256-Mjq/Fk1H6KReGk94q7cjhCBkjlUOyxYwNCyhn4Z/YUo=";
+      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.10.01.tar.gz";
+      sha256 = "sha256-6PkARqAWU008Zt1gcLLqJPTo1RyMnvctYD39CnRNqpA=";
     };
   };
   proton-ge-rtsp-bin = {
     pname = "proton-ge-rtsp-bin";
-    version = "GE-Proton10-15-rtsp18";
+    version = "GE-Proton10-20-rtsp19";
     src = fetchurl {
-      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton10-15-rtsp18/GE-Proton10-15-rtsp18.tar.gz";
-      sha256 = "sha256-Np6Z50z0e+5dTAOt+w1nGzBjE9UJGyEdTKWYo5eW+3E=";
+      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton10-20-rtsp19/GE-Proton10-20-rtsp19.tar.gz";
+      sha256 = "sha256-SP4nkO/6qfKyE2FFHLD8sEtvDzb71FxJRcTCXnfPF+s=";
     };
   };
   walland = {
@@ -79,14 +79,14 @@
   };
   zifu = {
     pname = "zifu";
-    version = "447684211b6f3bb2eb0938c84a14d89c86e533b3";
+    version = "99b257ebe10ffb9b0b9897a431aeaafe53811786";
     src = fetchFromGitHub {
       owner = "tats-u";
       repo = "zifu";
-      rev = "447684211b6f3bb2eb0938c84a14d89c86e533b3";
+      rev = "99b257ebe10ffb9b0b9897a431aeaafe53811786";
       fetchSubmodules = false;
-      sha256 = "sha256-4gtIPpLzI9ufrtwx0+W72uEfzrva6IE+koEUxbBBHJ8=";
+      sha256 = "sha256-D8kB4FxzcL/b4lDRY6yFf54GsG6PgO2StZXY1TBW8j8=";
     };
-    date = "2024-11-14";
+    date = "2025-10-13";
   };
 }
