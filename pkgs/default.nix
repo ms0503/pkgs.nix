@@ -54,7 +54,7 @@ _: {
           };
           microsoft-edit = callPackage ./microsoft-edit {
             inherit rustPlatform;
-            cargoHash = "sha256-ceAaaR+N03Dq2MHYel4sHDbbYUOr/ZrtwqJwhaUbC2o=";
+            cargoHash = "sha256-U8U70nzTmpY6r8J661EJ4CGjx6vWrGovu5m25dvz5sY=";
             source = sources.microsoft-edit;
           };
           noto-fonts-cjk-sans-non-variable = callPackage ./noto-fonts-cjk-sans-non-variable {
@@ -81,7 +81,7 @@ _: {
           };
           zifu = callPackage ./zifu {
             inherit rustPlatform;
-            cargoHash = "sha256-MKnhEqa8u8yg7fEc3GdPX63kIMl0FPOFg8FOSViLPhg=";
+            cargoHash = "sha256-bQMFznDsAsF2KhTryry2eLImtBdDS6/27/DB4OzSejI=";
             source = sources.zifu;
           };
         }
