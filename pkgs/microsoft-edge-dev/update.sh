@@ -1,5 +1,5 @@
-#!/usr/bin/env nix-shell
-#!nix-shell -i bash -p common-updater-scripts curl
+#!/usr/bin/env nix
+#!nix shell nixpkgs#common-updater-scripts nixpkgs#curl nixpkgs#bash -c bash
 # shellcheck disable=SC1008,SC2031,SC2128,SC2178
 
 VER_SAME=0
