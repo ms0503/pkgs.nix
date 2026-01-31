@@ -1,6 +1,6 @@
 {
     "ds4pairer": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2023-03-28",
         "extract": null,
         "name": "ds4pairer",
@@ -21,7 +21,7 @@
         "version": "24b6f6194e67270e94781c6b1211a4a830735fe9"
     },
     "git-vrc": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-06-18",
         "extract": null,
         "name": "git-vrc",
@@ -42,7 +42,7 @@
         "version": "b0ca3bf7da90099a02181df8880af022c6fc0320"
     },
     "microsoft-edit": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "microsoft-edit",
@@ -57,7 +57,7 @@
         "version": "1.2.1"
     },
     "noto-cjk-sans": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "noto-cjk-sans",
@@ -72,7 +72,7 @@
         "version": "2.004"
     },
     "noto-cjk-serif": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "noto-cjk-serif",
@@ -87,7 +87,7 @@
         "version": "2.003"
     },
     "noto-fonts": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "noto-fonts",
@@ -95,14 +95,14 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-oG8VurwWKhB2iWSWXpWgYgImIqB4r0vJ2YjJumW0yPc=",
+            "sha256": "sha256-8b7A3XIvz8sKp1yANTDjqK5ODdWeW5OlLdj1fVSU70Q=",
             "type": "url",
-            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2025.12.01.tar.gz"
+            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.01.01.tar.gz"
         },
-        "version": "2025.12.01"
+        "version": "2026.01.01"
     },
     "proton-ge-rtsp-bin": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": null,
         "extract": null,
         "name": "proton-ge-rtsp-bin",
@@ -117,7 +117,7 @@
         "version": "GE-Proton10-26-rtsp20"
     },
     "walland": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-05-21",
         "extract": null,
         "name": "walland",
@@ -138,7 +138,7 @@
         "version": "d1c9dae35e7125e642f93e6acfee2682e801b627"
     },
     "zifu": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-10-13",
         "extract": null,
         "name": "zifu",
