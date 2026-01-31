@@ -33,5 +33,6 @@ buildPythonApplication {
   patches = [
     ./add-setup-py.patch
   ];
+  pyproject = false;
   version = source.date;
 }
