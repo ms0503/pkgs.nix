@@ -34,6 +34,7 @@ stdenv.mkDerivation {
   ];
   patches = [
     ./add-new-product-id.patch
+    ./bump-cmake-minimum-required.patch
     ./fix-find-hidapi.patch
     ./fix-missing-ctype.h.patch
   ];
