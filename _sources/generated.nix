@@ -56,10 +56,10 @@
   };
   noto-fonts = {
     pname = "noto-fonts";
-    version = "2026.02.01";
+    version = "2026.03.01";
     src = fetchurl {
-      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.02.01.tar.gz";
-      sha256 = "sha256-1THqzY/8TIQkdCILAl73lTxLrjKezIeSppfVWp9qUgQ=";
+      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.03.01.tar.gz";
+      sha256 = "sha256-AzsOy71A9ai0Ui5ps6uROhu/SZ7gxtZG9Mf4xZjU+Vo=";
     };
   };
   proton-ge-rtsp-bin = {
