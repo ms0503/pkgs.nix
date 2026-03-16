@@ -31,6 +31,7 @@
   lib,
   libGL,
   libGLU,
+  libX11,
   libdecor,
   libepoxy,
   libffi,
@@ -44,7 +45,6 @@
   libspnav,
   libtiff,
   libwebp,
-  libx11,
   libxkbcommon,
   libxml2,
   llvmPackages,
@@ -200,7 +200,7 @@ stdenv.mkDerivation (
       jemalloc
       libGL
       libGLU
-      libx11
+      libX11
       libXext
       libXfixes
       libXi

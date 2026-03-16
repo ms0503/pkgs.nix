@@ -67,18 +67,16 @@
               config.allowUnfree = true;
             };
           };
-          devShells.default =
-            let
-              packages = with pkgs; [
+          devShells.default = pkgs.mkShell {
+            packages =
+              config.pre-commit.settings.enabledPackages
+              ++ (with pkgs; [
                 nvfetcher
-              ];
-            in
-            pkgs.mkShell {
-              inherit packages;
-              shellHook = ''
-                ${config.pre-commit.installationScript}
-              '';
-            };
+              ]);
+            shellHook = ''
+              ${config.pre-commit.shellHook}
+            '';
+          };
         };
       systems = import systems;
     };

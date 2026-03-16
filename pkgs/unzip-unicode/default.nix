@@ -1,4 +1,4 @@
-{ fetchurl, unzip }:
+{ unzip }:
 unzip.overrideAttrs (
   _: prev: {
     meta = {
@@ -6,16 +6,8 @@ unzip.overrideAttrs (
       description = "${prev.meta.description}, with Unicode support";
     };
     patches = prev.patches ++ [
-      (fetchurl {
-        hash = "sha256-525tbsmc0sg5cwBR6EHCh3o0Cg3kqPseT6PQZnmWpBw=";
-        name = "20-unzip60-alt-iconv-utf8.patch";
-        url = "https://git.launchpad.net/ubuntu/+source/unzip/plain/debian/patches/20-unzip60-alt-iconv-utf8.patch?id=4b84f6f7b2bb169583ab3a6f542528f1c2c0ad7b";
-      })
-      (fetchurl {
-        hash = "sha256-wcotXp0z+QjrRyGlT6Unxa/7i9shecIzQ3eWZb5+TdM=";
-        name = "30-fix-code-pages.patch";
-        url = "https://git.launchpad.net/ubuntu/+source/unzip/plain/debian/patches/30-fix-code-pages.patch?id=4b84f6f7b2bb169583ab3a6f542528f1c2c0ad7b";
-      })
+      ./20-unzip60-alt-iconv-utf8.patch
+      ./30-fix-code-pages.patch
     ];
     pname = "unzip-unicode";
     preConfigure = ''
