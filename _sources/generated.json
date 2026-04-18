@@ -95,11 +95,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-AzsOy71A9ai0Ui5ps6uROhu/SZ7gxtZG9Mf4xZjU+Vo=",
+            "sha256": "sha256-OhmvbfPDlTUnFUcP0vpO1Q51qZVR253Dt0Ph+H6HG3s=",
             "type": "url",
-            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.03.01.tar.gz"
+            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.04.01.tar.gz"
         },
-        "version": "2026.03.01"
+        "version": "2026.04.01"
     },
     "proton-ge-rtsp-bin": {
         "cargoLock": null,
@@ -110,11 +110,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-xEG3x+DlNrvhT8XbLaAsx+mmFuGz8vL9lwRHMe+I4iU=",
+            "sha256": "sha256-e98K1vgdOQNFtYH1CnL/wzrqEM98TZw/RRmm6g4qglQ=",
             "type": "url",
-            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton10-26-rtsp20/GE-Proton10-26-rtsp20.tar.gz"
+            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton10-33-rtsp23-4/GE-Proton10-33-rtsp23-4.tar.gz"
         },
-        "version": "GE-Proton10-26-rtsp20"
+        "version": "GE-Proton10-33-rtsp23-4"
     },
     "walland": {
         "cargoLock": null,
