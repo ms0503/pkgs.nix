@@ -48,6 +48,7 @@ _: {
             cargoHash = "sha256-/vO8xkD0uW0kqF8RzvAw2/TAvmDI5N8GZD0f6S6lY+M=";
             source = sources.git-vrc;
           };
+          mc-mod-downloader = inputs'.mc-mod-downloader.packages.default;
           microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
           microsoft-edge-dev-wayland = callPackage ./microsoft-edge-dev-wayland {
             inherit (self'.packages) microsoft-edge-dev;

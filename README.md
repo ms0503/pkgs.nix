@@ -28,6 +28,10 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Description: A command line extension for git to reduce meaningless diff on
     git of VRC project
   - Source: [github:anatawa12/git-vrc]
+- mc-mod-downloader
+  - Description: A tool that download mods from multiple sources in bulk via the
+    command line
+  - Flake: [github:ms0503/mc-mod-downloader]
 - microsoft-edge-dev
   - Description: Web browser from Microsoft, weekly build
   - Source: packages.microsoft.com
@@ -88,6 +92,7 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 [github:anatawa12/git-vrc]: https://github.com/anatawa12/git-vrc
 [github:golim/walland]: https://github.com/Golim/walland
 [github:microsoft/edit]: https://github.com/microsoft/edit
+[github:ms0503/mc-mod-downloader]: https://github.com/ms0503/mc-mod-downloader
 [github:notofonts/noto-cjk]: https://github.com/notofonts/noto-cjk
 [github:notofonts/notofonts.github.io]: https://github.com/notofonts/notofonts.github.io
 [github:paulstraw/ds4pairer]: https://github.com/paulstraw/ds4pairer
