@@ -100,6 +100,40 @@
         "type": "github"
       }
     },
+    "mc-mod-downloader": {
+      "inputs": {
+        "fenix": [
+          "fenix"
+        ],
+        "flake-compat": [],
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "git-hooks": [
+          "git-hooks"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems",
+        "treefmt-nix": [
+          "treefmt-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1777406039,
+        "narHash": "sha256-oOxtNk///w6R2F1rVMxKRyk9AZ7dKJ6rxavtuioBv4o=",
+        "owner": "ms0503",
+        "repo": "mc-mod-downloader",
+        "rev": "8bb95db9f04caf0679303aa3c41212cca24a856e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ms0503",
+        "repo": "mc-mod-downloader",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1775710090,
@@ -138,9 +172,10 @@
         "flake-compat": "flake-compat",
         "flake-parts": "flake-parts",
         "git-hooks": "git-hooks",
+        "mc-mod-downloader": "mc-mod-downloader",
         "nixpkgs": "nixpkgs",
         "nixpkgs-blender3": "nixpkgs-blender3",
-        "systems": "systems",
+        "systems": "systems_2",
         "treefmt-nix": "treefmt-nix"
       }
     },
@@ -162,6 +197,22 @@
       }
     },
     "systems": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_2": {
       "flake": false,
       "locked": {
         "lastModified": 1681028828,

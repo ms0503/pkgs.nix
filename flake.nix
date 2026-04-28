@@ -19,6 +19,17 @@
       };
       url = "github:cachix/git-hooks.nix";
     };
+    mc-mod-downloader = {
+      inputs = {
+        fenix.follows = "fenix";
+        flake-compat.follows = "";
+        flake-parts.follows = "flake-parts";
+        git-hooks.follows = "git-hooks";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "treefmt-nix";
+      };
+      url = "github:ms0503/mc-mod-downloader";
+    };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-blender3.url = "github:NixOS/nixpkgs/nixos-25.05";
     systems = {
@@ -47,6 +58,7 @@
       perSystem =
         {
           config,
+          lib,
           pkgs,
           system,
           ...
@@ -70,6 +82,7 @@
           devShells.default = pkgs.mkShell {
             packages =
               config.pre-commit.settings.enabledPackages
+              ++ lib.attrValues config.treefmt.build.programs
               ++ (with pkgs; [
                 nvfetcher
               ]);
