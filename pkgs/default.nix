@@ -46,9 +46,7 @@ _: {
           };
           fakevrchat = callPackage ./fakevrchat { };
           generatehex = inputs'.generatehex.packages.default;
-          getcodepoint = callPackage ./getcodepoint {
-            inherit rustPlatform;
-          };
+          getcodepoint = inputs'.getcodepoint.packages.default;
           getemoji = callPackage ./getemoji {
             inherit rustPlatform;
           };
