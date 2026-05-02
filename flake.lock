@@ -125,6 +125,40 @@
         "type": "github"
       }
     },
+    "generatehex": {
+      "inputs": {
+        "fenix": [
+          "fenix"
+        ],
+        "flake-compat": [],
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "git-hooks": [
+          "git-hooks"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems_3",
+        "treefmt-nix": [
+          "treefmt-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1777754213,
+        "narHash": "sha256-TP95Sgqak907rwD+bFATbKp9TP9vKwI+lVTTPeOyW0Q=",
+        "owner": "ms0503",
+        "repo": "generatehex",
+        "rev": "e024fb7d94f1123693ecec889846dd0d4e324ee2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ms0503",
+        "repo": "generatehex",
+        "type": "github"
+      }
+    },
     "git-hooks": {
       "inputs": {
         "flake-compat": [],
@@ -183,7 +217,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "systems": "systems_3",
+        "systems": "systems_4",
         "treefmt-nix": [
           "treefmt-nix"
         ]
@@ -241,11 +275,12 @@
         "fenix": "fenix",
         "flake-compat": "flake-compat",
         "flake-parts": "flake-parts",
+        "generatehex": "generatehex",
         "git-hooks": "git-hooks",
         "mc-mod-downloader": "mc-mod-downloader",
         "nixpkgs": "nixpkgs",
         "nixpkgs-blender3": "nixpkgs-blender3",
-        "systems": "systems_4",
+        "systems": "systems_5",
         "treefmt-nix": "treefmt-nix"
       }
     },
@@ -315,6 +350,22 @@
       }
     },
     "systems_4": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_5": {
       "flake": false,
       "locked": {
         "lastModified": 1681028828,
