@@ -38,9 +38,7 @@ _: {
         in
         {
           alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." alcom;
-          awww-bing = callPackage ./awww-bing {
-            inherit rustPlatform;
-          };
+          awww-bing = inputs'.awww-bing.packages.default;
           colortool = callPackage ./colortool {
             inherit rustPlatform;
           };
