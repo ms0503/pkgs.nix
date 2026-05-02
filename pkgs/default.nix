@@ -38,11 +38,26 @@ _: {
         in
         {
           alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." alcom;
+          awww-bing = callPackage ./awww-bing {
+            inherit rustPlatform;
+          };
+          colortool = callPackage ./colortool {
+            inherit rustPlatform;
+          };
           discord-canary-wayland = callPackage ./discord-canary-wayland { };
           ds4pairer = callPackage ./ds4pairer {
             source = sources.ds4pairer;
           };
           fakevrchat = callPackage ./fakevrchat { };
+          generatehex = callPackage ./generatehex {
+            inherit rustPlatform;
+          };
+          getcodepoint = callPackage ./getcodepoint {
+            inherit rustPlatform;
+          };
+          getemoji = callPackage ./getemoji {
+            inherit rustPlatform;
+          };
           git-vrc = callPackage ./git-vrc {
             inherit rustPlatform;
             cargoHash = "sha256-/vO8xkD0uW0kqF8RzvAw2/TAvmDI5N8GZD0f6S6lY+M=";
@@ -70,9 +85,18 @@ _: {
           proton-ge-rtsp-bin = callPackage ./proton-ge-rtsp-bin {
             source = sources.proton-ge-rtsp-bin;
           };
+          skel = callPackage ./skel {
+            inherit rustPlatform;
+          };
           slack-wayland = callPackage ./slack-wayland { };
           spotify-wayland = callPackage ./spotify-wayland { };
+          unicodeescape = callPackage ./unicodeescape {
+            inherit rustPlatform;
+          };
           unzip-unicode = callPackage ./unzip-unicode { };
+          urlencode = callPackage ./urlencode {
+            inherit rustPlatform;
+          };
           urxvt-wrapper = callPackage ./urxvt-wrapper { };
           walland = callPackage ./walland {
             source = sources.walland;

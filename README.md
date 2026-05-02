@@ -4,6 +4,9 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 
 ## Package List
 
+- awww-bing
+  - Description: awww wrapper for getting image from Bing Wallpaper
+  - Source: none
 - blender3
   - Description: 3D Creation/Animation/Publishing System
   - Source: [blender]
@@ -13,6 +16,9 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 - blender3-gpu
   - Description: 3D Creation/Animation/Publishing System, with GPU supports
   - Inherit: .#blender3
+- colortool
+  - Description: A simple color helper
+  - Source: none
 - discord-canary-wayland
   - Description: All-in-one cross-platform voice and text chat for gamers,
     including Wayland support
@@ -23,6 +29,16 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Source: [github:paulstraw/ds4pairer]
 - fakevrchat
   - Description: VRChat wrapper for offline world testing on Linux
+  - Source: none
+- generatehex
+  - Description: A random hexadecimal generator
+  - Source: none
+- getcodepoint
+  - Description: A tool that displays the Unicode codepoint for each character
+    from stdin
+  - Source: none
+- getemoji
+  - Description: An emoji downloader
   - Source: none
 - git-vrc
   - Description: A command line extension for git to reduce meaningless diff on
@@ -62,6 +78,9 @@ This repository contains packages that are out-dated or not included in nixpkgs.
     (This is intended for use in the \`programs.steam.extraCompatPackages\`
     option only)
   - Source: [github:SpookySkeletons/proton-ge-rtsp]
+- skel
+  - Description: A tool for managing skeletons
+  - Source: none
 - slack-wayland
   - Description: Desktop client for Slack, including Wayland support
   - Inherit: [nixpkgs]#slack
@@ -69,11 +88,17 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Description: Play music from the Spotify music service, including Wayland
     support
   - Inherit: [nixpkgs]#spotify
+- unicodeescape
+  - Description: A tool for converting plain text into Unicode-escaped text
+  - Source: none
 - unzip-unicode
   - Description: Extraction utility for archives compressed in .zip format, with
     Unicode support
   - Inherit: [nixpkgs]#unzip
   - Note: Unfree
+- urlencode
+  - Description: A tool for converting between plain text and URL-encoded text
+  - Source: none
 - urxvt-wrapper
   - Description: URxvt wrapper to use daemon mode easily
   - Source: none
