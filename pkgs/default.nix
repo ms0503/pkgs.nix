@@ -39,9 +39,7 @@ _: {
         {
           alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." alcom;
           awww-bing = inputs'.awww-bing.packages.default;
-          colortool = callPackage ./colortool {
-            inherit rustPlatform;
-          };
+          colortool = inputs'.colortool.packages.default;
           discord-canary-wayland = callPackage ./discord-canary-wayland { };
           ds4pairer = callPackage ./ds4pairer {
             source = sources.ds4pairer;
