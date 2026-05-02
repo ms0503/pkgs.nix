@@ -34,6 +34,17 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
       url = "github:hercules-ci/flake-parts";
     };
+    generatehex = {
+      inputs = {
+        fenix.follows = "fenix";
+        flake-compat.follows = "";
+        flake-parts.follows = "flake-parts";
+        git-hooks.follows = "git-hooks";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "treefmt-nix";
+      };
+      url = "github:ms0503/generatehex";
+    };
     git-hooks = {
       inputs = {
         flake-compat.follows = "";

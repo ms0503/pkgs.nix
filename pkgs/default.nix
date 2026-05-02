@@ -45,9 +45,7 @@ _: {
             source = sources.ds4pairer;
           };
           fakevrchat = callPackage ./fakevrchat { };
-          generatehex = callPackage ./generatehex {
-            inherit rustPlatform;
-          };
+          generatehex = inputs'.generatehex.packages.default;
           getcodepoint = callPackage ./getcodepoint {
             inherit rustPlatform;
           };
