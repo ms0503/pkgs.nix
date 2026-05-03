@@ -106,6 +106,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/treefmt-nix";
     };
+    unicodeescape = {
+      inputs = {
+        fenix.follows = "fenix";
+        flake-compat.follows = "";
+        flake-parts.follows = "flake-parts";
+        git-hooks.follows = "git-hooks";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "treefmt-nix";
+      };
+      url = "github:ms0503/unicodeescape";
+    };
   };
   outputs =
     inputs@{
