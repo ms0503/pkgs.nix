@@ -9,4 +9,4 @@
       lock.nodes.${name}.locked.url
         or "https://github.com/NixOS/flake-compat/archive/${lock.nodes.${name}.locked.rev}.tar.gz";
   }
-) { src = ./.; }).defaultNix
+) { src = ./.; }).shellNix
