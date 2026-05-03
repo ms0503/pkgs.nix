@@ -56,6 +56,17 @@
       };
       url = "github:ms0503/getcodepoint";
     };
+    getemoji = {
+      inputs = {
+        fenix.follows = "fenix";
+        flake-compat.follows = "";
+        flake-parts.follows = "flake-parts";
+        git-hooks.follows = "git-hooks";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "treefmt-nix";
+      };
+      url = "github:ms0503/getemoji";
+    };
     git-hooks = {
       inputs = {
         flake-compat.follows = "";
