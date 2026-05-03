@@ -291,11 +291,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777414831,
-        "narHash": "sha256-cABMoXp9n5waNPgRxR042h18Tq2lFEOLbwd+AV5lL+8=",
+        "lastModified": 1777730486,
+        "narHash": "sha256-WAOOqSjslfWzU7EiQFl1EWCVI993iiabkezdGIZZAVk=",
         "owner": "ms0503",
         "repo": "mc-mod-downloader",
-        "rev": "d1e1093d55d944fcc38d77d54a65f59d5dd36e1b",
+        "rev": "a48548892b8eec84501dc5bf81e0cac186186603",
         "type": "github"
       },
       "original": {
