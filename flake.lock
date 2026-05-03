@@ -353,7 +353,8 @@
         "skel": "skel",
         "systems": "systems_8",
         "treefmt-nix": "treefmt-nix",
-        "unicodeescape": "unicodeescape"
+        "unicodeescape": "unicodeescape",
+        "urlencode": "urlencode"
       }
     },
     "rust-analyzer-src": {
@@ -408,6 +409,22 @@
       }
     },
     "systems": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_10": {
       "flake": false,
       "locked": {
         "lastModified": 1681028828,
@@ -602,6 +619,40 @@
       "original": {
         "owner": "ms0503",
         "repo": "unicodeescape",
+        "type": "github"
+      }
+    },
+    "urlencode": {
+      "inputs": {
+        "fenix": [
+          "fenix"
+        ],
+        "flake-compat": [],
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "git-hooks": [
+          "git-hooks"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems_10",
+        "treefmt-nix": [
+          "treefmt-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1777788218,
+        "narHash": "sha256-RckG4LiD3gFzYiOwHoVA5VIfr0QoNacMQqgIMh8Pu20=",
+        "owner": "ms0503",
+        "repo": "urlencode",
+        "rev": "42e328be84493098579997b116cddc5afe040afb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ms0503",
+        "repo": "urlencode",
         "type": "github"
       }
     }

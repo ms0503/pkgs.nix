@@ -80,9 +80,7 @@ _: {
           spotify-wayland = callPackage ./spotify-wayland { };
           unicodeescape = inputs'.unicodeescape.packages.default;
           unzip-unicode = callPackage ./unzip-unicode { };
-          urlencode = callPackage ./urlencode {
-            inherit rustPlatform;
-          };
+          urlencode = inputs'.urlencode.packages.default;
           urxvt-wrapper = callPackage ./urxvt-wrapper { };
           walland = callPackage ./walland {
             source = sources.walland;
