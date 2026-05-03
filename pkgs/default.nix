@@ -47,9 +47,7 @@ _: {
           fakevrchat = callPackage ./fakevrchat { };
           generatehex = inputs'.generatehex.packages.default;
           getcodepoint = inputs'.getcodepoint.packages.default;
-          getemoji = callPackage ./getemoji {
-            inherit rustPlatform;
-          };
+          getemoji = inputs'.getemoji.packages.default;
           git-vrc = callPackage ./git-vrc {
             inherit rustPlatform;
             cargoHash = "sha256-/vO8xkD0uW0kqF8RzvAw2/TAvmDI5N8GZD0f6S6lY+M=";
