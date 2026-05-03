@@ -78,9 +78,7 @@ _: {
           skel = inputs'.skel.packages.default;
           slack-wayland = callPackage ./slack-wayland { };
           spotify-wayland = callPackage ./spotify-wayland { };
-          unicodeescape = callPackage ./unicodeescape {
-            inherit rustPlatform;
-          };
+          unicodeescape = inputs'.unicodeescape.packages.default;
           unzip-unicode = callPackage ./unzip-unicode { };
           urlencode = callPackage ./urlencode {
             inherit rustPlatform;
