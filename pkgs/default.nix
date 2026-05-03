@@ -75,9 +75,7 @@ _: {
           proton-ge-rtsp-bin = callPackage ./proton-ge-rtsp-bin {
             source = sources.proton-ge-rtsp-bin;
           };
-          skel = callPackage ./skel {
-            inherit rustPlatform;
-          };
+          skel = inputs'.skel.packages.default;
           slack-wayland = callPackage ./slack-wayland { };
           spotify-wayland = callPackage ./spotify-wayland { };
           unicodeescape = callPackage ./unicodeescape {
