@@ -7,6 +7,6 @@
     sha256 = lock.nodes.${name}.locked.narHash;
     url =
       lock.nodes.${name}.locked.url
-        or "https://github.com/edolstra/flake-compat/archive/${lock.nodes.${name}.locked.rev}.tar.gz";
+        or "https://github.com/NixOS/flake-compat/archive/${lock.nodes.${name}.locked.rev}.tar.gz";
   }
 ) { src = ./.; }).defaultNix
