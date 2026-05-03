@@ -87,6 +87,17 @@
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-blender3.url = "github:NixOS/nixpkgs/nixos-25.05";
+    skel = {
+      inputs = {
+        fenix.follows = "fenix";
+        flake-compat.follows = "";
+        flake-parts.follows = "flake-parts";
+        git-hooks.follows = "git-hooks";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "treefmt-nix";
+      };
+      url = "github:ms0503/skel";
+    };
     systems = {
       flake = false;
       url = "github:nix-systems/default";
