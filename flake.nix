@@ -86,7 +86,7 @@
       url = "github:ms0503/mc-mod-downloader";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-blender3.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-blender3.url = "github:NixOS/nixpkgs/nixos-25.11";
     skel = {
       inputs = {
         fenix.follows = "fenix";
