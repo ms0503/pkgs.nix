@@ -16,6 +16,7 @@
             editorconfig-checker = {
               enable = true;
               excludes = [
+                "_sources/generated.json"
                 "flake.lock"
               ];
             };

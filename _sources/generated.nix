@@ -32,10 +32,10 @@
   };
   microsoft-edit = {
     pname = "microsoft-edit";
-    version = "1.2.1";
+    version = "2.0.0";
     src = fetchurl {
-      url = "https://github.com/microsoft/edit/archive/refs/tags/v1.2.1.tar.gz";
-      sha256 = "sha256-QccZsIIS+kq25DSlMkKycYujE+jSTQkPJEu4V9ap0P0=";
+      url = "https://github.com/microsoft/edit/archive/refs/tags/v2.0.0.tar.gz";
+      sha256 = "sha256-812jCcXz2SsQ5cSyJn5NXinYCbKqRg6AMmsR9/66cqU=";
     };
   };
   noto-cjk-sans = {
@@ -56,10 +56,10 @@
   };
   noto-fonts = {
     pname = "noto-fonts";
-    version = "2026.04.01";
+    version = "2026.05.01";
     src = fetchurl {
-      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.04.01.tar.gz";
-      sha256 = "sha256-OhmvbfPDlTUnFUcP0vpO1Q51qZVR253Dt0Ph+H6HG3s=";
+      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.05.01.tar.gz";
+      sha256 = "sha256-bKpupiMYQmORGdSp/v2Ayu2M1YpJ9z1FMbBgQSAFxY0=";
     };
   };
   proton-ge-rtsp-bin = {
