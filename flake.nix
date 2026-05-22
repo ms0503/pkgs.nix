@@ -158,6 +158,7 @@
               config = {
                 allowUnfree = true;
                 permittedInsecurePackages = [
+                  "ilmbase-2.5.10"
                   "openssl-1.1.1w"
                 ];
               };
