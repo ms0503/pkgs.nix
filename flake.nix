@@ -158,14 +158,18 @@
               config = {
                 allowUnfree = true;
                 permittedInsecurePackages = [
-                  "ilmbase-2.5.10"
                   "openssl-1.1.1w"
                 ];
               };
             };
             pkgsB3d3 = import nixpkgs-blender3 {
               inherit system;
-              config.allowUnfree = true;
+              config = {
+                allowUnfree = true;
+                permittedInsecurePackages = [
+                  "ilmbase-2.5.10"
+                ];
+              };
             };
           };
           devShells.default = pkgs.mkShell {
