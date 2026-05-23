@@ -55,11 +55,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777753785,
-        "narHash": "sha256-gxpa+nohrRwSfCJW2VaDRheWXwDutf/rjyWDDFVBCZM=",
+        "lastModified": 1779443359,
+        "narHash": "sha256-rul+6nmPouUfmlqLmXfHnA7/acWlrAdls03p9rF0fq4=",
         "owner": "ms0503",
         "repo": "colortool",
-        "rev": "a4e0f8027b633e65537e42f2dd532d00dbc61885",
+        "rev": "47732194a2db4812eb72422dcc75770d9e8a4db6",
         "type": "github"
       },
       "original": {
