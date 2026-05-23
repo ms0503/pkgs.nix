@@ -5,7 +5,7 @@ jobs:
     runs-on: "ubuntu-24.04"
     steps:
       - name: "Checkout repository"
-        uses: "actions/checkout@v4"
+        uses: "actions/checkout@v6"
       - name: "Remove unused tools"
         run: |
           sudo rm -rf \
@@ -186,12 +186,12 @@ jobs:
           sudo apt-get autoremove -y &>/dev/null || true
           sudo apt-get autoclean -y &>/dev/null || true
       - name: "Install Nix"
-        uses: "cachix/install-nix-action@v30"
+        uses: "cachix/install-nix-action@v31"
         with:
           github_access_token: "${{ secrets.GITHUB_TOKEN }}"
           nix_path: "nixpkgs=channel:nixos-unstable"
       - name: "Use Cachix"
-        uses: "cachix/cachix-action@v15"
+        uses: "cachix/cachix-action@v17"
         with:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
           name: "ms0503"
