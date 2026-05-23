@@ -180,11 +180,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777784666,
-        "narHash": "sha256-x1SLUmxtTcpI/C9WSu8xxvZTY34nyCHNKXV9NfC18Hg=",
+        "lastModified": 1779443464,
+        "narHash": "sha256-PIFVWwn2xTREzjqqtPDQTgMtK+rbZ0PybwS/ZT5ZAk8=",
         "owner": "ms0503",
         "repo": "getcodepoint",
-        "rev": "31e484e2631dc2bed57c0fc46e76dfb37f639ed2",
+        "rev": "d36c0d9b9d3c190a93a12b3d257c2f77d8e30436",
         "type": "github"
       },
       "original": {
