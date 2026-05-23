@@ -643,11 +643,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777788218,
-        "narHash": "sha256-RckG4LiD3gFzYiOwHoVA5VIfr0QoNacMQqgIMh8Pu20=",
+        "lastModified": 1779443744,
+        "narHash": "sha256-g5byyW128llzuAy52xf4jHJSMrjTsG6NBG6i4TTGYCQ=",
         "owner": "ms0503",
         "repo": "urlencode",
-        "rev": "42e328be84493098579997b116cddc5afe040afb",
+        "rev": "66912c55af7b8ae2da522d9fe04c45e58f3d2896",
         "type": "github"
       },
       "original": {
