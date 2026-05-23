@@ -1,5 +1,7 @@
 updates:
   - directory: "/"
+    ignore:
+      - dependency-name: "nixpkgs-blender3"
     package-ecosystem: "nix"
     schedule:
       interval: "weekly"
