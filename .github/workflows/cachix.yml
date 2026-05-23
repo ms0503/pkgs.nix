@@ -199,7 +199,7 @@ jobs:
       - name: "Build"
         run: |
           nix \
-            --extra-experimental-features 'flakes nix-command' \
+            --extra-experimental-features 'flakes nix-command pipe-operators' \
             build .#${{ matrix.package }}
     strategy:
       matrix:
