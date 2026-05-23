@@ -168,6 +168,7 @@
                 allowUnfree = true;
                 permittedInsecurePackages = [
                   "ilmbase-2.5.10"
+                  "openexr-2.5.10"
                 ];
               };
             };
