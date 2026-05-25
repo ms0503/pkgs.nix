@@ -214,11 +214,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777963839,
-        "narHash": "sha256-vuHI7v5VzPg95idckgXc9h/xqZZPKc8tzdHhaxPduVw=",
+        "lastModified": 1779444019,
+        "narHash": "sha256-ZIiJ/AVTz8ActKuFcga9uR9gTiDjZkz7bX5c9J/dj1A=",
         "owner": "ms0503",
         "repo": "getemoji",
-        "rev": "f57c67e8f22f14336429ef89b1bac7a6b097d393",
+        "rev": "0b42ae87ce6bfdc279f2f1678b69d421af0bb450",
         "type": "github"
       },
       "original": {
