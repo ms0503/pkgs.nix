@@ -146,11 +146,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777754213,
-        "narHash": "sha256-TP95Sgqak907rwD+bFATbKp9TP9vKwI+lVTTPeOyW0Q=",
+        "lastModified": 1779443248,
+        "narHash": "sha256-N4djXy/Kyhp4ohIbIdhwkfT15SgYGi8LCGBuXdsG/To=",
         "owner": "ms0503",
         "repo": "generatehex",
-        "rev": "e024fb7d94f1123693ecec889846dd0d4e324ee2",
+        "rev": "7d990fa08d2fa835ac963c5f6535f5d8e657e914",
         "type": "github"
       },
       "original": {
