@@ -215,6 +215,7 @@ jobs:
           - "getcodepoint"
           - "getemoji"
           - "git-vrc"
+          - "karukan"
           - "mc-mod-downloader"
           - "microsoft-edge-dev"
           - "microsoft-edge-dev-wayland"

@@ -1,0 +1,28 @@
+--- a/karukan-im/fcitx5-addon/CMakeLists.txt
++++ b/karukan-im/fcitx5-addon/CMakeLists.txt
+@@ -23,23 +23,16 @@
+ include("${FCITX_INSTALL_CMAKECONFIG_DIR}/Fcitx5Utils/Fcitx5CompilerSettings.cmake")
+ 
+ # Path to the Rust library
+-set(KARUKAN_RUST_LIB "${CMAKE_CURRENT_SOURCE_DIR}/../../target/release/libkarukan_im.so")
++set(KARUKAN_RUST_LIB "@engine@/lib/libkarukan_im.so")
+ set(KARUKAN_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../include")
+ 
+ # Build Rust library as a custom target
+-find_program(CARGO cargo REQUIRED)
+-add_custom_target(karukan_rust_lib ALL
+-    COMMAND ${CARGO} build --release -p karukan-im
+-    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../.."
+-    COMMENT "Building karukan-im Rust library"
+-    BYPRODUCTS "${KARUKAN_RUST_LIB}"
+-)
+ 
+ # Add the addon
+ add_library(karukan MODULE
+     src/karukan.cpp
+ )
+-add_dependencies(karukan karukan_rust_lib)
++target_link_libraries(karukan ${KARUKAN_RUST_LIB})
+ 
+ target_include_directories(karukan PRIVATE
+     ${KARUKAN_INCLUDE_DIR}

@@ -9,6 +9,11 @@ git.fetchSubmodules = true
 src.branch = "master"
 src.git = "https://github.com/anatawa12/git-vrc.git"
 
+[karukan]
+fetch.url = "https://github.com/togatoga/karukan/archive/refs/tags/v$ver.tar.gz"
+src.github = "togatoga/karukan"
+src.prefix = "v"
+
 [microsoft-edit]
 fetch.url = "https://github.com/microsoft/edit/archive/refs/tags/v$ver.tar.gz"
 src.github = "microsoft/edit"

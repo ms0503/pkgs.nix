@@ -57,6 +57,11 @@
           cargoHash = "sha256-/vO8xkD0uW0kqF8RzvAw2/TAvmDI5N8GZD0f6S6lY+M=";
           source = sources.git-vrc;
         };
+        karukan = callPackage ./karukan {
+          inherit rustPlatform;
+          cargoHash = "sha256-fn9TjaIuYy4z65iUZxPntLacj7vIEpVgr2HrGkyTGag=";
+          source = sources.karukan;
+        };
         microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
         microsoft-edge-dev-wayland = callPackage ./microsoft-edge-dev-wayland {
           inherit (self'.packages) microsoft-edge-dev;
