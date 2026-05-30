@@ -30,6 +30,14 @@
     };
     date = "2025-06-18";
   };
+  karukan = {
+    pname = "karukan";
+    version = "0.1.0";
+    src = fetchurl {
+      url = "https://github.com/togatoga/karukan/archive/refs/tags/v0.1.0.tar.gz";
+      sha256 = "sha256-t0IbPz7/JJVK2JESB4vc3pSjjPUi/BNOxuLBNSrdQrc=";
+    };
+  };
   microsoft-edit = {
     pname = "microsoft-edit";
     version = "2.0.0";

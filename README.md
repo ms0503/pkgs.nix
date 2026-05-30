@@ -44,6 +44,10 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Description: A command line extension for git to reduce meaningless diff on
     git of VRC project
   - Source: [github:anatawa12/git-vrc]
+- karukan
+  - Description: Japanese Input Method System for Linux, Neural Kana-Kanji
+    Conversion Engine + fcitx5 IME
+  - Source: [github:togatoga/karukan]
 - mc-mod-downloader
   - Description: A tool that download mods from multiple sources in bulk via the
     command line
@@ -123,4 +127,5 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 [github:paulstraw/ds4pairer]: https://github.com/paulstraw/ds4pairer
 [github:spookyskeletons/proton-ge-rtsp]: https://github.com/SpookySkeletons/proton-ge-rtsp
 [github:tats-u/zifu]: https://github.com/tats-u/zifu
+[github:togatoga/karukan]: https://github.com/togatoga/karukan
 [nixpkgs]: https://github.com/NixOS/nixpkgs

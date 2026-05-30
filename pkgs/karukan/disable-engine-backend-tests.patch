@@ -1,0 +1,153 @@
+--- a/karukan-engine/src/kanji/backend.rs
++++ b/karukan-engine/src/kanji/backend.rs
+@@ -184,7 +184,7 @@
+     use super::*;
+ 
+     #[test]
+-
++    #[ignore]
+     fn test_default_model_conversion() {
+         let backend =
+             Backend::from_variant_id("jinen-v1-small-q5").expect("Failed to load default model");
+@@ -205,7 +205,7 @@
+     }
+ 
+     #[test]
+-
++    #[ignore]
+     fn test_xsmall_special_tokens() {
+         use super::super::hf_download::{get_path_by_id, get_tokenizer_path_by_id};
+         use super::super::{CONTEXT_TOKEN, INPUT_START_TOKEN, OUTPUT_START_TOKEN};
+@@ -240,7 +240,7 @@
+     }
+ 
+     #[test]
+-
++    #[ignore]
+     fn test_xsmall_conversion() {
+         let backend =
+             Backend::from_variant_id("jinen-v1-xsmall-q5").expect("Failed to download GGUF");
+--- a/karukan-engine/tests/kanji_conversion_tests.rs
++++ b/karukan-engine/tests/kanji_conversion_tests.rs
+@@ -62,6 +62,7 @@
+     }
+ 
+     #[test]
++    #[ignore]
+     fn test_tokenization() {
+         let model = load_model().expect("Failed to load");
+         let tokens = model.tokenize("コンニチハ").expect("Tokenize failed");
+@@ -69,6 +70,7 @@
+     }
+ 
+     #[test]
++    #[ignore]
+     fn test_generation() {
+         let model = load_model().expect("Failed to load");
+         let prompt = build_prompt("ワセダ");
+@@ -88,6 +90,7 @@
+     }
+ 
+     #[test]
++    #[ignore]
+     fn test_expected_conversions() {
+         let model = load_model().expect("Failed to load");
+         let test_cases = [
+@@ -117,6 +120,7 @@
+     }
+ 
+     #[test]
++    #[ignore]
+     fn test_beam_search_basic() {
+         let model = load_model().expect("Failed to load");
+         let prompt = build_prompt("ヘンカン");
+@@ -146,6 +150,7 @@
+     }
+ 
+     #[test]
++    #[ignore]
+     fn test_beam_search_multiple_inputs() {
+         let model = load_model().expect("Failed to load");
+         let test_cases = [
+@@ -183,6 +188,7 @@
+     }
+ 
+     #[test]
++    #[ignore]
+     fn test_beam_search_score_ordering() {
+         let model = load_model().expect("Failed to load");
+         let prompt = build_prompt("ヘンカン");
+@@ -207,6 +213,7 @@
+     }
+ 
+     #[test]
++    #[ignore]
+     fn test_conversion_with_context() {
+         let model = load_model().expect("Failed to load");
+ 
+@@ -245,6 +252,7 @@
+     }
+ 
+     #[test]
++    #[ignore]
+     fn test_context_variations() {
+         let model = load_model().expect("Failed to load");
+ 
+@@ -277,6 +285,7 @@
+     /// Test that context significantly changes conversion results
+     /// Same reading "こうえん" should produce different kanji based on context
+     #[test]
++    #[ignore]
+     fn test_context_disambiguation() {
+         let model = load_model().expect("Failed to load");
+ 
+@@ -329,6 +338,7 @@
+ 
+     /// Test "zenninn" -> "ゼンイン" conversion (reported crash)
+     #[test]
++    #[ignore]
+     fn test_zenninn_llamacpp() {
+         let model = load_model().expect("Failed to load");
+ 
+@@ -360,6 +370,7 @@
+ 
+     /// Test beam search with multiple candidates (this was causing decode errors)
+     #[test]
++    #[ignore]
+     fn test_zenninn_beam_search() {
+         let model = load_model().expect("Failed to load");
+ 
+@@ -395,6 +406,7 @@
+ 
+     /// Test that long context inputs work within n_ctx=256 limit
+     #[test]
++    #[ignore]
+     fn test_long_context_input() {
+         let model = load_model().expect("Failed to load");
+ 
+@@ -427,6 +439,7 @@
+     /// half-width equivalents by the tokenizer's NFKC normalizer, producing the
+     /// same token ids as the half-width input.
+     #[test]
++    #[ignore]
+     fn test_tokenizer_nfkc_normalization() {
+         let model = load_model().expect("Failed to load");
+ 
+@@ -465,6 +478,7 @@
+ 
+     /// Test token counts for various input lengths
+     #[test]
++    #[ignore]
+     fn test_token_counts() {
+         let model = load_model().expect("Failed to load");
+ 
+--- a/karukan-engine/tests/romaji_tests.rs
++++ b/karukan-engine/tests/romaji_tests.rs
+@@ -938,6 +938,7 @@
+ }
+ 
+ #[test]
++#[ignore]
+ fn test_zenninn_kanji_conversion() {
+     use karukan_engine::{Backend, KanaKanjiConverter};
+     let mut conv = RomajiConverter::new();
