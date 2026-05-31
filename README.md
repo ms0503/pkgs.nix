@@ -19,6 +19,10 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 - colortool
   - Description: A simple color helper
   - Source: none
+- dic-nico-intersection-pixiv
+  - Description: IME dictionary containing entries shared by Nico Nico Pedia and
+    Pixiv Encyclopedia
+  - Source: [github:ncaq/dic-nico-intersection-pixiv]
 - discord-canary-wayland
   - Description: All-in-one cross-platform voice and text chat for gamers,
     including Wayland support
@@ -122,6 +126,7 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 [github:golim/walland]: https://github.com/Golim/walland
 [github:microsoft/edit]: https://github.com/microsoft/edit
 [github:ms0503/mc-mod-downloader]: https://github.com/ms0503/mc-mod-downloader
+[github:ncaq/dic-nico-intersection-pixiv]: https://github.com/ncaq/dic-nico-intersection-pixiv
 [github:notofonts/noto-cjk]: https://github.com/notofonts/noto-cjk
 [github:notofonts/notofonts.github.io]: https://github.com/notofonts/notofonts.github.io
 [github:paulstraw/ds4pairer]: https://github.com/paulstraw/ds4pairer

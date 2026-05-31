@@ -1,4 +1,25 @@
 {
+    "dic-nico-intersection-pixiv": {
+        "cargoLock": null,
+        "date": "2024-09-03",
+        "extract": null,
+        "name": "dic-nico-intersection-pixiv",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ncaq",
+            "repo": "dic-nico-intersection-pixiv",
+            "rev": "db8953c31d30528515d9d1ccf103cd337f4a108d",
+            "sha256": "sha256-XhnUKnpU1BHT1N5RiUWUOD+rocihofCcfIGz2v56+zA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "db8953c31d30528515d9d1ccf103cd337f4a108d"
+    },
     "ds4pairer": {
         "cargoLock": null,
         "date": "2023-03-28",
