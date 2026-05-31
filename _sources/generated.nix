@@ -6,6 +6,18 @@
   dockerTools,
 }:
 {
+  dic-nico-intersection-pixiv = {
+    pname = "dic-nico-intersection-pixiv";
+    version = "db8953c31d30528515d9d1ccf103cd337f4a108d";
+    src = fetchFromGitHub {
+      owner = "ncaq";
+      repo = "dic-nico-intersection-pixiv";
+      rev = "db8953c31d30528515d9d1ccf103cd337f4a108d";
+      fetchSubmodules = false;
+      sha256 = "sha256-XhnUKnpU1BHT1N5RiUWUOD+rocihofCcfIGz2v56+zA=";
+    };
+    date = "2024-09-03";
+  };
   ds4pairer = {
     pname = "ds4pairer";
     version = "24b6f6194e67270e94781c6b1211a4a830735fe9";

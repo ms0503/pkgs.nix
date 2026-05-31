@@ -1,4 +1,5 @@
 **/.direnv/
 **/target/
 .pre-commit-config.yaml
+cache/
 result*

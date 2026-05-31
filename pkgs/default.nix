@@ -35,18 +35,29 @@
         cargo = inputs'.fenix.packages.latest.toolchain;
         rustc = inputs'.fenix.packages.latest.toolchain;
       };
-      sources = import ../_sources/generated.nix {
-        inherit
-          dockerTools
-          fetchFromGitHub
-          fetchgit
-          fetchurl
-          ;
-      };
+      sources =
+        import ../_sources/generated.nix {
+          inherit
+            dockerTools
+            fetchFromGitHub
+            fetchgit
+            fetchurl
+            ;
+        }
+        |> builtins.mapAttrs (
+          name: value:
+          value
+          // lib.optionalAttrs (value ? date) {
+            version = value.date;
+          }
+        );
     in
     {
       packages = {
         alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." alcom;
+        dic-nico-intersection-pixiv = callPackage ./dic-nico-intersection-pixiv {
+          source = sources.dic-nico-intersection-pixiv;
+        };
         discord-canary-wayland = callPackage ./discord-canary-wayland { };
         ds4pairer = callPackage ./ds4pairer {
           source = sources.ds4pairer;

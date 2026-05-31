@@ -208,6 +208,7 @@ jobs:
           - "blender3-cpu"
           - "blender3-gpu"
           - "colortool"
+          - "dic-nico-intersection-pixiv"
           - "discord-canary-wayland"
           - "ds4pairer"
           - "fakevrchat"

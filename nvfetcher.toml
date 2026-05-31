@@ -1,3 +1,8 @@
+[dic-nico-intersection-pixiv]
+fetch.github = "ncaq/dic-nico-intersection-pixiv"
+src.branch = "master"
+src.git = "https://github.com/ncaq/dic-nico-intersection-pixiv.git"
+
 [ds4pairer]
 fetch.github = "paulstraw/ds4pairer"
 src.branch = "master"
