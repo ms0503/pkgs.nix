@@ -1,36 +1,24 @@
 {
   callPackage,
   cargoHash,
-  cmake,
-  fcitx5,
-  kdePackages,
   lib,
-  libxkbcommon,
-  mold,
-  pkg-config,
   rustPlatform,
   source,
-  stdenv,
+  symlinkJoin,
 }:
 let
+  cli = callPackage ./cli.nix {
+    inherit cargoHash rustPlatform source;
+  };
   engine = callPackage ./engine.nix {
-    inherit
-      cargoHash
-      rustPlatform
-      source
-      ;
+    inherit cargoHash rustPlatform source;
+  };
+  im = callPackage ./im.nix {
+    inherit engine source;
   };
 in
-stdenv.mkDerivation {
-  inherit (source) pname src version;
-  buildInputs = [
-    fcitx5
-    libxkbcommon
-  ];
-  cmakeDir = "../karukan-im/fcitx5-addon";
-  cmakeFlags = [
-    "-DCMAKE_LINKER_TYPE=MOLD"
-  ];
+symlinkJoin {
+  inherit (source) pname version;
   meta = {
     description = "Japanese Input Method System for Linux, Neural Kana-Kanji Conversion Engine + fcitx5 IME";
     downloadPage = "https://github.com/togatoga/karukan/releases";
@@ -43,20 +31,8 @@ stdenv.mkDerivation {
       fromSource
     ];
   };
-  nativeBuildInputs = [
-    cmake
-    kdePackages.extra-cmake-modules
-    mold
-    pkg-config
+  paths = [
+    cli
+    im
   ];
-  passthru = {
-    inherit engine;
-  };
-  patches = [
-    ./replace-engine-with-prebuilt.patch
-  ];
-  postPatch = ''
-    substituteInPlace karukan-im/fcitx5-addon/CMakeLists.txt \
-      --replace-fail "@engine@" "${engine}"
-  '';
 }
