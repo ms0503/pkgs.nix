@@ -24,6 +24,11 @@ fetch.url = "https://github.com/microsoft/edit/archive/refs/tags/v$ver.tar.gz"
 src.github = "microsoft/edit"
 src.prefix = "v"
 
+[mozkey]
+fetch.url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v$ver.tar.gz"
+src.github_tag = "koyasi777/mozkey"
+src.prefix = "v"
+
 [noto-cjk-sans]
 fetch.url = "https://github.com/notofonts/noto-cjk/releases/download/Sans$ver/03_NotoSansCJK-OTC.zip"
 src.github_tag = "notofonts/noto-cjk"

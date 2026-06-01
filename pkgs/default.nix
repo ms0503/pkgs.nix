@@ -63,6 +63,10 @@
           source = sources.ds4pairer;
         };
         fakevrchat = callPackage ./fakevrchat { };
+        fcitx5-mozkey = callPackage ./fcitx5-mozkey {
+          inherit (self'.packages) dic-nico-intersection-pixiv mozkey;
+          source = sources.mozkey;
+        };
         git-vrc = callPackage ./git-vrc {
           inherit rustPlatform;
           cargoHash = "sha256-/vO8xkD0uW0kqF8RzvAw2/TAvmDI5N8GZD0f6S6lY+M=";
@@ -81,6 +85,10 @@
           inherit rustPlatform;
           cargoHash = "sha256-r7AR6Mf13UUeooPV5/8gyp7HvmOeSaOJNotWWqU10SQ=";
           source = sources.microsoft-edit;
+        };
+        mozkey = callPackage ./mozkey {
+          inherit (self'.packages) dic-nico-intersection-pixiv;
+          source = sources.mozkey;
         };
         noto-fonts-cjk-sans-non-variable = callPackage ./noto-fonts-cjk-sans-non-variable {
           source = sources.noto-cjk-sans;

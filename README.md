@@ -34,6 +34,9 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 - fakevrchat
   - Description: VRChat wrapper for offline world testing on Linux
   - Source: none
+- fcitx5-mozkey
+  - Description: A unofficial fork of Mozc
+  - Inherit: [nixpkgs]#fcitx5-mozc
 - generatehex
   - Description: A random hexadecimal generator
   - Source: none
@@ -68,6 +71,9 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 - microsoft-edit
   - Description: A simple editor for simple needs
   - Source: [github:microsoft/edit]
+- mozkey
+  - Description: A unofficial fork of Mozc
+  - Source: [github:koyasi777/mozkey]
 - noto-fonts-cjk-sans-non-variable
   - Description: Beautiful and free fonts for CJK languages, non-variable
     version
@@ -124,6 +130,7 @@ This repository contains packages that are out-dated or not included in nixpkgs.
 [blender]: https://www.blender.org
 [github:anatawa12/git-vrc]: https://github.com/anatawa12/git-vrc
 [github:golim/walland]: https://github.com/Golim/walland
+[github:koyasi777/mozkey]: https://github.com/koyasi777/mozkey
 [github:microsoft/edit]: https://github.com/microsoft/edit
 [github:ms0503/mc-mod-downloader]: https://github.com/ms0503/mc-mod-downloader
 [github:ncaq/dic-nico-intersection-pixiv]: https://github.com/ncaq/dic-nico-intersection-pixiv
