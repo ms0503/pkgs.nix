@@ -1,0 +1,94 @@
+diff -urN '--exclude=*.orig'  a/src/client/BUILD.bazel  b/src/client/BUILD.bazel
+---  a/src/client/BUILD.bazel	2026-05-29 00:04:50.000000000 +0900
++++  b/src/client/BUILD.bazel	2026-06-01 02:10:16.711424839 +0900
+@@ -39,14 +39,7 @@
+ mozc_cc_library(
+     name = "client_interface",
+     hdrs = ["client_interface.h"],
+-    visibility = [
+-        "//gui:__subpackages__",
+-        "//mac:__pkg__",
+-        "//renderer:__subpackages__",
+-        "//session:__pkg__",
+-        "//visibility:public",
+-        "//win32:__subpackages__",
+-    ],
++    visibility = ["//visibility:public"],
+     deps = [
+         "//ipc",
+         "//protocol:commands_cc_proto",
+@@ -69,14 +62,7 @@
+         linux = ["MOZC_USE_SVS_JAPANESE"],
+         oss = ["MOZC_USE_SVS_JAPANESE"],
+     ),
+-    visibility = [
+-        "//gui:__subpackages__",
+-        "//mac:__pkg__",
+-        "//session:__pkg__",
+-        "//unix:__subpackages__",
+-        "//visibility:public",
+-        "//win32:__subpackages__",
+-    ],
++    visibility = ["//visibility:public"],
+     deps = [
+         ":client_interface",
+         "//base:const",
+@@ -145,12 +131,7 @@
+     name = "client_mock",
+     testonly = True,
+     hdrs = ["client_mock.h"],
+-    visibility = [
+-        "//mac:__pkg__",
+-        "//session:__pkg__",
+-        "//unix:__subpackages__",
+-        "//visibility:public",
+-    ],
++    visibility = ["//visibility:public"],
+     deps = [
+         ":client_interface",
+         "//ipc",
+diff -urN '--exclude=*.orig'  a/src/renderer/BUILD.bazel  b/src/renderer/BUILD.bazel
+---  a/src/renderer/BUILD.bazel	2026-05-29 00:04:50.000000000 +0900
++++  b/src/renderer/BUILD.bazel	2026-06-01 02:10:16.708320893 +0900
+@@ -47,14 +47,7 @@
+     name = "renderer_client",
+     srcs = ["renderer_client.cc"],
+     hdrs = ["renderer_client.h"],
+-    visibility = [
+-        "//gui:__subpackages__",
+-        "//mac:__pkg__",
+-        "//renderer:__subpackages__",
+-        "//unix:__subpackages__",
+-        "//visibility:public",
+-        "//win32:__subpackages__",
+-    ],
++    visibility = ["//visibility:public"],
+     deps = [
+         ":renderer_interface",
+         "//base:clock",
+@@ -190,12 +183,7 @@
+ mozc_cc_library(
+     name = "renderer_interface",
+     hdrs = ["renderer_interface.h"],
+-    visibility = [
+-        "//mac:__pkg__",
+-        "//renderer:__subpackages__",
+-        "//unix:__subpackages__",
+-        "//visibility:public",
+-    ],
++    visibility = ["//visibility:public"],
+     deps = [
+         "//client:client_interface",
+         "//protocol:renderer_cc_proto",
+@@ -206,10 +194,7 @@
+     name = "renderer_mock",
+     testonly = True,
+     hdrs = ["renderer_mock.h"],
+-    visibility = [
+-        "//unix:__subpackages__",
+-        "//visibility:public",
+-    ],
++    visibility = ["//visibility:public"],
+     deps = [
+         ":renderer_interface",
+         "//client:client_interface",

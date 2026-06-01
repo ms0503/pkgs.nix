@@ -92,6 +92,21 @@
         },
         "version": "2.0.0"
     },
+    "mozkey": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "mozkey",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-jQc1CRFTn7QUoExWB8vG/PqKcXliq52FKDWQG2LyzlA=",
+            "type": "url",
+            "url": "https://github.com/koyasi777/mozkey/archive/refs/tags/v0.7.3.tar.gz"
+        },
+        "version": "0.7.3"
+    },
     "noto-cjk-sans": {
         "cargoLock": null,
         "date": null,

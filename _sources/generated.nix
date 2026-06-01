@@ -58,6 +58,14 @@
       sha256 = "sha256-812jCcXz2SsQ5cSyJn5NXinYCbKqRg6AMmsR9/66cqU=";
     };
   };
+  mozkey = {
+    pname = "mozkey";
+    version = "0.7.3";
+    src = fetchurl {
+      url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v0.7.3.tar.gz";
+      sha256 = "sha256-jQc1CRFTn7QUoExWB8vG/PqKcXliq52FKDWQG2LyzlA=";
+    };
+  };
   noto-cjk-sans = {
     pname = "noto-cjk-sans";
     version = "2.004";

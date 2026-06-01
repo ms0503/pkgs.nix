@@ -1,0 +1,148 @@
+--- a/src/unix/fcitx5/mozc_engine.h
++++ b/src/unix/fcitx5/mozc_engine.h
+@@ -37,6 +37,8 @@
+ #include <fcitx/instance.h>
+ #include <fcitx/menu.h>
+ 
++#include <cstdint>
++#include <functional>
+ #include <memory>
+ #include <string>
+ #include <vector>
+@@ -54,6 +56,7 @@
+ class MozcConnection;
+ class MozcResponseParser;
+ class MozcEngine;
++struct EventSourceTime;
+ 
+ enum class ExpandMode { Always, OnFocus, Hotkey };
+ 
+@@ -153,6 +156,9 @@
+   auto *parser() const { return parser_.get(); }
+   auto *pool() const { return pool_.get(); }
+ 
++  void ScheduleCallback(uint32_t delay_millisec,
++                        std::function<void()> callback);
++
+  private:
+   void ResetClientPool();
+   PropertyPropagatePolicy GetSharedStatePolicy();
+@@ -172,6 +178,7 @@
+   SimpleAction separatorAction_;
+   Menu toolMenu_;
+   MozcEngineConfig config_;
++  std::vector<std::unique_ptr<EventSourceTime>> callbackTimers_;
+   bool deactivating_ = false;
+ 
+   FCITX_ADDON_DEPENDENCY_LOADER(clipboard, instance_->addonManager());
+--- a/src/unix/fcitx5/mozc_engine.cc
++++ b/src/unix/fcitx5/mozc_engine.cc
+@@ -21,6 +21,7 @@
+ 
+ #include <fcitx-config/iniparser.h>
+ #include <fcitx-config/rawconfig.h>
++#include <fcitx-utils/event.h>
+ #include <fcitx-utils/log.h>
+ #include <fcitx-utils/macros.h>
+ #include <fcitx-utils/semver.h>
+@@ -37,7 +38,10 @@
+ #include <fcitx/userinterface.h>
+ #include <fcitx/userinterfacemanager.h>
+ 
++#include <algorithm>
+ #include <cstddef>
++#include <cstdint>
++#include <ctime>
+ #include <memory>
+ #include <string>
+ 
+@@ -316,6 +320,7 @@
+ 
+ void MozcEngine::ResetClientPool() {
+   if (pool_->policy() != GetSharedStatePolicy()) {
++    callbackTimers_.clear();
+     instance_->inputContextManager().foreach ([this](InputContext *ic) {
+       if (auto *state = this->mozcState(ic)) {
+         state->ReleaseClient();
+@@ -340,4 +345,22 @@
+   }
+ }
+ 
++void MozcEngine::ScheduleCallback(uint32_t delay_millisec,
++                                  std::function<void()> callback) {
++  callbackTimers_.erase(
++      std::remove_if(callbackTimers_.begin(), callbackTimers_.end(),
++                     [](const auto &timer) { return !timer->isEnabled(); }),
++      callbackTimers_.end());
++
++  const uint64_t delay_usec = static_cast<uint64_t>(delay_millisec) * 1000;
++  auto timer = instance_->eventLoop().addTimeEvent(
++      CLOCK_MONOTONIC, now(CLOCK_MONOTONIC) + delay_usec, 0,
++      [callback = std::move(callback)](EventSourceTime *, uint64_t) mutable {
++        callback();
++        return false;
++      });
++  timer->setOneShot();
++  callbackTimers_.push_back(std::move(timer));
++}
++
+ }  // namespace fcitx
+--- a/src/unix/fcitx5/mozc_response_parser.cc
++++ b/src/unix/fcitx5/mozc_response_parser.cc
+@@ -326,6 +326,27 @@
+       session_command.set_text(surrounding_text_info.selection_text);
+       break;
+     }
++    case mozc::commands::SessionCommand::APPLY_LIVE_CONVERSION:
++    case mozc::commands::SessionCommand::APPLY_ZENZ_LIVE_CORRECTION: {
++      const uint32_t delay_millisec =
++          response.callback().has_delay_millisec()
++              ? response.callback().delay_millisec()
++              : 0;
++      const mozc::commands::SessionCommand delayed_command = callback_command;
++      engine_->ScheduleCallback(
++          delay_millisec,
++          [this, ic_ref = ic->watch(), delayed_command] {
++            InputContext *ic = ic_ref.get();
++            if (!ic) {
++              return;
++            }
++            auto *mozc_state = engine_->mozcState(ic);
++            if (!mozc_state->SendCommandAndParse(delayed_command)) {
++              LOG(ERROR) << "Callback Command Failed";
++            }
++          });
++      return;
++    }
+     default:
+       return;
+   }
+--- a/src/unix/fcitx5/mozc_state.h
++++ b/src/unix/fcitx5/mozc_state.h
+@@ -101,6 +101,8 @@
+ 
+   bool SendCommand(const mozc::commands::SessionCommand &session_command,
+                    mozc::commands::Output *new_output);
++  bool SendCommandAndParse(
++      const mozc::commands::SessionCommand &session_command);
+ 
+   void SetUsage(const std::string &title, const std::string &description);
+ 
+--- a/src/unix/fcitx5/mozc_state.cc
++++ b/src/unix/fcitx5/mozc_state.cc
+@@ -443,6 +443,15 @@
+   return TrySendRawCommand(session_command, new_output, &error);
+ }
+ 
++bool MozcState::SendCommandAndParse(
++    const mozc::commands::SessionCommand& session_command) {
++  mozc::commands::Output new_output;
++  if (!SendCommand(session_command, &new_output)) {
++    return false;
++  }
++  return ParseResponse(new_output);
++}
++
+ void MozcState::SetUsage(const std::string& title,
+                          const std::string& description) {
+   title_ = title;
