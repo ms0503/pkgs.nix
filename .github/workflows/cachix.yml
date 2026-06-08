@@ -191,7 +191,7 @@ jobs:
           extra_nix_config: |
             accept-flake-config = true
             experimental-features = flakes nix-command pipe-operators
-          github_access_token: "${{ secrets.NIX_GITHUB_TOKEN }}"
+          github_access_token: "${{ secrets.GITHUB_TOKEN }}"
           nix_path: "nixpkgs=channel:nixos-unstable"
       - name: "Use Cachix"
         uses: "cachix/cachix-action@v17"
@@ -200,7 +200,10 @@ jobs:
           name: "ms0503"
           signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
       - name: "Build"
-        run: "nix build .#${{ matrix.package }}"
+        run: |
+          nix \
+            --extra-experimental-features 'flakes nix-command pipe-operators' \
+            build .#${{ matrix.package }}
     strategy:
       fail-fast: false
       matrix:
