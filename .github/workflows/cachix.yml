@@ -201,6 +201,7 @@ jobs:
       - name: "Build"
         run: "nix build .#${{ matrix.package }}"
     strategy:
+      fail-fast: false
       matrix:
         package:
           - "awww-bing"
