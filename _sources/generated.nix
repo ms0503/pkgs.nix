@@ -60,10 +60,10 @@
   };
   mozkey = {
     pname = "mozkey";
-    version = "0.7.3";
+    version = "0.7.4";
     src = fetchurl {
-      url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v0.7.3.tar.gz";
-      sha256 = "sha256-jQc1CRFTn7QUoExWB8vG/PqKcXliq52FKDWQG2LyzlA=";
+      url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v0.7.4.tar.gz";
+      sha256 = "sha256-CRrSYvzLgvN0y++1DxOonM1MaSWEguvnpHV7cKmy1hc=";
     };
   };
   noto-cjk-sans = {
@@ -84,10 +84,10 @@
   };
   noto-fonts = {
     pname = "noto-fonts";
-    version = "2026.05.01";
+    version = "2026.06.01";
     src = fetchurl {
-      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.05.01.tar.gz";
-      sha256 = "sha256-bKpupiMYQmORGdSp/v2Ayu2M1YpJ9z1FMbBgQSAFxY0=";
+      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.06.01.tar.gz";
+      sha256 = "sha256-L4U50IubbHPobc5nDqpG4dR9IzATfMsR70xpsnyGVgE=";
     };
   };
   proton-ge-rtsp-bin = {
