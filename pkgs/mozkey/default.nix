@@ -70,6 +70,11 @@ let
   ut-dictionary = merge-ut-dictionaries.override {
     dictionaries = dictionaries';
   };
+  ut-dictionary-personal-names = merge-ut-dictionaries.override {
+    dictionaries = [
+      mozcdic-ut-personal-names
+    ];
+  };
   ut-dictionary-sample = merge-ut-dictionaries.override {
     dictionaries = [
       mozcdic-ut-place-names
@@ -199,10 +204,11 @@ buildBazelPackage rec {
     cd src
   ''
   + lib.optionalString (dictionaries' != [ ]) ''
-    mkdir -p data/dictionary_koyasi/generated/nico_pixiv
+    mkdir -p data/dictionary_koyasi/generated/{nico_pixiv,personal_names}
     cp -f ${ut-dictionary}/mozcdic-ut.txt data/dictionary_koyasi/generated/mozcdic-ut-${dictionaryProfile}.txt
     cp -f ${ut-dictionary-sample}/mozcdic-ut.txt data/dictionary_koyasi/generated/mozcdic-ut-safe.txt
     cp -f ${dic-nico-intersection-pixiv} data/dictionary_koyasi/generated/nico_pixiv/dic-nico-intersection-pixiv-google.txt
+    cp -f ${ut-dictionary-personal-names}/mozcdic-ut.txt data/dictionary_koyasi/generated/personal_names/mozcdic-ut-personal-names.txt
   '';
   removeRulesCC = false;
   sourceRoot = "mozkey-${version}";
