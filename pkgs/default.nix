@@ -1,3 +1,4 @@
+{ inputs, ... }:
 {
   perSystem =
     {
@@ -31,6 +32,7 @@
         "urlencode"
       ];
       generateExternalPackages = packages: lib.genAttrs packages (name: inputs'.${name}.packages.default);
+      myLib = inputs.ms0503-lib.lib;
       rustPlatform = makeRustPlatform {
         cargo = inputs'.fenix.packages.latest.toolchain;
         rustc = inputs'.fenix.packages.latest.toolchain;
@@ -110,7 +112,7 @@
           source = sources.walland;
         };
         wezimgcat-wrapper = callPackage ./wezimgcat-wrapper {
-          inherit rustPlatform;
+          inherit myLib rustPlatform;
         };
         zifu = callPackage ./zifu {
           inherit rustPlatform;

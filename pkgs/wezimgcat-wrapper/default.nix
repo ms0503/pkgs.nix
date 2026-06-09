@@ -2,9 +2,12 @@
   imagemagick,
   lib,
   mold,
+  myLib,
   rustPlatform,
 }:
 let
+  inherit (myLib) filters;
+  inherit (myLib.build) cleanSourcePipe;
   cargoToml = builtins.fromTOML (builtins.readFile ./Cargo.toml);
 in
 rustPlatform.buildRustPackage {
@@ -26,5 +29,7 @@ rustPlatform.buildRustPackage {
     mold
   ];
   pname = cargoToml.package.name;
-  src = ./.;
+  src = cleanSourcePipe ./. [
+    filters.isNotNixFiles
+  ];
 }
