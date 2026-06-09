@@ -6,6 +6,7 @@
         flake-compat.follows = "";
         flake-parts.follows = "flake-parts";
         git-hooks.follows = "";
+        ms0503-lib.follows = "ms0503-lib";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
       };
@@ -17,6 +18,7 @@
         flake-compat.follows = "";
         flake-parts.follows = "flake-parts";
         git-hooks.follows = "";
+        ms0503-lib.follows = "ms0503-lib";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
       };
@@ -40,6 +42,7 @@
         flake-compat.follows = "";
         flake-parts.follows = "flake-parts";
         git-hooks.follows = "";
+        ms0503-lib.follows = "ms0503-lib";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
       };
@@ -51,6 +54,7 @@
         flake-compat.follows = "";
         flake-parts.follows = "flake-parts";
         git-hooks.follows = "";
+        ms0503-lib.follows = "ms0503-lib";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
       };
@@ -62,6 +66,7 @@
         flake-compat.follows = "";
         flake-parts.follows = "flake-parts";
         git-hooks.follows = "";
+        ms0503-lib.follows = "ms0503-lib";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
       };
@@ -80,10 +85,21 @@
         flake-compat.follows = "";
         flake-parts.follows = "flake-parts";
         git-hooks.follows = "";
+        ms0503-lib.follows = "ms0503-lib";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
       };
       url = "github:ms0503/mc-mod-downloader";
+    };
+    ms0503-lib = {
+      inputs = {
+        flake-compat.follows = "";
+        flake-parts.follows = "flake-parts";
+        git-hooks.follows = "";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "";
+      };
+      url = "github:ms0503/lib.nix";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-blender3.url = "github:NixOS/nixpkgs/nixos-25.05";
@@ -93,6 +109,7 @@
         flake-compat.follows = "";
         flake-parts.follows = "flake-parts";
         git-hooks.follows = "";
+        ms0503-lib.follows = "ms0503-lib";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
       };
@@ -112,6 +129,7 @@
         flake-compat.follows = "";
         flake-parts.follows = "flake-parts";
         git-hooks.follows = "";
+        ms0503-lib.follows = "ms0503-lib";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
       };
@@ -123,6 +141,7 @@
         flake-compat.follows = "";
         flake-parts.follows = "flake-parts";
         git-hooks.follows = "";
+        ms0503-lib.follows = "ms0503-lib";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
       };
