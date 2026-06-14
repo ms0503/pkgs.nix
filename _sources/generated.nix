@@ -60,10 +60,10 @@
   };
   mozkey = {
     pname = "mozkey";
-    version = "0.7.4";
+    version = "0.7.6";
     src = fetchurl {
-      url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v0.7.4.tar.gz";
-      sha256 = "sha256-CRrSYvzLgvN0y++1DxOonM1MaSWEguvnpHV7cKmy1hc=";
+      url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v0.7.6.tar.gz";
+      sha256 = "sha256-C9VdGD5+7owBL3DdSvCVp0fmTEqnMkBLEZmlJ2tUF3M=";
     };
   };
   noto-cjk-sans = {
