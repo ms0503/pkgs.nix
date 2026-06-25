@@ -20,6 +20,7 @@
         fetchurl
         makeRustPlatform
         ;
+      inherit (self.lib) bazelHashes;
       cargoHashes =
         (self.lib.cargoHashes {
           inherit system;
@@ -70,6 +71,7 @@
         fakevrchat = callPackage ./fakevrchat { };
         fcitx5-mozkey = callPackage ./fcitx5-mozkey {
           inherit (self'.packages) dic-nico-intersection-pixiv mozkey;
+          depsHash = bazelHashes.fcitx5-mozkey;
           sources = {
             inherit (sources) bazel-central-registry fcitx5-mozc mozkey;
           };
@@ -95,6 +97,7 @@
         };
         mozkey = callPackage ./mozkey {
           inherit (self'.packages) dic-nico-intersection-pixiv;
+          depsHash = bazelHashes.mozkey;
           sources = {
             inherit (sources) bazel-central-registry mozkey;
           };
