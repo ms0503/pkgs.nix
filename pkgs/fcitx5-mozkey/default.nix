@@ -183,16 +183,6 @@ buildBazelPackage rec {
     chmod -R u+w src/unix/fcitx5
     patch -p1 <${./handle-mozkey-live-conversion-callback.patch}
 
-    substituteInPlace src/unix/fcitx5/mozc_response_parser.cc \
-      --replace-fail "protocol/candidates.pb.h" "protocol/candidate_window.pb.h" \
-      --replace-fail "response.has_candidates()" "response.has_candidate_window()" \
-      --replace-fail "response.candidates()" "response.candidate_window()"
-    substituteInPlace src/unix/fcitx5/mozc_response_parser.h \
-      --replace-fail "class Candidates;" "class CandidateWindow; using Candidates = CandidateWindow;"
-    substituteInPlace src/unix/fcitx5/mozc_state.cc \
-      --replace-fail "SessionCommand::SWITCH_INPUT_MODE" "SessionCommand::SWITCH_COMPOSITION_MODE"
-    sed -i '/"\/\/protocol:commands_cc_proto",/i\        "//protocol:candidate_window_cc_proto",' src/unix/fcitx5/BUILD
-
     substituteInPlace src/config.bzl \
       --replace-fail "/usr/lib/mozc" "${mozkey}/lib/mozc"
     substituteInPlace src/MODULE.bazel \
