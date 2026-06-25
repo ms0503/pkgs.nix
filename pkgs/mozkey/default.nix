@@ -5,7 +5,6 @@
   dic-nico-intersection-pixiv,
   dictionaries ? [ ],
   dictionaryProfile ? "daily",
-  fetchFromGitHub,
   gnused,
   ibus,
   jp-zip-codes,
@@ -24,7 +23,7 @@
   protobuf_30,
   python3Packages,
   qt6,
-  source,
+  sources,
   unzip,
   withIbus ? false,
   xdg-utils,
@@ -61,12 +60,6 @@ let
       else
         throw "dictionaryProfile must be 'daily', 'rich' or 'max'"
     );
-  registry = fetchFromGitHub {
-    hash = "sha256-OcMLg0KiAQOJZLH8r+QkeQ9bxcEc4L0dCgyUv5PkLQk=";
-    owner = "bazelbuild";
-    repo = "bazel-central-registry";
-    rev = "0f256a72067e42d62bb568cc2619f98deed139e2";
-  };
   ut-dictionary = merge-ut-dictionaries.override {
     dictionaries = dictionaries';
   };
@@ -83,7 +76,7 @@ let
   };
 in
 buildBazelPackage rec {
-  inherit (source) pname src version;
+  inherit (sources.mozkey) pname src version;
   bazel = bazel_7;
   bazelFlags = [
     "--compilation_mode"
@@ -93,7 +86,7 @@ buildBazelPackage rec {
     "--python_path"
     "${python}/bin/python3"
     "--registry"
-    "file://${registry}"
+    "file://${sources.bazel-central-registry.src}"
   ];
   bazelTargets = [
     "gui/tool:mozc_tool"

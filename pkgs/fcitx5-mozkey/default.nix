@@ -5,7 +5,6 @@
   dictionaries ? [ ],
   dictionaryProfile ? "daily",
   fcitx5,
-  fetchFromGitHub,
   gettext,
   gnused,
   jp-zip-codes,
@@ -24,7 +23,7 @@
   powershell,
   protobuf_30,
   python3Packages,
-  source,
+  sources,
   unzip,
 }:
 let
@@ -59,18 +58,6 @@ let
       else
         throw "dictionaryProfile must be 'daily', 'rich' or 'max'"
     );
-  fcitx5MozcSrc = fetchFromGitHub {
-    owner = "fcitx";
-    repo = "mozc";
-    rev = "57e67f2a25e4c0861e0e422da0c7d4c232d89fcc";
-    hash = "sha256-1EZjEbMl+LRipH5gEgFpaKP8uEKPfupHmiiTNJc/T1k=";
-  };
-  registry = fetchFromGitHub {
-    hash = "sha256-OcMLg0KiAQOJZLH8r+QkeQ9bxcEc4L0dCgyUv5PkLQk=";
-    owner = "bazelbuild";
-    repo = "bazel-central-registry";
-    rev = "0f256a72067e42d62bb568cc2619f98deed139e2";
-  };
   ut-dictionary = merge-ut-dictionaries.override {
     dictionaries = dictionaries';
   };
@@ -87,7 +74,7 @@ let
   };
 in
 buildBazelPackage rec {
-  inherit (source) src version;
+  inherit (sources.mozkey) src version;
   bazel = bazel_7;
   bazelFlags = [
     "--compilation_mode"
@@ -97,7 +84,7 @@ buildBazelPackage rec {
     "--python_path"
     "${python}/bin/python3"
     "--registry"
-    "file://${registry}"
+    "file://${sources.bazel-central-registry.src}"
   ];
   bazelTargets = [
     "unix/fcitx5:fcitx5-mozc.so"
@@ -192,7 +179,7 @@ buildBazelPackage rec {
   postPatch = ''
     mkdir -p src/third_party
     cp -r ${protobuf_30.src} src/third_party/protobuf
-    cp -r ${fcitx5MozcSrc}/src/unix/fcitx5 src/unix/fcitx5
+    cp -r ${sources.fcitx5-mozc.src}/src/unix/fcitx5 src/unix/fcitx5
     chmod -R u+w src/unix/fcitx5
     patch -p1 <${./handle-mozkey-live-conversion-callback.patch}
 

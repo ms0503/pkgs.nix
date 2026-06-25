@@ -70,7 +70,9 @@
         fakevrchat = callPackage ./fakevrchat { };
         fcitx5-mozkey = callPackage ./fcitx5-mozkey {
           inherit (self'.packages) dic-nico-intersection-pixiv mozkey;
-          source = sources.mozkey;
+          sources = {
+            inherit (sources) bazel-central-registry fcitx5-mozc mozkey;
+          };
         };
         git-vrc = callPackage ./git-vrc {
           inherit rustPlatform;
@@ -93,7 +95,9 @@
         };
         mozkey = callPackage ./mozkey {
           inherit (self'.packages) dic-nico-intersection-pixiv;
-          source = sources.mozkey;
+          sources = {
+            inherit (sources) bazel-central-registry mozkey;
+          };
         };
         noto-fonts-cjk-sans-non-variable = callPackage ./noto-fonts-cjk-sans-non-variable {
           source = sources.noto-cjk-sans;
