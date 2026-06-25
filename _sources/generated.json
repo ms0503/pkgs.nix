@@ -1,4 +1,25 @@
 {
+    "bazel-central-registry": {
+        "cargoLock": null,
+        "date": "2026-06-25",
+        "extract": null,
+        "name": "bazel-central-registry",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "bazelbuild",
+            "repo": "bazel-central-registry",
+            "rev": "2daca3f5264d2c3ef1e42b4df9c9b2c303c08a4f",
+            "sha256": "sha256-Ms/XEJmfDUhutTjtP7TYV7pSD3fHcy6I1ndcpzj+iEs=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "2daca3f5264d2c3ef1e42b4df9c9b2c303c08a4f"
+    },
     "dic-nico-intersection-pixiv": {
         "cargoLock": null,
         "date": "2024-09-03",
@@ -40,6 +61,27 @@
             "type": "github"
         },
         "version": "24b6f6194e67270e94781c6b1211a4a830735fe9"
+    },
+    "fcitx5-mozc": {
+        "cargoLock": null,
+        "date": "2026-06-25",
+        "extract": null,
+        "name": "fcitx5-mozc",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "fcitx",
+            "repo": "mozc",
+            "rev": "35898ee6c4f7424ae73000bbd754510d7ab772d0",
+            "sha256": "sha256-PQtHjZAwo/hImF+7nVEEs85uZbwO1zaXVy+/qbhMY9Q=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "35898ee6c4f7424ae73000bbd754510d7ab772d0"
     },
     "git-vrc": {
         "cargoLock": null,

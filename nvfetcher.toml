@@ -1,3 +1,8 @@
+[bazel-central-registry]
+fetch.github = "bazelbuild/bazel-central-registry"
+src.branch = "main"
+src.git = "https://github.com/bazelbuild/bazel-central-registry.git"
+
 [dic-nico-intersection-pixiv]
 fetch.github = "ncaq/dic-nico-intersection-pixiv"
 src.branch = "master"
@@ -7,6 +12,11 @@ src.git = "https://github.com/ncaq/dic-nico-intersection-pixiv.git"
 fetch.github = "paulstraw/ds4pairer"
 src.branch = "master"
 src.git = "https://github.com/paulstraw/ds4pairer.git"
+
+[fcitx5-mozc]
+fetch.github = "fcitx/mozc"
+src.branch = "fcitx"
+src.git = "https://github.com/fcitx/mozc.git"
 
 [git-vrc]
 fetch.github = "anatawa12/git-vrc"
