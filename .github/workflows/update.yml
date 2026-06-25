@@ -30,6 +30,30 @@ jobs:
           git add _sources/
           ./pkgs/microsoft-edge-dev/update.sh
           git add pkgs/microsoft-edge-dev/default.nix
+          for pkg in $(
+            nix eval --json --impure .#lib.cargoHashes \
+              --apply 'cargoHashes: (cargoHashes {
+                system = builtins.currentSystem;
+              }).hashes |> builtins.attrNames' \
+            | jq -r '.[]'
+          ); do
+            path=$(
+              nix eval --impure .#lib.cargoHashes \
+                --apply 'cargoHashes: (cargoHashes {
+                  system = builtins.currentSystem;
+                }).get-hash "'"$pkg"'"' \
+              sed 's/^«derivation \(.*\)»$/\1/'
+            )
+            hash=$(
+              nix build "${path}^out" 2>&1 >/dev/null \
+              | grep got: \
+              | awk '{print $2}'
+            )
+            sed -i \
+              's:^\( \{4\}\)'"$pkg"' = ".*";$:\1'"$pkg"' = "'"$hash"'";:' \
+              lib/cargo-hashes.nix
+          done
+          git add lib/cargo-hashes.nix
           git commit -m "chore: update packages"
       - name: "Push to repository"
         run: |

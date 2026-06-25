@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, self, ... }:
 {
   perSystem =
     {
@@ -20,6 +20,10 @@
         fetchurl
         makeRustPlatform
         ;
+      cargoHashes =
+        (self.lib.cargoHashes {
+          inherit system;
+        }).hashes;
       externalPackages = [
         "awww-bing"
         "colortool"
@@ -34,8 +38,7 @@
       generateExternalPackages = packages: lib.genAttrs packages (name: inputs'.${name}.packages.default);
       myLib = inputs.ms0503-lib.lib;
       rustPlatform = makeRustPlatform {
-        cargo = inputs'.fenix.packages.latest.toolchain;
-        rustc = inputs'.fenix.packages.latest.toolchain;
+        inherit (inputs'.fenix.packages.latest) cargo rustc;
       };
       sources =
         import ../_sources/generated.nix {
@@ -71,12 +74,12 @@
         };
         git-vrc = callPackage ./git-vrc {
           inherit rustPlatform;
-          cargoHash = "sha256-/vO8xkD0uW0kqF8RzvAw2/TAvmDI5N8GZD0f6S6lY+M=";
+          cargoHash = cargoHashes.git-vrc;
           source = sources.git-vrc;
         };
         karukan = callPackage ./karukan {
           inherit rustPlatform;
-          cargoHash = "sha256-fn9TjaIuYy4z65iUZxPntLacj7vIEpVgr2HrGkyTGag=";
+          cargoHash = cargoHashes.karukan;
           source = sources.karukan;
         };
         microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
@@ -85,7 +88,7 @@
         };
         microsoft-edit = callPackage ./microsoft-edit {
           inherit rustPlatform;
-          cargoHash = "sha256-r7AR6Mf13UUeooPV5/8gyp7HvmOeSaOJNotWWqU10SQ=";
+          cargoHash = cargoHashes.microsoft-edit;
           source = sources.microsoft-edit;
         };
         mozkey = callPackage ./mozkey {
@@ -116,7 +119,7 @@
         };
         zifu = callPackage ./zifu {
           inherit rustPlatform;
-          cargoHash = "sha256-bQMFznDsAsF2KhTryry2eLImtBdDS6/27/DB4OzSejI=";
+          cargoHash = cargoHashes.zifu;
           source = sources.zifu;
         };
       }
