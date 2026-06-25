@@ -54,6 +54,20 @@ jobs:
               lib/cargo-hashes.nix
           done
           git add lib/cargo-hashes.nix
+          for pkg in $(
+            nix eval --json .#lib.bazelHashes \
+              --apply builtins.attrNames \
+            | jq -r '.[]'
+          ); do
+            if msg=$(nix build ".#${pkg}.deps" 2>&1 >/dev/null); then
+              continue
+            fi
+            hash=$(echo "$msg" | grep got: | awk '{print $2}')
+            sed -i \
+              's:^\( \{2\}\)'"$pkg"' = ".*";$:\1'"$pkg"' = "'"$hash"'";:' \
+              lib/bazel-hashes.nix
+          done
+          git add lib/bazel-hashes.nix
           git commit -m "chore: update packages"
       - name: "Push to repository"
         run: |

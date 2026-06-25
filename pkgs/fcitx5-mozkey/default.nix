@@ -1,6 +1,7 @@
 {
   bazel_7,
   buildBazelPackage,
+  depsHash,
   dic-nico-intersection-pixiv,
   dictionaries ? [ ],
   dictionaryProfile ? "daily",
@@ -145,7 +146,7 @@ buildBazelPackage rec {
   dontAddBazelOpts = true;
   fetchAttrs = {
     __structuredAttrs = true;
-    hash = "sha256-odK692yB9yHZKqfPoEC7q0wxLwDNkHgpj7z/gtKaII0=";
+    hash = depsHash;
     preInstall = ''
       # Remove zip code data. It will be replaced with jp-zip-codes from nixpkgs
       rm -rvf "$bazelOut"/external/zip_code_{jigyosyo,ken_all}

@@ -1,6 +1,7 @@
 { withSystem, ... }:
 {
   flake.lib = {
+    bazelHashes = import ./bazel-hashes.nix;
     cargoHashes =
       { system }:
       withSystem system (
