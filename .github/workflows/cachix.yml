@@ -200,10 +200,7 @@ jobs:
           name: "ms0503"
           signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
       - name: "Build"
-        run: |
-          nix \
-            --extra-experimental-features 'flakes nix-command pipe-operators' \
-            build .#${{ matrix.package }}
+        run: "nix build --no-link '.#${{ matrix.package }}'"
     strategy:
       fail-fast: false
       matrix:
@@ -213,6 +210,7 @@ jobs:
           - "blender3-cpu"
           - "blender3-gpu"
           - "colortool"
+          - "devShells.x86_64-linux.default"
           - "dic-nico-intersection-pixiv"
           - "discord-canary-wayland"
           - "ds4pairer"
