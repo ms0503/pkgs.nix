@@ -23,7 +23,7 @@ jobs:
         run: |
           nix flake update
           git add flake.lock
-          git commit -m "chore: update flakes"
+          git commit -m "chore: update flakes" || :
       - name: "Update packages"
         run: |
           nix run nixpkgs#nvfetcher
@@ -68,7 +68,7 @@ jobs:
               lib/bazel-hashes.nix
           done
           git add lib/bazel-hashes.nix
-          git commit -m "chore: update packages"
+          git commit -m "chore: update packages" || :
       - name: "Push to repository"
         run: |
           git push origin main
