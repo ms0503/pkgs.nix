@@ -8,15 +8,15 @@
 {
   bazel-central-registry = {
     pname = "bazel-central-registry";
-    version = "2daca3f5264d2c3ef1e42b4df9c9b2c303c08a4f";
+    version = "2e149fa6c07e7a12ad953e9923396a50085bb3bc";
     src = fetchFromGitHub {
       owner = "bazelbuild";
       repo = "bazel-central-registry";
-      rev = "2daca3f5264d2c3ef1e42b4df9c9b2c303c08a4f";
+      rev = "2e149fa6c07e7a12ad953e9923396a50085bb3bc";
       fetchSubmodules = false;
-      sha256 = "sha256-Ms/XEJmfDUhutTjtP7TYV7pSD3fHcy6I1ndcpzj+iEs=";
+      sha256 = "sha256-0rbpUEIX2cUwmPlSUTJItPHljElkpKzYES+7WJxAx20=";
     };
-    date = "2026-06-25";
+    date = "2026-07-19";
   };
   dic-nico-intersection-pixiv = {
     pname = "dic-nico-intersection-pixiv";
@@ -44,15 +44,15 @@
   };
   fcitx5-mozc = {
     pname = "fcitx5-mozc";
-    version = "35898ee6c4f7424ae73000bbd754510d7ab772d0";
+    version = "3f9b1bd6d089cef2e1e8814d7de25291e730274b";
     src = fetchFromGitHub {
       owner = "fcitx";
       repo = "mozc";
-      rev = "35898ee6c4f7424ae73000bbd754510d7ab772d0";
+      rev = "3f9b1bd6d089cef2e1e8814d7de25291e730274b";
       fetchSubmodules = false;
-      sha256 = "sha256-PQtHjZAwo/hImF+7nVEEs85uZbwO1zaXVy+/qbhMY9Q=";
+      sha256 = "sha256-e9H+hhCbqvpbL/McsNNKEUS7yPQLcz0wY3DQogYJcBM=";
     };
-    date = "2026-06-25";
+    date = "2026-07-19";
   };
   git-vrc = {
     pname = "git-vrc";
@@ -84,10 +84,10 @@
   };
   mozkey = {
     pname = "mozkey";
-    version = "0.7.6";
+    version = "0.7.7";
     src = fetchurl {
-      url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v0.7.6.tar.gz";
-      sha256 = "sha256-C9VdGD5+7owBL3DdSvCVp0fmTEqnMkBLEZmlJ2tUF3M=";
+      url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v0.7.7.tar.gz";
+      sha256 = "sha256-w84LnnWRfzwCFdxrcQ07UeE66NPU7+XDW52JBN1Lb2c=";
     };
   };
   noto-cjk-sans = {
@@ -108,18 +108,18 @@
   };
   noto-fonts = {
     pname = "noto-fonts";
-    version = "2026.06.01";
+    version = "2026.07.01";
     src = fetchurl {
-      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.06.01.tar.gz";
-      sha256 = "sha256-L4U50IubbHPobc5nDqpG4dR9IzATfMsR70xpsnyGVgE=";
+      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.07.01.tar.gz";
+      sha256 = "sha256-thQVIUfWe/zqrzQJYANT5YKkd/pkvvTaaoyi43Cq9TE=";
     };
   };
   proton-ge-rtsp-bin = {
     pname = "proton-ge-rtsp-bin";
-    version = "GE-Proton10-33-rtsp23-4";
+    version = "11.0-20260609-1";
     src = fetchurl {
-      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/GE-Proton10-33-rtsp23-4/GE-Proton10-33-rtsp23-4.tar.gz";
-      sha256 = "sha256-e98K1vgdOQNFtYH1CnL/wzrqEM98TZw/RRmm6g4qglQ=";
+      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/proton-rtsp-11.0-20260609-1/proton-rtsp-11.0-20260609-1.tar.gz";
+      sha256 = "sha256-aaAOSIScRlEAJAWTGBd3Ob/aNLAKCROmVnkQHIyHav0=";
     };
   };
   walland = {
