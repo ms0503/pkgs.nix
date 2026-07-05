@@ -42,7 +42,7 @@ jobs:
                 --apply 'cargoHashes: (cargoHashes {
                   system = builtins.currentSystem;
                 }).get-hash "'"$pkg"'"' \
-              sed 's/^«derivation \(.*\)»$/\1/'
+              | sed 's/^«derivation \(.*\)»$/\1/'
             )
             hash=$(
               nix build "${path}^out" 2>&1 >/dev/null \
