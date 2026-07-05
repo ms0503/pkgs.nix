@@ -57,8 +57,9 @@ src.github = "notofonts/notofonts.github.io"
 src.prefix = "noto-monthly-release-"
 
 [proton-ge-rtsp-bin]
-fetch.url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/$ver/$ver.tar.gz"
+fetch.url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/proton-rtsp-$ver/proton-rtsp-$ver.tar.gz"
 src.github = "SpookySkeletons/proton-ge-rtsp"
+src.prefix = "proton-rtsp-"
 
 [walland]
 fetch.github = "Golim/walland"
