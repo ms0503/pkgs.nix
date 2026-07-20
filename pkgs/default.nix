@@ -12,7 +12,6 @@
     }:
     let
       inherit (pkgs)
-        alcom
         callPackage
         dockerTools
         fetchFromGitHub
@@ -60,7 +59,10 @@
     in
     {
       packages = {
-        alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." alcom;
+        alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." pkgs.alcom;
+        microsoft-edge-dev-wayland = builtins.warn "microsoft-edge-dev-wayland is deprecated. Please use microsoft-edge-dev instead." self'.packages.microsoft-edge-dev;
+      }
+      // {
         dic-nico-intersection-pixiv = callPackage ./dic-nico-intersection-pixiv {
           source = sources.dic-nico-intersection-pixiv;
         };
@@ -87,9 +89,6 @@
           source = sources.karukan;
         };
         microsoft-edge-dev = callPackage ./microsoft-edge-dev { };
-        microsoft-edge-dev-wayland = callPackage ./microsoft-edge-dev-wayland {
-          inherit (self'.packages) microsoft-edge-dev;
-        };
         microsoft-edit = callPackage ./microsoft-edit {
           inherit rustPlatform;
           cargoHash = cargoHashes.microsoft-edit;
