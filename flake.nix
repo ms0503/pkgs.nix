@@ -177,19 +177,12 @@
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
-        ./treefmt.nix
-        ./git-hooks.nix
+        ./tools/shell
         ./lib
         ./pkgs
       ];
       perSystem =
-        {
-          config,
-          lib,
-          pkgs,
-          system,
-          ...
-        }:
+        { system, ... }:
         {
           _module.args = {
             pkgs = import nixpkgs {
@@ -211,17 +204,6 @@
                 ];
               };
             };
-          };
-          devShells.default = pkgs.mkShell {
-            packages =
-              config.pre-commit.settings.enabledPackages
-              ++ lib.attrValues config.treefmt.build.programs
-              ++ (with pkgs; [
-                nvfetcher
-              ]);
-            shellHook = ''
-              ${config.pre-commit.shellHook}
-            '';
           };
         };
       systems = import systems;
