@@ -1,5 +1,8 @@
 jobs:
   build:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     permissions:
       contents: "read"
     runs-on: "ubuntu-24.04"
@@ -245,3 +248,8 @@ on:
   pull_request:
   push:
   workflow_dispatch:
+  workflow_run:
+    types:
+      - "completed"
+    workflows:
+      - "Update Nix Flakes and packages"
