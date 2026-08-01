@@ -1,7 +1,7 @@
 {
     "bazel-central-registry": {
         "cargoLock": null,
-        "date": "2026-07-25",
+        "date": "2026-08-01",
         "extract": null,
         "name": "bazel-central-registry",
         "passthru": null,
@@ -13,12 +13,12 @@
             "name": null,
             "owner": "bazelbuild",
             "repo": "bazel-central-registry",
-            "rev": "b2f271d30826d1c772ebb585de0fb9483a7193f7",
-            "sha256": "sha256-p37vk8PVQ6BCWCYt3wIwCQ/0qbut3F9awstuX0+Vl10=",
+            "rev": "efbe413fba0c6eabf6f4cf97c8950df18f0a31b1",
+            "sha256": "sha256-i8Vu0WWRVYI17zuEQ4YS+gA12OXBMoAUkzfrQg0On44=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "b2f271d30826d1c772ebb585de0fb9483a7193f7"
+        "version": "efbe413fba0c6eabf6f4cf97c8950df18f0a31b1"
     },
     "dic-nico-intersection-pixiv": {
         "cargoLock": null,
@@ -188,11 +188,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-thQVIUfWe/zqrzQJYANT5YKkd/pkvvTaaoyi43Cq9TE=",
+            "sha256": "sha256-7yab1C2gzRxgLGnJ7dgcZVZiur9JX2nNZtAYQqG3u7I=",
             "type": "url",
-            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.07.01.tar.gz"
+            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.08.01.tar.gz"
         },
-        "version": "2026.07.01"
+        "version": "2026.08.01"
     },
     "proton-ge-rtsp-bin": {
         "cargoLock": null,

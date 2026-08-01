@@ -8,15 +8,15 @@
 {
   bazel-central-registry = {
     pname = "bazel-central-registry";
-    version = "b2f271d30826d1c772ebb585de0fb9483a7193f7";
+    version = "efbe413fba0c6eabf6f4cf97c8950df18f0a31b1";
     src = fetchFromGitHub {
       owner = "bazelbuild";
       repo = "bazel-central-registry";
-      rev = "b2f271d30826d1c772ebb585de0fb9483a7193f7";
+      rev = "efbe413fba0c6eabf6f4cf97c8950df18f0a31b1";
       fetchSubmodules = false;
-      sha256 = "sha256-p37vk8PVQ6BCWCYt3wIwCQ/0qbut3F9awstuX0+Vl10=";
+      sha256 = "sha256-i8Vu0WWRVYI17zuEQ4YS+gA12OXBMoAUkzfrQg0On44=";
     };
-    date = "2026-07-25";
+    date = "2026-08-01";
   };
   dic-nico-intersection-pixiv = {
     pname = "dic-nico-intersection-pixiv";
@@ -108,10 +108,10 @@
   };
   noto-fonts = {
     pname = "noto-fonts";
-    version = "2026.07.01";
+    version = "2026.08.01";
     src = fetchurl {
-      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.07.01.tar.gz";
-      sha256 = "sha256-thQVIUfWe/zqrzQJYANT5YKkd/pkvvTaaoyi43Cq9TE=";
+      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.08.01.tar.gz";
+      sha256 = "sha256-7yab1C2gzRxgLGnJ7dgcZVZiur9JX2nNZtAYQqG3u7I=";
     };
   };
   proton-ge-rtsp-bin = {
