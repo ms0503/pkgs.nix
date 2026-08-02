@@ -13,12 +13,12 @@
             "name": null,
             "owner": "bazelbuild",
             "repo": "bazel-central-registry",
-            "rev": "7ca72a03b1d657d30e1aa2b398864ea1f6e3fb7c",
-            "sha256": "sha256-7x7vrhLnXxGEt8U0tSTB+LGCtiLSAL3Zcw2cXMLr86M=",
+            "rev": "c9ff9ba0aa25457a4cabc0d54624b2e589401f77",
+            "sha256": "sha256-KZYP/hC1+JonsvnXP+88njrU+p9CkfAirISU+fgfrVw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "7ca72a03b1d657d30e1aa2b398864ea1f6e3fb7c"
+        "version": "c9ff9ba0aa25457a4cabc0d54624b2e589401f77"
     },
     "dic-nico-intersection-pixiv": {
         "cargoLock": null,
