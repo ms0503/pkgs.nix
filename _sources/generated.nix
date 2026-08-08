@@ -8,15 +8,15 @@
 {
   bazel-central-registry = {
     pname = "bazel-central-registry";
-    version = "c9ff9ba0aa25457a4cabc0d54624b2e589401f77";
+    version = "ed5e563b1fdede804a173226796a2452d0f4317f";
     src = fetchFromGitHub {
       owner = "bazelbuild";
       repo = "bazel-central-registry";
-      rev = "c9ff9ba0aa25457a4cabc0d54624b2e589401f77";
+      rev = "ed5e563b1fdede804a173226796a2452d0f4317f";
       fetchSubmodules = false;
-      sha256 = "sha256-KZYP/hC1+JonsvnXP+88njrU+p9CkfAirISU+fgfrVw=";
+      sha256 = "sha256-kDbVLCNXMXRSfoyLM5XxiY+rienxtnmAsuWy1zQaUZQ=";
     };
-    date = "2026-08-02";
+    date = "2026-08-08";
   };
   dic-nico-intersection-pixiv = {
     pname = "dic-nico-intersection-pixiv";
