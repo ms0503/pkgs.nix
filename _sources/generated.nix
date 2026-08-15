@@ -8,15 +8,15 @@
 {
   bazel-central-registry = {
     pname = "bazel-central-registry";
-    version = "d54eef84d38f0afd8f0805464d7156105934f961";
+    version = "aa447d4af8182c14014de8ffeb9ac63c069b9113";
     src = fetchFromGitHub {
       owner = "bazelbuild";
       repo = "bazel-central-registry";
-      rev = "d54eef84d38f0afd8f0805464d7156105934f961";
+      rev = "aa447d4af8182c14014de8ffeb9ac63c069b9113";
       fetchSubmodules = false;
-      sha256 = "sha256-kYPI4GevLI1Or2EEmhPLLJdFB9T+urq89dqeZnPq7B4=";
+      sha256 = "sha256-zSP4uJEqnDyqTHxJMvSDOhe/Y9qAc0Z/HbHoLdHaeNE=";
     };
-    date = "2026-08-14";
+    date = "2026-08-15";
   };
   dic-nico-intersection-pixiv = {
     pname = "dic-nico-intersection-pixiv";
@@ -44,15 +44,15 @@
   };
   fcitx5-mozc = {
     pname = "fcitx5-mozc";
-    version = "3f9b1bd6d089cef2e1e8814d7de25291e730274b";
+    version = "3f8dea4bdf72c6af200ecdbe3d456871fb1d5e03";
     src = fetchFromGitHub {
       owner = "fcitx";
       repo = "mozc";
-      rev = "3f9b1bd6d089cef2e1e8814d7de25291e730274b";
+      rev = "3f8dea4bdf72c6af200ecdbe3d456871fb1d5e03";
       fetchSubmodules = false;
-      sha256 = "sha256-e9H+hhCbqvpbL/McsNNKEUS7yPQLcz0wY3DQogYJcBM=";
+      sha256 = "sha256-xiEhdCnXY4NLiQKffTbbArvhUcfpm0tZ9u+A1Bk1t0w=";
     };
-    date = "2026-07-19";
+    date = "2026-08-14";
   };
   git-vrc = {
     pname = "git-vrc";
@@ -116,10 +116,10 @@
   };
   proton-ge-rtsp-bin = {
     pname = "proton-ge-rtsp-bin";
-    version = "11.0-20260609-1";
+    version = "11.0-20260609-2";
     src = fetchurl {
-      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/proton-rtsp-11.0-20260609-1/proton-rtsp-11.0-20260609-1.tar.gz";
-      sha256 = "sha256-aaAOSIScRlEAJAWTGBd3Ob/aNLAKCROmVnkQHIyHav0=";
+      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/proton-rtsp-11.0-20260609-2/proton-rtsp-11.0-20260609-2.tar.gz";
+      sha256 = "sha256-R2gRlqzC2QGazJoAAV7Htj8Vodp0SYT9g7IVAcyc27o=";
     };
   };
   walland = {
