@@ -129,7 +129,7 @@
           source = sources.zifu;
         };
       }
-      // lib.optionalAttrs (pkgs.stdenv.isLinux) {
+      // lib.optionalAttrs (pkgs.stdenv.hostPlatform.isLinux) {
         blender3 = pkgsB3d3.callPackage ./blender3 {
           hash = "sha256-vFZjV6EDWARObGf0mWw/cQfILbWQtDQsML/bjyc4UJk=";
           version = "3.6.23";
