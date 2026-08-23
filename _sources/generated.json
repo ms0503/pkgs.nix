@@ -1,7 +1,7 @@
 {
     "bazel-central-registry": {
         "cargoLock": null,
-        "date": "2026-08-22",
+        "date": "2026-08-23",
         "extract": null,
         "name": "bazel-central-registry",
         "passthru": null,
@@ -13,12 +13,12 @@
             "name": null,
             "owner": "bazelbuild",
             "repo": "bazel-central-registry",
-            "rev": "bf2f97355ceedf4b62d842277d8ef78acee84ab6",
-            "sha256": "sha256-ABCDKC/KEJaR3FflvT7R+1OqqPc/3jCh2RVSuJxdWp0=",
+            "rev": "9416a5a7c2d95e780b3316ae2562a95d89b3e48a",
+            "sha256": "sha256-qvMYK7dCnvnrk2qzu0L2+2a7/oUhm5roJo6Lu+D/Gc0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "bf2f97355ceedf4b62d842277d8ef78acee84ab6"
+        "version": "9416a5a7c2d95e780b3316ae2562a95d89b3e48a"
     },
     "dic-nico-intersection-pixiv": {
         "cargoLock": null,
