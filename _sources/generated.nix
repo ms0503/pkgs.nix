@@ -8,13 +8,13 @@
 {
   bazel-central-registry = {
     pname = "bazel-central-registry";
-    version = "9416a5a7c2d95e780b3316ae2562a95d89b3e48a";
+    version = "e2738c8bd9e93a0e011f27e96f2ca730ef1f06e4";
     src = fetchFromGitHub {
       owner = "bazelbuild";
       repo = "bazel-central-registry";
-      rev = "9416a5a7c2d95e780b3316ae2562a95d89b3e48a";
+      rev = "e2738c8bd9e93a0e011f27e96f2ca730ef1f06e4";
       fetchSubmodules = false;
-      sha256 = "sha256-qvMYK7dCnvnrk2qzu0L2+2a7/oUhm5roJo6Lu+D/Gc0=";
+      sha256 = "sha256-Eh4NQCoeO/7hDUcMo6bH4gCD/i22thHRHWPwhqfUoUo=";
     };
     date = "2026-08-23";
   };
