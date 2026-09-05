@@ -8,15 +8,15 @@
 {
   bazel-central-registry = {
     pname = "bazel-central-registry";
-    version = "5e83dca452dbbe64359830061a5253fe6cc228f8";
+    version = "c0dc8b233dd56daa85be15e2849974531795cb89";
     src = fetchFromGitHub {
       owner = "bazelbuild";
       repo = "bazel-central-registry";
-      rev = "5e83dca452dbbe64359830061a5253fe6cc228f8";
+      rev = "c0dc8b233dd56daa85be15e2849974531795cb89";
       fetchSubmodules = false;
-      sha256 = "sha256-9Syr8o74ix2A1UdLv31Lktoh7noSiXFxGtXb9L4MZ+g=";
+      sha256 = "sha256-6sKaO0ylt7G43vgeFaQrv9DZw51F+/LgxSzRPVnQ6KU=";
     };
-    date = "2026-08-29";
+    date = "2026-09-05";
   };
   dic-nico-intersection-pixiv = {
     pname = "dic-nico-intersection-pixiv";
@@ -44,15 +44,15 @@
   };
   fcitx5-mozc = {
     pname = "fcitx5-mozc";
-    version = "91c1e63e4ad2378e7b3224c622e5b9f29d4fcfcc";
+    version = "6b20c794f3112075703bae1603a81dce86b1f44e";
     src = fetchFromGitHub {
       owner = "fcitx";
       repo = "mozc";
-      rev = "91c1e63e4ad2378e7b3224c622e5b9f29d4fcfcc";
+      rev = "6b20c794f3112075703bae1603a81dce86b1f44e";
       fetchSubmodules = false;
-      sha256 = "sha256-xlA5IOji+Z1kiJYrM9gfIAospJWEEXaPvF/3eBixaag=";
+      sha256 = "sha256-Z0lZ1WSENvu+YIDb0gOmq4S84uI4GZvqZlb2UEz8pZM=";
     };
-    date = "2026-08-27";
+    date = "2026-09-05";
   };
   git-vrc = {
     pname = "git-vrc";
@@ -108,18 +108,18 @@
   };
   noto-fonts = {
     pname = "noto-fonts";
-    version = "2026.08.01";
+    version = "2026.09.01";
     src = fetchurl {
-      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.08.01.tar.gz";
-      sha256 = "sha256-7yab1C2gzRxgLGnJ7dgcZVZiur9JX2nNZtAYQqG3u7I=";
+      url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.09.01.tar.gz";
+      sha256 = "sha256-v1waC61kf03X2J8JB66w4eOwFoVISXzNeyEFp+QeeYQ=";
     };
   };
   proton-ge-rtsp-bin = {
     pname = "proton-ge-rtsp-bin";
-    version = "11.0-20260609-2";
+    version = "11.0-20260609-3";
     src = fetchurl {
-      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/proton-rtsp-11.0-20260609-2/proton-rtsp-11.0-20260609-2.tar.gz";
-      sha256 = "sha256-R2gRlqzC2QGazJoAAV7Htj8Vodp0SYT9g7IVAcyc27o=";
+      url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/proton-rtsp-11.0-20260609-3/proton-rtsp-11.0-20260609-3.tar.gz";
+      sha256 = "sha256-pDUnfE0hbpwPeC2FlXhxEYK4AElSe9qDrFpMGgQ7MKE=";
     };
   };
   walland = {
