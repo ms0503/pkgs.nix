@@ -30,42 +30,55 @@ jobs:
           git add _sources/
           ./pkgs/microsoft-edge-dev/update.sh
           git add pkgs/microsoft-edge-dev/default.nix
-          for pkg in $(
-            nix eval --json --impure .#lib.cargoHashes \
-              --apply 'cargoHashes: (cargoHashes {
-                system = builtins.currentSystem;
-              }).hashes |> builtins.attrNames' \
-            | jq -r '.[]'
-          ); do
-            path=$(
-              nix eval --impure .#lib.cargoHashes \
+          while :; do
+            is_changed=false
+            for pkg in $(
+              nix eval --json --impure .#lib.cargoHashes \
                 --apply 'cargoHashes: (cargoHashes {
                   system = builtins.currentSystem;
-                }).get-hash "'"$pkg"'"' \
-              | sed 's/^«derivation \(.*\)»$/\1/'
-            )
-            hash=$(
-              nix build "${path}^out" 2>&1 >/dev/null \
-              | grep got: \
-              | awk '{print $2}'
-            )
-            sed -i \
-              's:^\( \{4\}\)'"$pkg"' = ".*";$:\1'"$pkg"' = "'"$hash"'";:' \
-              lib/cargo-hashes.nix
+                }).hashes |> builtins.attrNames' \
+              | jq -r '.[]'
+            ); do
+              path=$(
+                nix eval --impure .#lib.cargoHashes \
+                  --apply 'cargoHashes: (cargoHashes {
+                    system = builtins.currentSystem;
+                  }).get-hash "'"$pkg"'"' \
+                | sed 's/^«derivation \(.*\)»$/\1/'
+              )
+              if msg=$(nix build "${path}^out" 2>&1 >/dev/null); then
+                continue
+              fi
+              is_changed=true
+              hash=$(<<<"$msg" grep got: | awk '{print $2}')
+              sed -i \
+                's:^\( \+\)'"$pkg"' = ".*";$:\1'"$pkg"' = "'"$hash"'";:' \
+                lib/cargo-hashes.nix
+            done
+            if ! "$is_changed"; then
+              break
+            fi
           done
           git add lib/cargo-hashes.nix
-          for pkg in $(
-            nix eval --json .#lib.bazelHashes \
-              --apply builtins.attrNames \
-            | jq -r '.[]'
-          ); do
-            if msg=$(nix build ".#${pkg}.deps" 2>&1 >/dev/null); then
-              continue
+          while :; do
+            is_changed=false
+            for pkg in $(
+              nix eval --json .#lib.bazelHashes \
+                --apply builtins.attrNames \
+              | jq -r '.[]'
+            ); do
+              if msg=$(nix build ".#${pkg}.deps" 2>&1 >/dev/null); then
+                continue
+              fi
+              is_changed=true
+              hash=$(<<<"$msg" grep got: | awk '{print $2}')
+              sed -i \
+                's:^\( \+\)'"$pkg"' = ".*";$:\1'"$pkg"' = "'"$hash"'";:' \
+                lib/bazel-hashes.nix
+            done
+            if ! "$is_changed"; then
+              break
             fi
-            hash=$(echo "$msg" | grep got: | awk '{print $2}')
-            sed -i \
-              's:^\( \{2\}\)'"$pkg"' = ".*";$:\1'"$pkg"' = "'"$hash"'";:' \
-              lib/bazel-hashes.nix
           done
           git add lib/bazel-hashes.nix
           git commit -m "chore: update packages" || :
