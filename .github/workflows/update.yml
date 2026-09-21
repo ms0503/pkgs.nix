@@ -36,23 +36,26 @@ jobs:
               nix eval --json --impure .#lib.cargoHashes \
                 --apply 'cargoHashes: (cargoHashes {
                   system = builtins.currentSystem;
-                }).hashes |> builtins.attrNames' \
-              | jq -r '.[]'
+                }).hashes' \
+              | jq -r 'to_entries[] | .key + "," + .value'
             ); do
+              name=${pkg%,*}
+              current_hash=${pkg#*,}
               path=$(
                 nix eval --impure .#lib.cargoHashes \
                   --apply 'cargoHashes: (cargoHashes {
                     system = builtins.currentSystem;
-                  }).get-hash "'"$pkg"'"' \
+                  }).get-hash "'"$name"'"' \
                 | sed 's/^«derivation \(.*\)»$/\1/'
               )
-              if msg=$(nix build "${path}^out" 2>&1 >/dev/null); then
+              msg=$(nix build "${path}^out" 2>&1 >/dev/null)
+              hash=$(<<<"$msg" grep got: | awk '{print $2}')
+              if [[ $current_hash = "$hash" ]]; then
                 continue
               fi
               is_changed=true
-              hash=$(<<<"$msg" grep got: | awk '{print $2}')
               sed -i \
-                's:^\( \+\)'"$pkg"' = ".*";$:\1'"$pkg"' = "'"$hash"'";:' \
+                's:^\( \+\)'"$name"' = ".*";$:\1'"$name"' = "'"$hash"'";:' \
                 lib/cargo-hashes.nix
             done
             if ! "$is_changed"; then
