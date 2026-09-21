@@ -55,7 +55,7 @@ jobs:
                   }).get-hash "'"$name"'"' \
                 | sed 's/^«derivation \(.*\)»$/\1/'
               )
-              msg=$(nix build "${path}^out" 2>&1 >/dev/null)
+              msg=$(nix build "${path}^out" 2>&1 >/dev/null || :)
               hash=$(<<<"$msg" grep got: | awk '{print $2}')
               if [[ $current_hash = "$hash" ]]; then
                 printf "==== Up-to-date\n"
