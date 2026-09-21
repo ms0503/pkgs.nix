@@ -14,10 +14,10 @@
 }:
 let
   src = fetchurl {
-    hash = "sha256-u22uxu+nxqYhB6+kB8DQxqDOMPyteUjYTjnkSWWjX3I=";
+    hash = "sha256-vMkhdXW5EBnnCOrUQ1+cfSU2Dc5G5KoGiAb824XAUYg=";
     url = "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/microsoft-edge-dev_${version}-1_amd64.deb";
   };
-  version = "155.0.4268.0";
+  version = "155.0.4273.0";
 in
 (microsoft-edge.override {
   withSymlink = false;

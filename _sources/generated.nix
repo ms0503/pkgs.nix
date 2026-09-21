@@ -8,15 +8,15 @@
 {
   bazel-central-registry = {
     pname = "bazel-central-registry";
-    version = "3bb827885906d007d41fbc995d95410ca24bb3b0";
+    version = "eb05b77f41810ea7fa811244050b588675e8cd95";
     src = fetchFromGitHub {
       owner = "bazelbuild";
       repo = "bazel-central-registry";
-      rev = "3bb827885906d007d41fbc995d95410ca24bb3b0";
+      rev = "eb05b77f41810ea7fa811244050b588675e8cd95";
       fetchSubmodules = false;
-      sha256 = "sha256-4TZFPdj6mVQ+VxHpvaodxhu4QYiycAxe+NimO79G4Mo=";
+      sha256 = "sha256-ed9q8dKRjZPPvmpA7HrQiQ7iMdHrkRFkDEi/orgNO74=";
     };
-    date = "2026-09-12";
+    date = "2026-09-20";
   };
   dic-nico-intersection-pixiv = {
     pname = "dic-nico-intersection-pixiv";
@@ -44,15 +44,15 @@
   };
   fcitx5-mozc = {
     pname = "fcitx5-mozc";
-    version = "be56e8f05516a291f6b51a8660d969ff0228f9a2";
+    version = "91a85938122f4ab8ca855df98daf2acf2cf3cf3c";
     src = fetchFromGitHub {
       owner = "fcitx";
       repo = "mozc";
-      rev = "be56e8f05516a291f6b51a8660d969ff0228f9a2";
+      rev = "91a85938122f4ab8ca855df98daf2acf2cf3cf3c";
       fetchSubmodules = false;
-      sha256 = "sha256-EDZZg/Ln6bBLvtrFur3xPXrxrxC5mFfvvQN2N7TGEuE=";
+      sha256 = "sha256-rPZFZnnH4vvMVinRC/GtBpJZ6JNgtsYn2LCPpDhxQR0=";
     };
-    date = "2026-09-12";
+    date = "2026-09-19";
   };
   git-vrc = {
     pname = "git-vrc";
