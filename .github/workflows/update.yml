@@ -26,10 +26,16 @@ jobs:
           git commit -m "chore: update flakes" || :
       - name: "Update packages"
         run: |
+          echo "::group::Sync sources"
           nix run nixpkgs#nvfetcher
           git add _sources/
+          echo "::endgroup::"
+          echo "::group::Run update scripts"
+          printf "== Update Microsoft Edge Dev\n"
           ./pkgs/microsoft-edge-dev/update.sh
           git add pkgs/microsoft-edge-dev/default.nix
+          echo "::endgroup::"
+          echo "::group::Sync cargo hashes"
           while :; do
             is_changed=false
             for pkg in $(
@@ -41,6 +47,7 @@ jobs:
             ); do
               name=${pkg%,*}
               current_hash=${pkg#*,}
+              printf "== Check %s (%s)\n" "$name" "$current_hash"
               path=$(
                 nix eval --impure .#lib.cargoHashes \
                   --apply 'cargoHashes: (cargoHashes {
@@ -51,18 +58,24 @@ jobs:
               msg=$(nix build "${path}^out" 2>&1 >/dev/null)
               hash=$(<<<"$msg" grep got: | awk '{print $2}')
               if [[ $current_hash = "$hash" ]]; then
+                printf "==== Up-to-date\n"
                 continue
               fi
               is_changed=true
+              printf "==== Update to %s\n" "$hash"
               sed -i \
                 's:^\( \+\)'"$name"' = ".*";$:\1'"$name"' = "'"$hash"'";:' \
                 lib/cargo-hashes.nix
             done
             if ! "$is_changed"; then
+              printf "== Sync completed\n"
               break
             fi
+            printf "== Resync needed\n"
           done
           git add lib/cargo-hashes.nix
+          echo "::endgroup::"
+          echo "::group::Sync bazel hashes"
           while :; do
             is_changed=false
             for pkg in $(
@@ -70,20 +83,26 @@ jobs:
                 --apply builtins.attrNames \
               | jq -r '.[]'
             ); do
+              printf "== Check %s\n" "$pkg"
               if msg=$(nix build ".#${pkg}.deps" 2>&1 >/dev/null); then
+                printf "==== Up-to-date\n"
                 continue
               fi
               is_changed=true
               hash=$(<<<"$msg" grep got: | awk '{print $2}')
+              printf "==== Update to %s\n" "$hash"
               sed -i \
                 's:^\( \+\)'"$pkg"' = ".*";$:\1'"$pkg"' = "'"$hash"'";:' \
                 lib/bazel-hashes.nix
             done
             if ! "$is_changed"; then
+              printf "== Sync completed\n"
               break
             fi
+            printf "== Resync needed\n"
           done
           git add lib/bazel-hashes.nix
+          echo "::endgroup::"
           git commit -m "chore: update packages" || :
       - name: "Push to repository"
         run: |
