@@ -1,0 +1,11 @@
+--- a/CMakeModules/FindHIDAPI.cmake
++++ b/CMakeModules/FindHIDAPI.cmake
+@@ -18,7 +18,7 @@
+     set (HIDAPI_INCLUDE_DIRS ${HIDAPI_INCLUDE_DIRS}/hidapi CACHE PATH "HIDAPI include directory")
+ endif ()
+ 
+-find_library (HIDAPI_LIBRARIES NAMES hidapi HINTS ${HIDAPI_ROOT_DIR})
++find_library (HIDAPI_LIBRARIES NAMES hidapi-libusb HINTS ${HIDAPI_ROOT_DIR})
+ 
+ if (HIDAPI_INCLUDE_DIRS AND HIDAPI_LIBRARIES)
+     set (HIDAPI_FOUND TRUE)

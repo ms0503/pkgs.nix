@@ -1,0 +1,6 @@
+updates:
+  - directory: "/pkgs/wezimgcat-wrapper"
+    package-ecosystem: "cargo"
+    schedule:
+      interval: "weekly"
+version: 2

@@ -1,0 +1,11 @@
+--- a/src/Main.hs
++++ b/src/Main.hs
+@@ -56,7 +56,7 @@
+   dictionary <- getDictionary
+ 
+   -- Mozc/Google日本語入力形式の辞書データを保存します。
+-  T.writeFile "public/dic-nico-intersection-pixiv-google.txt" $ T.unlines $ dicInfo : (toMozcLine <$> dictionary)
++  T.writeFile "pkgs/dic-nico-intersection-pixiv/dic-nico-intersection-pixiv-google.txt" $ T.unlines $ dicInfo : (toMozcLine <$> dictionary)
+ 
+ -- | エントリー1つをMozcの辞書データ1行に変換します。
+ toMozcLine :: Entry -> Text

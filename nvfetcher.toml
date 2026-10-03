@@ -1,0 +1,76 @@
+[bazel-central-registry]
+fetch.github = "bazelbuild/bazel-central-registry"
+src.branch = "main"
+src.git = "https://github.com/bazelbuild/bazel-central-registry.git"
+
+[dic-nico-intersection-pixiv]
+fetch.github = "ncaq/dic-nico-intersection-pixiv"
+src.branch = "master"
+src.git = "https://github.com/ncaq/dic-nico-intersection-pixiv.git"
+
+[ds4pairer]
+fetch.github = "paulstraw/ds4pairer"
+src.branch = "master"
+src.git = "https://github.com/paulstraw/ds4pairer.git"
+
+[fcitx5-mozc]
+fetch.github = "fcitx/mozc"
+src.branch = "fcitx"
+src.git = "https://github.com/fcitx/mozc.git"
+
+[git-vrc]
+fetch.github = "anatawa12/git-vrc"
+git.fetchSubmodules = true
+src.branch = "master"
+src.git = "https://github.com/anatawa12/git-vrc.git"
+
+[karukan]
+fetch.url = "https://github.com/togatoga/karukan/archive/refs/tags/v$ver.tar.gz"
+src.github = "togatoga/karukan"
+src.prefix = "v"
+
+[microsoft-edit]
+fetch.url = "https://github.com/microsoft/edit/archive/refs/tags/v$ver.tar.gz"
+src.github = "microsoft/edit"
+src.prefix = "v"
+
+[mozkey]
+fetch.url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v$ver.tar.gz"
+src.github_tag = "koyasi777/mozkey"
+src.prefix = "v"
+
+[noto-cjk-sans]
+fetch.url = "https://github.com/notofonts/noto-cjk/releases/download/Sans$ver/03_NotoSansCJK-OTC.zip"
+src.github_tag = "notofonts/noto-cjk"
+src.include_regex = "Sans.*"
+src.prefix = "Sans"
+
+[noto-cjk-serif]
+fetch.url = "https://github.com/notofonts/noto-cjk/releases/download/Serif$ver/04_NotoSerifCJKOTC.zip"
+src.github_tag = "notofonts/noto-cjk"
+src.include_regex = "Serif.*"
+src.prefix = "Serif"
+
+[noto-fonts]
+fetch.url = "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-$ver.tar.gz"
+src.github = "notofonts/notofonts.github.io"
+src.prefix = "noto-monthly-release-"
+
+[proton-ge-rtsp-bin]
+fetch.url = "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/proton-rtsp-$ver/proton-rtsp-$ver.tar.gz"
+src.github = "SpookySkeletons/proton-ge-rtsp"
+src.prefix = "proton-rtsp-"
+
+[walland]
+fetch.github = "Golim/walland"
+src.branch = "main"
+src.git = "https://github.com/Golim/walland.git"
+
+[zifu]
+# proc-macro2's error is not solved yet
+#fetch.url = "https://github.com/tats-u/zifu/archive/refs/tags/v$ver.tar.gz"
+#src.github = "tats-u/zifu"
+#src.prefix = "v"
+fetch.github = "tats-u/zifu"
+src.branch = "master"
+src.git = "https://github.com/tats-u/zifu.git"

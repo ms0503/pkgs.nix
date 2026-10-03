@@ -1,0 +1,254 @@
+{
+    "bazel-central-registry": {
+        "cargoLock": null,
+        "date": "2026-10-10",
+        "extract": null,
+        "name": "bazel-central-registry",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "bazelbuild",
+            "repo": "bazel-central-registry",
+            "rev": "79b20ea89162d5584b58711426c8fe9b4d12286e",
+            "sha256": "sha256-DyWvEVXt+vtGhKBjX8Gq66PUDMK70cPqrVo6fSdSmAU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "79b20ea89162d5584b58711426c8fe9b4d12286e"
+    },
+    "dic-nico-intersection-pixiv": {
+        "cargoLock": null,
+        "date": "2024-09-03",
+        "extract": null,
+        "name": "dic-nico-intersection-pixiv",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ncaq",
+            "repo": "dic-nico-intersection-pixiv",
+            "rev": "db8953c31d30528515d9d1ccf103cd337f4a108d",
+            "sha256": "sha256-XhnUKnpU1BHT1N5RiUWUOD+rocihofCcfIGz2v56+zA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "db8953c31d30528515d9d1ccf103cd337f4a108d"
+    },
+    "ds4pairer": {
+        "cargoLock": null,
+        "date": "2023-03-28",
+        "extract": null,
+        "name": "ds4pairer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "paulstraw",
+            "repo": "ds4pairer",
+            "rev": "24b6f6194e67270e94781c6b1211a4a830735fe9",
+            "sha256": "sha256-JZxEQhl+f2xGK/5nu3+6j/k06SER6u56cF6W9F8SoRY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "24b6f6194e67270e94781c6b1211a4a830735fe9"
+    },
+    "fcitx5-mozc": {
+        "cargoLock": null,
+        "date": "2026-10-09",
+        "extract": null,
+        "name": "fcitx5-mozc",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "fcitx",
+            "repo": "mozc",
+            "rev": "13ef96d765703805f57f7b1e6cd238e959640282",
+            "sha256": "sha256-Qzvukx3Yn7SFgjSJwjpY5+XJNn7PIie/kBE/1ztOoGQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "13ef96d765703805f57f7b1e6cd238e959640282"
+    },
+    "git-vrc": {
+        "cargoLock": null,
+        "date": "2025-06-18",
+        "extract": null,
+        "name": "git-vrc",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "anatawa12",
+            "repo": "git-vrc",
+            "rev": "b0ca3bf7da90099a02181df8880af022c6fc0320",
+            "sha256": "sha256-UKS7i0tyaeScaubTTusdwZfmojQXwj+EDqxfw8vQkgA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "b0ca3bf7da90099a02181df8880af022c6fc0320"
+    },
+    "karukan": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "karukan",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-t0IbPz7/JJVK2JESB4vc3pSjjPUi/BNOxuLBNSrdQrc=",
+            "type": "url",
+            "url": "https://github.com/togatoga/karukan/archive/refs/tags/v0.1.0.tar.gz"
+        },
+        "version": "0.1.0"
+    },
+    "microsoft-edit": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "microsoft-edit",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-812jCcXz2SsQ5cSyJn5NXinYCbKqRg6AMmsR9/66cqU=",
+            "type": "url",
+            "url": "https://github.com/microsoft/edit/archive/refs/tags/v2.0.0.tar.gz"
+        },
+        "version": "2.0.0"
+    },
+    "mozkey": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "mozkey",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-w84LnnWRfzwCFdxrcQ07UeE66NPU7+XDW52JBN1Lb2c=",
+            "type": "url",
+            "url": "https://github.com/koyasi777/mozkey/archive/refs/tags/v0.7.7.tar.gz"
+        },
+        "version": "0.7.7"
+    },
+    "noto-cjk-sans": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "noto-cjk-sans",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Uo9OGyX/O62wMhs40BXZVMTA3pJseDDvUOShlI9qPu0=",
+            "type": "url",
+            "url": "https://github.com/notofonts/noto-cjk/releases/download/Sans2.004/03_NotoSansCJK-OTC.zip"
+        },
+        "version": "2.004"
+    },
+    "noto-cjk-serif": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "noto-cjk-serif",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-x27Y/Ukc6YGC7GQwI4uQoeq+qIV8fbZOkDfvo44ZijE=",
+            "type": "url",
+            "url": "https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/04_NotoSerifCJKOTC.zip"
+        },
+        "version": "2.003"
+    },
+    "noto-fonts": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "noto-fonts",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-ZUk7WWf9ETcsFWbofzigXIyAoOfx/uRkT8qtI3Mae44=",
+            "type": "url",
+            "url": "https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.10.01.tar.gz"
+        },
+        "version": "2026.10.01"
+    },
+    "proton-ge-rtsp-bin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "proton-ge-rtsp-bin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-tS8jGhFunQ8fnRn06HD/hDkvNdquAjkab3n9+cpYNBU=",
+            "type": "url",
+            "url": "https://github.com/SpookySkeletons/proton-ge-rtsp/releases/download/proton-rtsp-11.0-20260609-4/proton-rtsp-11.0-20260609-4.tar.gz"
+        },
+        "version": "11.0-20260609-4"
+    },
+    "walland": {
+        "cargoLock": null,
+        "date": "2025-05-21",
+        "extract": null,
+        "name": "walland",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Golim",
+            "repo": "walland",
+            "rev": "d1c9dae35e7125e642f93e6acfee2682e801b627",
+            "sha256": "sha256-5SiLbLz3N3D/Fvu42zJy1QUQjArkzabwBo5pYP7DbcA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "d1c9dae35e7125e642f93e6acfee2682e801b627"
+    },
+    "zifu": {
+        "cargoLock": null,
+        "date": "2025-10-13",
+        "extract": null,
+        "name": "zifu",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tats-u",
+            "repo": "zifu",
+            "rev": "99b257ebe10ffb9b0b9897a431aeaafe53811786",
+            "sha256": "sha256-D8kB4FxzcL/b4lDRY6yFf54GsG6PgO2StZXY1TBW8j8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "99b257ebe10ffb9b0b9897a431aeaafe53811786"
+    }
+}

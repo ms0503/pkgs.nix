@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+PARAM_PROTON_PATH=
+PARAM_STEAM_COMPAT_CLIENT_INSTALL_PATH=
+PARAM_STEAM_COMPAT_DATA_PATH=
+PARAM_STEAM_RUN=
+PARAM_VRCHAT_EXE_PATH=
+if [[ -z $PARAM_PROTON_PATH || -z $PARAM_STEAM_COMPAT_CLIENT_INSTALL_PATH || -z $PARAM_STEAM_COMPAT_DATA_PATH || -z $PARAM_STEAM_RUN || -z $PARAM_VRCHAT_EXE_PATH ]]; then
+    echo "invalid setup" >&2
+    exit 1
+fi
+declare -a args
+for arg in "$@"; do
+    if [[ $arg =~ ^--url= ]]; then
+        args+=("$(echo "$arg" | sed -e 's;file:///;file:///Z:;' -e 's;%2f;/;g')")
+    else
+        args+=("$arg")
+    fi
+done
+exec "$PARAM_STEAM_RUN" env \
+    STEAM_COMPAT_CLIENT_INSTALL_PATH="$PARAM_STEAM_COMPAT_CLIENT_INSTALL_PATH" \
+    STEAM_COMPAT_DATA_PATH="$PARAM_STEAM_COMPAT_DATA_PATH" \
+    "$PARAM_PROTON_PATH" run "$PARAM_VRCHAT_EXE_PATH" "${args[@]}"
