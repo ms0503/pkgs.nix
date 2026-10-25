@@ -25,7 +25,6 @@ jobs:
         run: |
           nix flake update
           git add flake.lock
-          git commit -m "chore: update flakes" || :
       - name: "Update packages"
         run: |
           nix run nixpkgs#nvfetcher
@@ -70,10 +69,17 @@ jobs:
               lib/bazel-hashes.nix
           done
           git add lib/bazel-hashes.nix
-          git commit -m "chore: update packages" || :
+      - name: "Commit"
+        run: |
+          msg="chore: update flakes and packages"
+          if [[ $(git log -n 1 --pretty=%s) = "$msg" ]]; then
+            git commit --amend -m "$msg" || :
+          else
+            git commit -m "$msg" || :
+          fi
       - name: "Push to repository"
         run: |
-          git push origin main
+          git push --force-with-lease origin main
 name: "Update Nix Flakes and packages"
 on:
   workflow_dispatch:
