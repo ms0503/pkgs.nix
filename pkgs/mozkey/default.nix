@@ -168,6 +168,7 @@ buildBazelPackage rec {
     ./0-protobuf-from-nixpkgs.patch
     ./1-merge-ut-positive-daily-from-nixpkgs.patch
     ./2-bazel-visibility-public-only.patch
+    ./3-qt-new-class-name.patch
   ];
   postPatch = ''
     mkdir -p src/third_party

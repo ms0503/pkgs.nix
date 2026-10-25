@@ -1,4 +1,4 @@
 {
-  fcitx5-mozkey = "sha256-5hbSSxzJMuqqw2bmKAfSytZbx7ZjjKgXO0icPU+Mf04=";
-  mozkey = "sha256-RKRql0RrairrWjn0jIGD0q4eSDjM7kqEgy7ty7QuvpM=";
+  fcitx5-mozkey = "sha256-u0dAjMxcZ0mNFpCDdfUkrRckbti6rEM01opJ+MNWQeg=";
+  mozkey = "sha256-CuJ1GKPR38YQDUMPm47ANrzKvGuhNWxiuhUUKUlzJRw=";
 }
