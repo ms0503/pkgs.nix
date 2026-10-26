@@ -72,10 +72,10 @@
         };
         fakevrchat = callPackage ./fakevrchat { };
         fcitx5-mozkey = callPackage ./fcitx5-mozkey {
-          inherit (self'.packages) dic-nico-intersection-pixiv mozkey;
+          inherit (self'.packages) mozkey;
           depsHash = bazelHashes.fcitx5-mozkey;
           sources = {
-            inherit (sources) bazel-central-registry fcitx5-mozc mozkey;
+            inherit (sources) fcitx5-mozc mozkey;
           };
         };
         git-vrc = callPackage ./git-vrc {
@@ -97,9 +97,7 @@
         mozkey = callPackage ./mozkey {
           inherit (self'.packages) dic-nico-intersection-pixiv;
           depsHash = bazelHashes.mozkey;
-          sources = {
-            inherit (sources) bazel-central-registry mozkey;
-          };
+          source = sources.mozkey;
         };
         noto-fonts-cjk-sans-non-variable = callPackage ./noto-fonts-cjk-sans-non-variable {
           source = sources.noto-cjk-sans;

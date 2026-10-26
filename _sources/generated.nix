@@ -6,18 +6,6 @@
   dockerTools,
 }:
 {
-  bazel-central-registry = {
-    pname = "bazel-central-registry";
-    version = "891915af5435915bf2a284028d73d08e3aafb0e6";
-    src = fetchFromGitHub {
-      owner = "bazelbuild";
-      repo = "bazel-central-registry";
-      rev = "891915af5435915bf2a284028d73d08e3aafb0e6";
-      fetchSubmodules = false;
-      sha256 = "sha256-AvAMZNi0+a72zen7Nb2Y9yzbG58r7XiFMBL4F2JBawU=";
-    };
-    date = "2026-10-24";
-  };
   dic-nico-intersection-pixiv = {
     pname = "dic-nico-intersection-pixiv";
     version = "db8953c31d30528515d9d1ccf103cd337f4a108d";

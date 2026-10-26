@@ -1,8 +1,3 @@
-[bazel-central-registry]
-fetch.github = "bazelbuild/bazel-central-registry"
-src.branch = "main"
-src.git = "https://github.com/bazelbuild/bazel-central-registry.git"
-
 [dic-nico-intersection-pixiv]
 fetch.github = "ncaq/dic-nico-intersection-pixiv"
 src.branch = "master"
