@@ -85,7 +85,7 @@ jobs:
               | jq -r '.[]'
             ); do
               printf "== Check %s\n" "$pkg"
-              if msg=$(nix build ".#${pkg}.deps" 2>&1 >/dev/null); then
+              if msg=$(nix build ".#${pkg}.vendorDeps" 2>&1 >/dev/null); then
                 printf "==== Up-to-date\n"
                 continue
               fi
