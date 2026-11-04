@@ -12,6 +12,7 @@
     }:
     lib.optionalAttrs (inputs.treefmt-nix ? flakeModule) {
       treefmt.programs = {
+        actionlint.enable = true;
         mdformat = {
           enable = true;
           plugins =
