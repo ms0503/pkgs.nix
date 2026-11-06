@@ -23,10 +23,6 @@ This repository contains packages that are out-dated or not included in nixpkgs.
   - Description: IME dictionary containing entries shared by Nico Nico Pedia and
     Pixiv Encyclopedia
   - Source: [github:ncaq/dic-nico-intersection-pixiv]
-- discord-canary-wayland
-  - Description: All-in-one cross-platform voice and text chat for gamers,
-    including Wayland support
-  - Inherit: [nixpkgs]#discord-canary
 - ds4pairer
   - Description: A tool for viewing and setting the bluetooth address a
     DualShock 4 controller is currently paired with

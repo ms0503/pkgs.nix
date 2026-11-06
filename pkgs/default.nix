@@ -60,13 +60,13 @@
     {
       packages = {
         alcom = builtins.warn "github:ms0503/pkgs.nix#alcom is deprecated. Please use nixpkgs#alcom instead." pkgs.alcom;
+        discord-canary-wayland = builtins.warn "github:ms0503/pkgs.nix#discord-canary-wayland is deprecated. Please use nixpkgs#discord-canary instead." pkgs.discord-canary;
         microsoft-edge-dev-wayland = builtins.warn "microsoft-edge-dev-wayland is deprecated. Please use microsoft-edge-dev instead." self'.packages.microsoft-edge-dev;
       }
       // {
         dic-nico-intersection-pixiv = callPackage ./dic-nico-intersection-pixiv {
           source = sources.dic-nico-intersection-pixiv;
         };
-        discord-canary-wayland = callPackage ./discord-canary-wayland { };
         ds4pairer = callPackage ./ds4pairer {
           source = sources.ds4pairer;
         };
