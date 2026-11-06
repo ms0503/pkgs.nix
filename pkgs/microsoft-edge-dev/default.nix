@@ -61,6 +61,7 @@ in
 
         # "--simulate-outdated-no-au" disables auto updates and browser outdated popup
         makeWrapper "$out/share/microsoft/$appname/microsoft-edge-dev" "$exe" \
+          "''${wrapperArgs[@]}" \
           --prefix QT_PLUGIN_PATH : "${qt6.qtbase}/lib/qt-6/plugins" \
           --prefix QT_PLUGIN_PATH : "${qt6.qtwayland}/lib/qt-6/plugins" \
           --prefix NIXPKGS_QT6_QML_IMPORT_PATH : "${qt6.qtwayland}/lib/qt-6/qml" \
