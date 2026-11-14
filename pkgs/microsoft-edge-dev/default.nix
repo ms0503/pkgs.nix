@@ -17,7 +17,7 @@ let
     hash = "sha256-IJ9Uon65nKz5JD9ib/6ArbKtj3wWvbAzqWTZDiGbEz0=";
     url = "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/microsoft-edge-dev_${version}-1_amd64.deb";
   };
-  version = "159.0.4378.0";
+  version = "159.0.4393.0";
 in
 (microsoft-edge.override {
   withSymlink = false;

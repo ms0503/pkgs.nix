@@ -32,15 +32,15 @@
   };
   fcitx5-mozc = {
     pname = "fcitx5-mozc";
-    version = "8ab43bc361db9fb056e1f0644ec89956c0d67987";
+    version = "bf76a6fe94618c132e40057f8b11ec1726c1cad2";
     src = fetchFromGitHub {
       owner = "fcitx";
       repo = "mozc";
-      rev = "8ab43bc361db9fb056e1f0644ec89956c0d67987";
+      rev = "bf76a6fe94618c132e40057f8b11ec1726c1cad2";
       fetchSubmodules = false;
-      sha256 = "sha256-b83sJdvQ+9dXOHBhFxHII3Fuvh+HPSKKkmQVEVHaGU8=";
+      sha256 = "sha256-ld0MerqDg+mPyZx2tflsdjzVejCQKFzwBbNgubVvK7Q=";
     };
-    date = "2026-11-03";
+    date = "2026-11-09";
   };
   git-vrc = {
     pname = "git-vrc";
@@ -72,10 +72,10 @@
   };
   mozkey = {
     pname = "mozkey";
-    version = "1.0.0";
+    version = "1.1.0";
     src = fetchurl {
-      url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v1.0.0.tar.gz";
-      sha256 = "sha256-1+LRk2EERoaJrnymjqWJIFEemKfvPKWhIlO/47yq2yU=";
+      url = "https://github.com/koyasi777/mozkey/archive/refs/tags/v1.1.0.tar.gz";
+      sha256 = "sha256-vTumyMCiinPMoeYgDgYk3qKwrhuPIKUmlkaZ2KsmFd8=";
     };
   };
   noto-cjk-sans = {
