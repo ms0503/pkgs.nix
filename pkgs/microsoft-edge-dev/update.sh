@@ -1,6 +1,5 @@
-#!/usr/bin/env nix
-#!nix shell nixpkgs#common-updater-scripts nixpkgs#curl nixpkgs#bash -c bash
-# shellcheck disable=SC1008,SC2031,SC2128,SC2178
+#!/usr/bin/env bash
+# shellcheck disable=SC2128,SC2178
 
 VER_SAME=0
 VER_LEFT_NEWER=1
@@ -59,4 +58,4 @@ for ((i = 1; i < ${#index[@]}; i++)); do
     fi
 done
 
-update-source-version microsoft-edge-dev "$latest_version"
+sed -i 's/^  version = ".*";$/  version = "'"$latest_version"'";/' "$(dirname "$(realpath "$0")")/default.nix"
