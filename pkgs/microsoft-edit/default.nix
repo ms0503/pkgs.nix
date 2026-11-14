@@ -4,8 +4,10 @@
   lib,
   makeWrapper,
   mold,
+  pkg-config,
   rustPlatform,
   source,
+  zstd,
 }:
 rustPlatform.buildRustPackage (finalAttrs: {
   inherit cargoHash;
@@ -17,6 +19,9 @@ rustPlatform.buildRustPackage (finalAttrs: {
     ]
     |> lib.makeLibraryPath;
   RUSTFLAGS = "-Clink-arg=-fuse-ld=mold";
+  buildInputs = [
+    zstd
+  ];
   meta = {
     description = "A simple editor for simple needs";
     downloadPage = "https://github.com/microsoft/edit/releases";
@@ -30,6 +35,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   nativeBuildInputs = [
     makeWrapper
     mold
+    pkg-config
   ];
   postInstall = ''
     wrapProgram "$out/bin/edit" \
