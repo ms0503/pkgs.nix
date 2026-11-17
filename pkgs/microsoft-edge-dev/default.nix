@@ -14,7 +14,7 @@
 }:
 let
   src = fetchurl {
-    hash = "sha256-IJ9Uon65nKz5JD9ib/6ArbKtj3wWvbAzqWTZDiGbEz0=";
+    hash = "sha256-gKnizYDgykhaA5zYMt7wop40pv8/MQM9pw5+TdgVaUA=";
     url = "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/microsoft-edge-dev_${version}-1_amd64.deb";
   };
   version = "159.0.4393.0";

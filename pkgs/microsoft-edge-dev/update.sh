@@ -58,4 +58,6 @@ for ((i = 1; i < ${#index[@]}; i++)); do
     fi
 done
 
-sed -i 's/^  version = ".*";$/  version = "'"$latest_version"'";/' "$(dirname "$(realpath "$0")")/default.nix"
+sed -i "$(dirname "$(realpath "$0")")/default.nix" \
+    -e 's/^  version = ".*";$/  version = "'"$latest_version"'";/' \
+    -e 's:^    hash = ".*";$:    hash = "'"$(nix hash convert --hash-algo sha256 --to sri "$(nix-prefetch-url "$repo_url/microsoft-edge-dev_$latest_version-1_amd64.deb")")"'";:'
