@@ -107,8 +107,8 @@ stdenv.mkDerivation {
     iconsDir=$out/share/icons/hicolor/scalable/apps
     mkdir -p "$iconsDir"
     unzip -q bazel-bin/unix/icons.zip -d icons
-    install -Dm444 icons/mozc.svg "$iconsDir/org.fcitx.Fcitx5.fcitx_mozc.svg"
-    ln -s org.fcitx.Fcitx5.fcitx_mozc.svg "$iconsDir/fcitx_mozc.svg"
+    install -Dm444 icons/mozc.svg "$iconsDir/org.fcitx.Fcitx5.fcitx_mozkey.svg"
+    ln -s org.fcitx.Fcitx5.fcitx_mozkey.svg "$iconsDir/fcitx_mozkey.svg"
     for icon in \
       alpha_full \
       alpha_half \
@@ -120,8 +120,8 @@ stdenv.mkDerivation {
       properties \
       tool
     do
-      install -Dm444 "icons/$icon.svg" "$iconsDir/org.fcitx.Fcitx5.fcitx_mozc_$icon.svg"
-      ln -s "org.fcitx.Fcitx5.fcitx_mozc_$icon.svg" "$iconsDir/fcitx_mozc_$icon.svg"
+      install -Dm444 "icons/$icon.svg" "$iconsDir/org.fcitx.Fcitx5.fcitx_mozkey_$icon.svg"
+      ln -s "org.fcitx.Fcitx5.fcitx_mozkey_$icon.svg" "$iconsDir/fcitx_mozkey_$icon.svg"
     done
     runHook postInstall
   '';
@@ -149,7 +149,7 @@ stdenv.mkDerivation {
     cd src
     ${mozkey'.setupBazelVendor vendorDeps}
     substituteInPlace config.bzl \
-      --replace-fail "/usr/lib/mozc" "${mozkey'}/lib/mozc"
+      --replace-fail "/usr/lib/mozkey" "${mozkey'}/lib/mozkey"
   '';
   preBuild = ''
     install -Dm444 "${mozkey'.dic}/dist/dictionary/koyasi-syntax-guard-debug.tsv" ../dist/dictionary/koyasi-syntax-guard-debug.tsv

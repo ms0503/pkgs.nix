@@ -43,7 +43,6 @@ let
       "--action_env=LIBRARY_PATH=${libraryPath}"
       "gui/tool:mozc_tool"
       "server:mozc_server"
-      "unix/emacs:mozc_emacs_helper"
     ]
     ++ lib.optionals withIbus [
       "renderer/qt:mozc_renderer"
@@ -116,7 +115,6 @@ let
     inherit (source) pname src version;
     bazelArgs = bazelArgs ++ [
       "renderer/qt:mozc_renderer"
-      "unix/emacs:mozc_emacs_helper"
       "unix/ibus:ibus_mozc"
     ];
     buildInputs = buildInputs ++ [
@@ -142,7 +140,7 @@ stdenv.mkDerivation {
   desktopItems = lib.optionals withIbus [
     (makeDesktopItem {
       desktopName = "Mozkey Setup";
-      exec = "@out@/lib/mozc/mozc_tool --mode=config_dialog";
+      exec = "@out@/lib/mozkey/mozc_tool --mode=config_dialog";
       name = "ibus-setup-mozkey-jp";
       noDisplay = true;
       startupNotify = true;
@@ -155,18 +153,16 @@ stdenv.mkDerivation {
   };
   installPhase = ''
     runHook preInstall
-    install -Dm555 bazel-bin/server/mozc_server "$out/lib/mozc/mozc_server"
-    install -Dm555 bazel-bin/gui/tool/mozc_tool "$out/lib/mozc/mozc_tool"
-    install -Dm555 bazel-bin/unix/emacs/mozc_emacs_helper "$out/bin/mozc_emacs_helper"
-    install -Dm444 unix/emacs/mozc.el "$out/share/emacs/site-lisp/emacs-mozc/mozc.el"
+    install -Dm555 bazel-bin/server/mozc_server "$out/lib/mozkey/mozc_server"
+    install -Dm555 bazel-bin/gui/tool/mozc_tool "$out/lib/mozkey/mozc_tool"
   ''
   + lib.optionalString withIbus ''
-    install -Dm555 bazel-bin/renderer/qt/mozc_renderer "$out/lib/mozc/mozc_renderer"
-    install -Dm555 bazel-bin/unix/ibus/ibus_mozc "$out/lib/ibus-mozc/ibus-engine-mozc"
-    install -Dm555 bazel-bin/unix/ibus/mozc.xml "$out/share/ibus/component/mozc.xml"
-    unzip bazel-bin/unix/icons.zip -d "$out/share/ibus-mozc/"
-    install -Dm444 data/images/product_icon_32bpp-128.png "$out/share/ibus-mozc/product_icon.png"
-    install -Dm444 data/images/icon.svg "$out/share/ibus-mozc/product_icon.svg"
+    install -Dm555 bazel-bin/renderer/qt/mozc_renderer "$out/lib/mozkey/mozc_renderer"
+    install -Dm555 bazel-bin/unix/ibus/ibus_mozc "$out/lib/ibus-mozkey/ibus-engine-mozkey"
+    install -Dm555 bazel-bin/unix/ibus/mozkey.xml "$out/share/ibus/component/mozkey.xml"
+    unzip bazel-bin/unix/icons.zip -d "$out/share/ibus-mozkey/"
+    install -Dm444 data/images/product_icon_32bpp-128.png "$out/share/ibus-mozkey/product_icon.png"
+    install -Dm444 data/images/icon.svg "$out/share/ibus-mozkey/product_icon.svg"
   ''
   + ''
     install -Dm444 ../LICENSE "$out/share/licenses/$pname/LICENSE"
@@ -182,7 +178,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/koyasi777/mozkey";
     isIbusEngine = withIbus;
     license = lib.licenses.free;
-    mainProgram = "mozc_emacs_helper";
     platforms = lib.platforms.linux;
   };
   outputs = [
