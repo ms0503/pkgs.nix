@@ -4,6 +4,7 @@
   cmake,
   libclang,
   mold,
+  oniguruma,
   openssl,
   pkg-config,
   rustPlatform,
@@ -15,6 +16,7 @@ rustPlatform.buildRustPackage {
   LIBCLANG_PATH = "${libclang.lib}/lib/libclang.so";
   RUSTFLAGS = "-Clink-arg=-fuse-ld=mold";
   buildInputs = [
+    oniguruma
     openssl
   ];
   cargoBuildFlags = [
