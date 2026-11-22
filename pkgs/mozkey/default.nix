@@ -8,6 +8,7 @@
   dictionaryProfile ? "daily",
   glib,
   ibus,
+  jawiki-all-titles-in-ns0,
   lib,
   libglvnd,
   makeDesktopItem,
@@ -84,11 +85,19 @@ let
       else
         throw "dictionaryProfile must be 'daily', 'rich' or 'max'"
     );
+  dictionaries-personal-names = [
+    mozcdic-ut-personal-names
+  ];
+  dictionaries-sample = [
+    mozcdic-ut-place-names
+    mozcdic-ut-sudachidict
+  ];
   includePath = lib.makeIncludePath buildInputs;
   libraryPath = lib.makeLibraryPath buildInputs;
   nativeBuildInputs = [
     bazel
     copyDesktopItems
+    merge-ut-dictionaries
     pkg-config
     powershell
     python3
@@ -96,20 +105,35 @@ let
     unzip
     writableTmpDirAsHomeHook
   ];
-  ut-dictionary = merge-ut-dictionaries.override {
-    dictionaries = dictionaries';
-  };
-  ut-dictionary-personal-names = merge-ut-dictionaries.override {
-    dictionaries = [
-      mozcdic-ut-personal-names
-    ];
-  };
-  ut-dictionary-sample = merge-ut-dictionaries.override {
-    dictionaries = [
-      mozcdic-ut-place-names
-      mozcdic-ut-sudachidict
-    ];
-  };
+  toMergedDictionary = file: dictionaries: ''
+    dictionaryInputs=()
+    for dictionary in ${
+      dictionaries |> lib.concatMapStringsSep " " (dictionary: "${dictionary}/mozcdic-ut-*.txt*.bz2")
+    }; do
+      case "$dictionary" in
+        *.tar.bz2)
+          dictionaryDir=$(mktemp -d)
+          tar -xjf "$dictionary" -C "$dictionaryDir"
+          bzip2 "$dictionaryDir"/*.txt
+          dictionaryInputs+=( "$dictionaryDir"/*.txt.bz2 )
+          ;;
+        *) dictionaryInputs+=( "$dictionary" ) ;;
+      esac
+    done
+    bzcat "''${dictionaryInputs[@]}" > "${file}"
+    if [[ ! -f jawiki-all-titles-in-ns0 ]]; then
+      gzip -dc ${jawiki-all-titles-in-ns0}/jawiki-all-titles-in-ns0.gz | sed '1d; s/_/ /g; s/^/0:0:/' > jawiki-all-titles-in-ns0
+    fi
+    # if [[ ! -d /tmp/source ]]; then
+    #   mkdir -p /tmp/source
+    #   if [[ "${source.src}" == *.tar* ]]; then
+    #     tar -xf "${source.src}" -C /tmp/source
+    #   else
+    #     cp -r "${source.src}"/* "${source.src}"/.* /tmp/source
+    #   fi
+    # fi
+    MOZC_SOURCE=$PWD/.. JAWIKI_TITLES="$PWD/jawiki-all-titles-in-ns0" merge-ut-dictionaries "${file}"
+  '';
   vendorDeps = mkVendorDeps {
     inherit nativeBuildInputs;
     inherit (source) pname src version;
@@ -130,6 +154,20 @@ stdenv.mkDerivation {
   __structuredAttrs = true;
   buildPhase = ''
     runHook preBuild
+    mkdir -p data/dictionary_koyasi/generated/{nico_pixiv,personal_names}
+    cp -f ${dic-nico-intersection-pixiv} data/dictionary_koyasi/generated/nico_pixiv/dic-nico-intersection-pixiv-google.txt
+  ''
+  + (
+    dictionaries'
+    |> toMergedDictionary "data/dictionary_koyasi/generated/mozcdic-ut-${dictionaryProfile}.txt"
+  )
+  + (dictionaries-sample |> toMergedDictionary "data/dictionary_koyasi/generated/mozcdic-ut-safe.txt")
+  + (
+    dictionaries-personal-names
+    |> toMergedDictionary "data/dictionary_koyasi/generated/personal_names/mozcdic-ut-personal-names.txt"
+  )
+  + ''
+    pwsh ../tools/dictionary/prepare_daily_dictionary.ps1 -SkipDownload
     bazel build \
       --action_env=HOME \
       --lockfile_mode=error \
@@ -194,7 +232,6 @@ stdenv.mkDerivation {
       ;
   };
   patches = [
-    ./1-merge-ut-positive-daily-from-nixpkgs.patch
     ./3-qt-new-class-name.patch
   ];
   postFixup = lib.optionalString withIbus ''
@@ -207,16 +244,6 @@ stdenv.mkDerivation {
     substituteInPlace config.bzl \
       --replace-fail "/usr/bin/xdg-open" "${xdg-utils}/bin/xdg-open" \
       --replace-fail "/usr" "$out"
-  ''
-  + lib.optionalString (dictionaries' != [ ]) ''
-    mkdir -p data/dictionary_koyasi/generated/{nico_pixiv,personal_names}
-    cp -f ${ut-dictionary}/mozcdic-ut.txt data/dictionary_koyasi/generated/mozcdic-ut-${dictionaryProfile}.txt
-    cp -f ${ut-dictionary-sample}/mozcdic-ut.txt data/dictionary_koyasi/generated/mozcdic-ut-safe.txt
-    cp -f ${dic-nico-intersection-pixiv} data/dictionary_koyasi/generated/nico_pixiv/dic-nico-intersection-pixiv-google.txt
-    cp -f ${ut-dictionary-personal-names}/mozcdic-ut.txt data/dictionary_koyasi/generated/personal_names/mozcdic-ut-personal-names.txt
-  '';
-  preBuild = ''
-    pwsh ../tools/dictionary/prepare_daily_dictionary.ps1 -SkipDownload
   '';
   sourceRoot = "mozkey-${source.version}";
   strictDeps = true;
