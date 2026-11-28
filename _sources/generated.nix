@@ -32,15 +32,15 @@
   };
   fcitx5-mozc = {
     pname = "fcitx5-mozc";
-    version = "60aca5d2f4f21063f7936a5366494c709e2dae45";
+    version = "be212ffab90f248efa8946807e9634154d5c5186";
     src = fetchFromGitHub {
       owner = "fcitx";
       repo = "mozc";
-      rev = "60aca5d2f4f21063f7936a5366494c709e2dae45";
+      rev = "be212ffab90f248efa8946807e9634154d5c5186";
       fetchSubmodules = false;
-      sha256 = "sha256-UJobBYIxUrtH2IWGgqvU91bx42ki8wYSGivzgo0g9gw=";
+      sha256 = "sha256-SChDtOcVaLp51mqVjph3dyC6tfDfp7f8lc4swP0qMuQ=";
     };
-    date = "2026-11-20";
+    date = "2026-11-28";
   };
   git-vrc = {
     pname = "git-vrc";
